@@ -1,0 +1,17 @@
+.about {
+	width: auto;
+	height: 95vh;
+	padding: 1rem 10vw;
+	text-align: center;
+
+	h2 {
+		font-size: calc(2vw + 1rem);
+	}
+	h6 {
+		font-size: calc(1vw + 1rem);
+		font-weight: 400;
+		max-width: 65ch;
+		margin: 7vh auto;
+		line-height: 2;
+	}
+}

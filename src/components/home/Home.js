@@ -1,12 +1,35 @@
 import React from 'react';
 import { Button } from '@material-ui/core';
 import './css/home.css';
+import Typed from 'react-typed';
+import AOS from 'aos';
+import 'aos/dist/aos.css';
 
 export default function Home() {
+	AOS.init();
+
 	return (
 		<div className="home">
-			<h2>Andrew Xavier Shah</h2>
-			<h6>Full Stack Web Developer</h6>
+			<div data-aos="fade" data-aos-duration="2000">
+				<Typed
+					className="typed-name"
+					strings={['Andrew Xavier Shah']}
+					typeSpeed={40}
+				/>
+			</div>
+			<Typed
+				className="typed-text"
+				strings={[
+					'Web Development',
+					'REST APIs',
+					'Machine Learning',
+					'Database Design',
+					'Testing & Debugging',
+				]}
+				typeSpeed={40}
+				backSpeed={50}
+				loop
+			/>
 			<div className="line" />
 			<Button variant="contained" color="secondary">
 				Contact Me

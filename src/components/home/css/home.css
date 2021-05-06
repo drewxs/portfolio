@@ -31,4 +31,8 @@
   margin: 3rem auto;
   width: calc(20vw + 2px);
 }
+
+.home .contact-button {
+  font-size: calc(1vw + 3px);
+}
 /*# sourceMappingURL=home.css.map */

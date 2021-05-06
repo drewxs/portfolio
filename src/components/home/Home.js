@@ -31,7 +31,7 @@ export default function Home() {
 				loop
 			/>
 			<div className="line" />
-			<Button variant="contained" color="secondary">
+			<Button variant="contained" color="secondary" className="contact-button">
 				Contact Me
 			</Button>
 		</div>

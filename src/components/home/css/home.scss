@@ -7,14 +7,16 @@
 	text-align: center;
 	justify-content: center;
 
-	h2 {
+	.typed-name {
 		font-size: calc(5vw + 3px);
 	}
-	h6 {
+
+	.typed-text {
 		font-size: calc(2vw + 3px);
 		margin: 2vh 0;
 		font-weight: 400;
 	}
+
 	.line {
 		border-bottom: 1px solid #422a2a;
 		margin: 3rem auto;

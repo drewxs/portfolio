@@ -18,19 +18,21 @@
 		padding-top: 50px;
 		position: relative;
 
-		::after {
-			position: absolute;
-			display: block;
-			background-image: url('../images/bg.gif');
-			background-repeat: no-repeat;
-			background-position: 50% 0;
-			background-size: cover;
-			left: 0;
-			top: 0;
-			width: 100%;
-			height: 100%;
-			opacity: 0.3;
-			z-index: 2;
-		}
+		// ::after {
+		// 	position: absolute;
+		// 	display: block;
+		// 	content: '';
+		// 	background-image: url('../images/bg.gif');
+		// 	background-repeat: no-repeat;
+		// 	background-position: 50% 0;
+		// 	background-size: cover;
+		// 	background-attachment: fixed;
+		// 	top: 0;
+		// 	left: 0;
+		// 	width: 100%;
+		// 	height: 100%;
+		// 	opacity: 0.3;
+		// 	z-index: -10;
+		// }
 	}
 }

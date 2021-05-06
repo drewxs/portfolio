@@ -17,11 +17,11 @@
           justify-content: center;
 }
 
-.home h2 {
+.home .typed-name {
   font-size: calc(5vw + 3px);
 }
 
-.home h6 {
+.home .typed-text {
   font-size: calc(2vw + 3px);
   margin: 2vh 0;
   font-weight: 400;

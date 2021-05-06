@@ -25,19 +25,4 @@
   padding-top: 50px;
   position: relative;
 }
-
-.app .screen ::after {
-  position: absolute;
-  display: block;
-  background-image: url("../images/bg.gif");
-  background-repeat: no-repeat;
-  background-position: 50% 0;
-  background-size: cover;
-  left: 0;
-  top: 0;
-  width: 100%;
-  height: 100%;
-  opacity: 0.3;
-  z-index: 2;
-}
 /*# sourceMappingURL=app.css.map */

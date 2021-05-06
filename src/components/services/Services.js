@@ -1,9 +1,13 @@
 import React from 'react';
 import './css/services.css';
-import { Typography, Card } from '@material-ui/core';
+import { Card } from '@material-ui/core';
 import { Code, Web, CallMade } from '@material-ui/icons';
+import AOS from 'aos';
+import 'aos/dist/aos.css';
 
 export default function Services() {
+	AOS.init();
+
 	return (
 		<div className="services">
 			<div className="text">
@@ -13,18 +17,19 @@ export default function Services() {
 					<h2>Skills & Services</h2>
 				)}
 			</div>
-			<div className="cards">
-				<Card className="card">
-					<Code color="secondary" className="cardicon" fontSize="large" />
-					<div className="cardtext">
+			<div className="skill-cards">
+				<Card className="skill-card">
+					<Code
+						color="secondary"
+						className="skill-card-icon"
+						fontSize="large"
+					/>
+					<div className="skill-card-text">
 						<h4>Backend Development</h4>
 						{window.matchMedia('(min-width: 540px)').matches && (
 							<div>
 								<br />
-								<h5>
-									I enjoy creating RESTful API's for interactive and secure data
-									access
-								</h5>
+								<h5>RESTful API's for interactive and secure data access</h5>
 								<br />
 								<br />
 								<h5>Languages/tools:</h5>
@@ -37,18 +42,21 @@ export default function Services() {
 							Django <br />
 							MongoDB <br />
 							Firebase <br />
+							MySQL <br />
 							PostgreSQL
 						</h6>
 					</div>
 				</Card>
-				<Card className="card">
-					<Web color="secondary" className="cardicon" fontSize="large" />
-					<div className="cardtext">
+				<Card className="skill-card">
+					<Web color="secondary" className="skill-card-icon" fontSize="large" />
+					<div className="skill-card-text">
 						<h4>Frontend Development</h4>
 						{window.matchMedia('(min-width: 540px)').matches && (
 							<div>
 								<br />
-								<h5>I like to design responsive and interactive websites</h5>
+								<h5>
+									Responsive and interactive user-friendly websites and UIs
+								</h5>
 								<br />
 								<br />
 								<h5>Languages/tools:</h5>
@@ -68,9 +76,13 @@ export default function Services() {
 					</div>
 				</Card>
 				{window.matchMedia('(min-width: 540px)').matches && (
-					<Card className="card">
-						<CallMade color="secondary" className="cardicon" fontSize="large" />
-						<div className="cardtext">
+					<Card className="skill-card">
+						<CallMade
+							color="secondary"
+							className="skill-card-icon"
+							fontSize="large"
+						/>
+						<div className="skill-card-text">
 							<h4>DevOps</h4>
 							{window.matchMedia('(min-width: 540px)').matches && (
 								<div>
@@ -89,7 +101,6 @@ export default function Services() {
 								Git <br />
 								OpenShift <br />
 								CircleCI <br />
-								Google Cloud <br />
 								AWS <br />
 								Azure
 							</h6>

@@ -5,27 +5,29 @@
 	display: flex;
 	flex-direction: column;
 	text-align: center;
+	align-items: center;
 
 	.text {
 		margin: 5vh auto 5vh auto;
 	}
 
-	.cards {
+	.skill-cards {
 		display: flex;
 
-		.card {
+		.skill-card {
 			flex: 1;
 			background: transparent;
 			height: 540px;
+			width: 30vw;
 			box-shadow: 1px 3px 3px black;
 			margin: 0 1vw;
 			align-items: center;
 			text-align: center;
 
-			.cardicon {
+			.skill-card-icon {
 				margin-top: 20px;
 			}
-			.cardtext {
+			.skill-card-text {
 				margin: 15px 30px;
 				color: #959b9b;
 				line-height: 1.75;
@@ -57,17 +59,17 @@
 			margin: 0 auto;
 		}
 
-		.cards {
+		.skill-cards {
 			flex-direction: column;
 
-			.card {
+			.skill-card {
 				margin: 2vh 0;
 				height: 480px;
 
-				.cardicon {
+				.skill-card-icon {
 					margin: 0 auto;
 				}
-				.cardtext {
+				.skill-card-text {
 					h6 {
 						margin: 2vh 0;
 					}

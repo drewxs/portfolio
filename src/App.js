@@ -10,6 +10,7 @@ import './css/app.css';
 import logo from './images/logo.png';
 import AOS from 'aos';
 import 'aos/dist/aos.css';
+import Particles from 'react-particles-js';
 
 function App() {
 	const [currentPage, setCurrentPage] = useState(0);
@@ -22,6 +23,20 @@ function App() {
 
 	return (
 		<div className="app">
+			<Particles
+				params={{
+					particles: {
+						number: { value: 30, density: { enable: true, value_area: 2000 } },
+						shape: {
+							type: 'circle',
+							stroke: {
+								width: 6,
+								color: '#422a2a',
+							},
+						},
+					},
+				}}
+			/>
 			<AppBar position="fixed">
 				<Toolbar className="toolbar">
 					<img src={logo} alt="" />

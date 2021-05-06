@@ -17,6 +17,7 @@
   -webkit-box-align: center;
       -ms-flex-align: center;
           align-items: center;
+  z-index: 2;
 }
 
 .app .toolbar img {
@@ -28,5 +29,14 @@
   padding-top: 3rem;
   position: relative;
   height: 92vh;
+}
+
+.app .tsparticles-canvas-el {
+  position: absolute;
+  top: 0;
+  left: 0;
+  height: 100vh;
+  width: 100vw;
+  z-index: -1;
 }
 /*# sourceMappingURL=app.css.map */

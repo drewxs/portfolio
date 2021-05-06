@@ -1,11 +1,207 @@
 $primary: hsl(207, 19%, 9%);
 $secondary: hsl(0, 0%, 100%);
-$accent: hsl(142, 90%, 61%);
+$accent: #422a2a;
+$padding: 1.5rem;
 
 .card {
-	color: $primary;
-	background-image: url();
+	color: $secondary;
+	background-size: cover;
+	padding: 10rem 0 0;
+	width: 32rem;
+	margin: 20px;
+	border-radius: 0.5rem;
+	overflow: hidden;
+	transition: transform 500ms ease;
+	line-height: 1.6;
 
-	.card-title {
+	.card-content {
+		padding: $padding;
+		background: linear-gradient(
+			hsla(0, 0%, 0%, 0),
+			hsla(20, 0%, 0%, 0.3) 20%,
+			hsla(0, 0%, 0%, 1)
+		);
+
+		.card-title {
+			position: relative;
+
+			&:after {
+				content: '';
+				position: absolute;
+				height: 4px;
+				width: calc(100% + #{$padding});
+				left: calc(#{$padding} * -1);
+				bottom: -5px;
+				background: $accent;
+				transform: scaleX(0);
+				transform-origin: left;
+				transition: transform 500ms ease;
+			}
+		}
+
+		.card-body {
+			color: rgba(255, 255, 255, 0.85);
+		}
+
+		.button {
+			cursor: pointer;
+			display: inline-block;
+			text-decoration: none;
+			color: $secondary;
+			background-color: $accent;
+			padding: 0.5em 1.25em;
+			border-radius: 0.25em;
+		}
 	}
+}
+
+@media (hover) {
+	.card {
+		&:hover,
+		&:focus-within {
+			transform: scale(1.05);
+
+			.card-content {
+				transform: translateY(0);
+				transition-delay: 500ms;
+
+				> *:not(.card-title) {
+					opacity: 1;
+					transition-delay: 750ms;
+				}
+
+				.card-title::after {
+					transform: scaleX(1);
+				}
+			}
+		}
+		&:focus-within .card-content {
+			transition-duration: 250ms;
+		}
+
+		.card-content {
+			transform: translateY(40%);
+			transition: transform 500ms ease;
+
+			> *:not(.card-title) {
+				opacity: 0;
+				transition: opacity 500ms linear;
+			}
+
+			.card-title {
+				&:after {
+					transform: scaleX(0);
+				}
+			}
+		}
+
+		.button {
+			&:hover,
+			&:focus {
+				background-color: $primary;
+			}
+		}
+	}
+}
+
+@media only screen and (max-width: 1720px) {
+	.card {
+		width: 24rem;
+	}
+}
+@media only screen and (max-width: 1332px) {
+	.card {
+		width: 16rem;
+		height: 8rem;
+
+		.card-title {
+			font-size: 1.2rem;
+		}
+	}
+	@media (hover) {
+		.card {
+			&:hover,
+			&:focus-within {
+				.card-content {
+					transform: translateY(-30%);
+					transition-delay: 500ms;
+				}
+			}
+			.card-content {
+				transform: translateY(20%);
+				transition: transform 500ms ease;
+			}
+		}
+	}
+}
+@media only screen and (max-width: 948px) {
+	.card {
+		margin: 0.5rem;
+		width: 12rem;
+		height: 4rem;
+
+		.card-title {
+			font-size: 0.8rem;
+		}
+		.card-body {
+			font-size: 0.7rem;
+		}
+		.button {
+			font-size: 0.7rem;
+		}
+	}
+	@media (hover) {
+		.card {
+			&:hover,
+			&:focus-within {
+				.card-content {
+					transform: translateY(-50%);
+					transition-delay: 500ms;
+				}
+			}
+			.card-content {
+				transform: translateY(-5%);
+				transition: transform 500ms ease;
+			}
+		}
+	}
+}
+@media only screen and (max-width: 478px) {
+	.card {
+		margin: 0.5rem;
+		width: 8rem;
+		height: 2.6rem;
+
+		.card-title {
+			font-size: 0.5rem;
+		}
+		.card-body {
+			font-size: 0.4rem;
+		}
+		.button {
+			font-size: 0.4rem;
+		}
+	}
+}
+
+.raven {
+	background-image: url('/src/images/raven.png');
+}
+.zapr {
+	background-image: url('/src/images/zapr.gif');
+}
+.ciel {
+	background-image: url('/src/images/ciel.png');
+}
+.ravenunsupported {
+	background-image: url('/src/images/raven(unsupported).png');
+}
+.digitclassification {
+	background-image: url('/src/images/digitclassification.gif');
+}
+.objectdetection {
+	background-image: url('/src/images/objectdetection.gif');
+}
+.plannr {
+	background-image: url('/src/images/plannr.gif');
 }

@@ -1,3 +1,16 @@
 .projects {
 	padding-top: 3vh;
+	height: 95vh;
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+
+	.project-title {
+		margin-left: -10rem;
+	}
+
+	.project-list {
+		display: flex;
+		flex-wrap: wrap;
+	}
 }

@@ -7,8 +7,9 @@ $padding: 1.5rem;
 	color: $secondary;
 	background-size: cover;
 	padding: 10rem 0 0;
-	width: 32rem;
-	margin: 20px;
+	width: 18.2vw;
+	height: 12vh;
+	margin: 0.7vw;
 	border-radius: 0.5rem;
 	overflow: hidden;
 	transition: transform 500ms ease;
@@ -24,6 +25,8 @@ $padding: 1.5rem;
 
 		.card-title {
 			position: relative;
+			width: max-content;
+			text-overflow: ellipsis;
 
 			&:after {
 				content: '';
@@ -62,7 +65,7 @@ $padding: 1.5rem;
 			transform: scale(1.05);
 
 			.card-content {
-				transform: translateY(0);
+				transform: translateY(-6.5vh);
 				transition-delay: 500ms;
 
 				> *:not(.card-title) {
@@ -80,18 +83,12 @@ $padding: 1.5rem;
 		}
 
 		.card-content {
-			transform: translateY(40%);
+			transform: translateY(3vh);
 			transition: transform 500ms ease;
 
 			> *:not(.card-title) {
 				opacity: 0;
 				transition: opacity 500ms linear;
-			}
-
-			.card-title {
-				&:after {
-					transform: scaleX(0);
-				}
 			}
 		}
 
@@ -104,82 +101,35 @@ $padding: 1.5rem;
 	}
 }
 
-@media only screen and (max-width: 1720px) {
+@media only screen and (max-width: 1024px) {
 	.card {
-		width: 24rem;
-	}
-}
-@media only screen and (max-width: 1332px) {
-	.card {
-		width: 16rem;
-		height: 8rem;
+		margin: 1.3vw;
+		width: 30vw;
+		height: 7vw;
 
-		.card-title {
-			font-size: 1.2rem;
-		}
-	}
-	@media (hover) {
-		.card {
-			&:hover,
-			&:focus-within {
-				.card-content {
-					transform: translateY(-30%);
-					transition-delay: 500ms;
-				}
+		.card-content {
+			transform: translateY(-55%);
+
+			.card-title {
+				font-size: 2vw;
 			}
-			.card-content {
-				transform: translateY(20%);
-				transition: transform 500ms ease;
+			.card-body {
+				font-size: 1.4vw;
+			}
+			.button {
+				font-size: 1vw;
 			}
 		}
 	}
 }
-@media only screen and (max-width: 948px) {
+@media only screen and (max-width: 768px) {
 	.card {
-		margin: 0.5rem;
-		width: 12rem;
-		height: 4rem;
+		margin: 0.8vw;
+		width: 31vw;
+		height: 7vw;
 
-		.card-title {
-			font-size: 0.8rem;
-		}
-		.card-body {
-			font-size: 0.7rem;
-		}
-		.button {
-			font-size: 0.7rem;
-		}
-	}
-	@media (hover) {
-		.card {
-			&:hover,
-			&:focus-within {
-				.card-content {
-					transform: translateY(-50%);
-					transition-delay: 500ms;
-				}
-			}
-			.card-content {
-				transform: translateY(-5%);
-				transition: transform 500ms ease;
-			}
-		}
-	}
-}
-@media only screen and (max-width: 478px) {
-	.card {
-		margin: 0.5rem;
-		width: 8rem;
-		height: 2.6rem;
-
-		.card-title {
-			font-size: 0.5rem;
-		}
-		.card-body {
-			font-size: 0.4rem;
-		}
-		.button {
-			font-size: 0.4rem;
+		.card-content {
+			transform: translateY(-65%);
 		}
 	}
 }

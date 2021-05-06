@@ -11,7 +11,7 @@ export default function Services() {
 	return (
 		<div className="services">
 			<div className="text">
-				{window.matchMedia('(min-width: 420px)').matches ? (
+				{window.matchMedia('(min-width: 512px)').matches ? (
 					<h2>Here are some of the skills and services I offer</h2>
 				) : (
 					<h2>Skills & Services</h2>
@@ -25,17 +25,19 @@ export default function Services() {
 						fontSize="large"
 					/>
 					<div className="skill-card-text">
-						<h4>Backend Development</h4>
-						{window.matchMedia('(min-width: 540px)').matches && (
+						<h4 className="skill-card-title">Backend</h4>
+						{window.matchMedia('(min-width: 768px)').matches && (
 							<div>
 								<br />
-								<h5>RESTful API's for interactive and secure data access</h5>
+								<h5 className="skill-card-description">
+									RESTful API's for interactive and secure data access
+								</h5>
 								<br />
 								<br />
-								<h5>Languages/tools:</h5>
+								<h5 className="skill-card-description">Languages/tools:</h5>
 							</div>
 						)}
-						<h6>
+						<h6 className="skill-card-list">
 							Node.js <br />
 							Express.js <br />
 							Ruby on Rails <br />
@@ -50,19 +52,19 @@ export default function Services() {
 				<Card className="skill-card">
 					<Web color="secondary" className="skill-card-icon" fontSize="large" />
 					<div className="skill-card-text">
-						<h4>Frontend Development</h4>
-						{window.matchMedia('(min-width: 540px)').matches && (
+						<h4 className="skill-card-title">Frontend</h4>
+						{window.matchMedia('(min-width: 768px)').matches && (
 							<div>
 								<br />
-								<h5>
-									Responsive and interactive user-friendly websites and UIs
+								<h5 className="skill-card-description">
+									Responsive and interactive user-friendly interfaces
 								</h5>
 								<br />
 								<br />
-								<h5>Languages/tools:</h5>
+								<h5 className="skill-card-description">Languages/tools:</h5>
 							</div>
 						)}
-						<h6>
+						<h6 className="skill-card-list">
 							React.js <br />
 							Next.js <br />
 							Redux <br />
@@ -75,7 +77,7 @@ export default function Services() {
 						</h6>
 					</div>
 				</Card>
-				{window.matchMedia('(min-width: 540px)').matches && (
+				{window.matchMedia('(min-width: 512px)').matches && (
 					<Card className="skill-card">
 						<CallMade
 							color="secondary"
@@ -83,19 +85,19 @@ export default function Services() {
 							fontSize="large"
 						/>
 						<div className="skill-card-text">
-							<h4>DevOps</h4>
-							{window.matchMedia('(min-width: 540px)').matches && (
+							<h4 className="skill-card-title">DevOps</h4>
+							{window.matchMedia('(min-width: 768px)').matches && (
 								<div>
 									<br />
-									<h5>
-										Integration, testing, scaling, optimizing, and deploying
+									<h5 className="skill-card-description">
+										Integration, testing, scaling, optimizing, deploying
 									</h5>
 									<br />
 									<br />
-									<h5>Tools:</h5>
+									<h5 className="skill-card-description">Tools:</h5>
 								</div>
 							)}
-							<h6>
+							<h6 className="skill-card-list">
 								Kubernetes <br />
 								Docker <br />
 								Git <br />

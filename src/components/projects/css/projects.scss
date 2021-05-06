@@ -1,13 +1,9 @@
 .projects {
-	padding-top: 3vh;
 	height: 95vh;
 	display: flex;
 	flex-direction: column;
 	align-items: center;
-
-	.project-title {
-		margin-left: -10rem;
-	}
+	padding: 2rem 1vw;
 
 	.project-list {
 		display: flex;

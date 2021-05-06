@@ -1,14 +1,13 @@
 .services {
-	width: 95vw;
 	height: 95vh;
-	padding-top: 1rem;
+	padding-top: 2rem;
 	display: flex;
 	flex-direction: column;
 	text-align: center;
 	align-items: center;
 
 	.text {
-		margin: 5vh auto 5vh auto;
+		margin: 1rem 0;
 	}
 
 	.skill-cards {
@@ -17,12 +16,12 @@
 		.skill-card {
 			flex: 1;
 			background: transparent;
-			height: 540px;
-			width: 30vw;
+			width: 100%;
 			box-shadow: 1px 3px 3px black;
-			margin: 0 1vw;
+			margin: 0.5rem;
 			align-items: center;
 			text-align: center;
+			padding-bottom: 0.5rem;
 
 			.skill-card-icon {
 				margin-top: 20px;
@@ -30,18 +29,18 @@
 			.skill-card-text {
 				margin: 15px 30px;
 				color: #959b9b;
-				line-height: 1.75;
+				line-height: 3vh;
 
-				h4 {
+				.skill-card-title {
 					font-size: calc(0.5vw + 1rem);
 					margin: 0;
 				}
-				h5 {
+				.skill-card-description {
 					font-size: calc(0.3vw + 1rem);
 					font-weight: 400;
 					margin: 0;
 				}
-				h6 {
+				.skill-card-list {
 					font-size: calc(0.2vw + 1rem);
 					font-weight: 400;
 					margin: 0;
@@ -51,27 +50,33 @@
 	}
 }
 
-@media only screen and (max-width: 540px) {
+@media only screen and (max-width: 768px) {
 	.services {
-		padding-top: 1vh;
-
-		.text {
-			margin: 0 auto;
+		.skill-card {
+			margin: 0.2rem;
+			.skill-card-title {
+				margin: 1rem 0;
+			}
 		}
-
+	}
+}
+@media only screen and (max-width: 512px) {
+	.services {
+		.text {
+			margin: 0;
+		}
 		.skill-cards {
 			flex-direction: column;
 
 			.skill-card {
-				margin: 2vh 0;
-				height: 480px;
+				width: 80vw;
 
 				.skill-card-icon {
-					margin: 0 auto;
+					margin-top: 1rem;
 				}
 				.skill-card-text {
-					h6 {
-						margin: 2vh 0;
+					.skill-card-title {
+						margin: -1rem 0 1rem;
 					}
 				}
 			}

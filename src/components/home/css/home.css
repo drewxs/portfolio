@@ -1,6 +1,5 @@
 .home {
   height: 92vh;
-  padding-top: calc(3vh + 1rem);
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;

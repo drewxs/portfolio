@@ -2,8 +2,9 @@
   color: white;
   background-size: cover;
   padding: 10rem 0 0;
-  width: 32rem;
-  margin: 20px;
+  width: 18.2vw;
+  height: 12vh;
+  margin: 0.7vw;
   border-radius: 0.5rem;
   overflow: hidden;
   -webkit-transition: -webkit-transform 500ms ease;
@@ -21,6 +22,10 @@
 
 .card .card-content .card-title {
   position: relative;
+  width: -webkit-max-content;
+  width: -moz-max-content;
+  width: max-content;
+  text-overflow: ellipsis;
 }
 
 .card .card-content .card-title:after {
@@ -61,8 +66,8 @@
             transform: scale(1.05);
   }
   .card:hover .card-content, .card:focus-within .card-content {
-    -webkit-transform: translateY(0);
-            transform: translateY(0);
+    -webkit-transform: translateY(-6.5vh);
+            transform: translateY(-6.5vh);
     -webkit-transition-delay: 500ms;
             transition-delay: 500ms;
   }
@@ -80,8 +85,8 @@
             transition-duration: 250ms;
   }
   .card .card-content {
-    -webkit-transform: translateY(40%);
-            transform: translateY(40%);
+    -webkit-transform: translateY(3vh);
+            transform: translateY(3vh);
     -webkit-transition: -webkit-transform 500ms ease;
     transition: -webkit-transform 500ms ease;
     transition: transform 500ms ease;
@@ -92,96 +97,41 @@
     -webkit-transition: opacity 500ms linear;
     transition: opacity 500ms linear;
   }
-  .card .card-content .card-title:after {
-    -webkit-transform: scaleX(0);
-            transform: scaleX(0);
-  }
   .card .button:hover, .card .button:focus {
     background-color: #13171b;
   }
 }
 
-@media only screen and (max-width: 1720px) {
+@media only screen and (max-width: 1024px) {
   .card {
-    width: 24rem;
-  }
-}
-
-@media only screen and (max-width: 1332px) {
-  .card {
-    width: 16rem;
-    height: 8rem;
-  }
-  .card .card-title {
-    font-size: 1.2rem;
-  }
-}
-
-@media only screen and (max-width: 1332px) and (hover) {
-  .card:hover .card-content, .card:focus-within .card-content {
-    -webkit-transform: translateY(-30%);
-            transform: translateY(-30%);
-    -webkit-transition-delay: 500ms;
-            transition-delay: 500ms;
+    margin: 1.3vw;
+    width: 30vw;
+    height: 7vw;
   }
   .card .card-content {
-    -webkit-transform: translateY(20%);
-            transform: translateY(20%);
-    -webkit-transition: -webkit-transform 500ms ease;
-    transition: -webkit-transform 500ms ease;
-    transition: transform 500ms ease;
-    transition: transform 500ms ease, -webkit-transform 500ms ease;
+    -webkit-transform: translateY(-55%);
+            transform: translateY(-55%);
+  }
+  .card .card-content .card-title {
+    font-size: 2vw;
+  }
+  .card .card-content .card-body {
+    font-size: 1.4vw;
+  }
+  .card .card-content .button {
+    font-size: 1vw;
   }
 }
 
-@media only screen and (max-width: 948px) {
+@media only screen and (max-width: 768px) {
   .card {
-    margin: 0.5rem;
-    width: 12rem;
-    height: 4rem;
-  }
-  .card .card-title {
-    font-size: 0.8rem;
-  }
-  .card .card-body {
-    font-size: 0.7rem;
-  }
-  .card .button {
-    font-size: 0.7rem;
-  }
-}
-
-@media only screen and (max-width: 948px) and (hover) {
-  .card:hover .card-content, .card:focus-within .card-content {
-    -webkit-transform: translateY(-50%);
-            transform: translateY(-50%);
-    -webkit-transition-delay: 500ms;
-            transition-delay: 500ms;
+    margin: 0.8vw;
+    width: 31vw;
+    height: 7vw;
   }
   .card .card-content {
-    -webkit-transform: translateY(-5%);
-            transform: translateY(-5%);
-    -webkit-transition: -webkit-transform 500ms ease;
-    transition: -webkit-transform 500ms ease;
-    transition: transform 500ms ease;
-    transition: transform 500ms ease, -webkit-transform 500ms ease;
-  }
-}
-
-@media only screen and (max-width: 478px) {
-  .card {
-    margin: 0.5rem;
-    width: 8rem;
-    height: 2.6rem;
-  }
-  .card .card-title {
-    font-size: 0.5rem;
-  }
-  .card .card-body {
-    font-size: 0.4rem;
-  }
-  .card .button {
-    font-size: 0.4rem;
+    -webkit-transform: translateY(-65%);
+            transform: translateY(-65%);
   }
 }
 

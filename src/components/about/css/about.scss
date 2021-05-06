@@ -1,17 +1,23 @@
 .about {
 	width: auto;
 	height: 95vh;
-	padding: 1rem 10vw;
+	padding: 2rem 10vw;
 	text-align: center;
 
-	h2 {
+	.about-title {
 		font-size: calc(2vw + 1rem);
 	}
-	h6 {
+	.about-body {
 		font-size: calc(1vw + 1rem);
 		font-weight: 400;
 		max-width: 65ch;
 		margin: 7vh auto;
 		line-height: 2;
+	}
+	.github:hover {
+		background-color: #422a2a;
+		color: rgb(20, 20, 20);
+		transition: background-color 1000ms ease;
+		transition: color 500ms ease;
 	}
 }

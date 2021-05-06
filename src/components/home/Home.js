@@ -24,7 +24,7 @@ export default function Home() {
 					'REST APIs',
 					'Machine Learning',
 					'Database Design',
-					'Testing & Debugging',
+					'Testing / Debugging',
 				]}
 				typeSpeed={40}
 				backSpeed={50}

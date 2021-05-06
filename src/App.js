@@ -8,12 +8,16 @@ import About from './components/about/About';
 import Projects from './components/projects/Projects';
 import './css/app.css';
 import logo from './images/logo.png';
+import AOS from 'aos';
+import 'aos/dist/aos.css';
 
 function App() {
 	const [currentPage, setCurrentPage] = useState(0);
+	AOS.init();
 
 	const handlePageChange = (number) => {
 		setCurrentPage(number);
+		AOS.refresh();
 	};
 
 	return (

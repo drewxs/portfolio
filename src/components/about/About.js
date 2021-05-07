@@ -4,13 +4,14 @@ import AOS from 'aos';
 import 'aos/dist/aos.css';
 import { IconButton } from '@material-ui/core';
 import { GitHub } from '@material-ui/icons';
+import Typed from 'react-typed';
 
 export default function About() {
 	AOS.init();
 
 	return (
 		<div className="about">
-			<h2 className="about-title">About Me</h2>
+			<Typed className="about-title" strings={['About Me']} typeSpeed={40} />
 			<h6 className="about-body">
 				Hi, I like to code and make stuff. My favourite tech stack currently is:
 				MongoDB, Express, React, Node, Redux. I like to constantly learn new

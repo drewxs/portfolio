@@ -5,6 +5,14 @@
 	align-items: center;
 	padding: 2rem 1vw;
 
+	.project-titles {
+		margin: 1rem 0;
+
+		.project-title {
+			font-size: calc(2vw + 1rem);
+		}
+	}
+
 	.project-list {
 		display: flex;
 		flex-wrap: wrap;

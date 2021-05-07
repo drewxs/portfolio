@@ -1,12 +1,13 @@
 .services {
 	height: 95vh;
-	padding-top: 2rem;
+	padding-top: 3rem;
 	display: flex;
 	flex-direction: column;
 	text-align: center;
 	align-items: center;
 
-	.text {
+	.services-title {
+		font-size: calc(2vw + 1rem);
 		margin: 1rem 0;
 	}
 

@@ -1,15 +1,24 @@
 import React from 'react';
 import './css/projects.css';
 import Card from './Card';
+import Typed from 'react-typed';
 
 export default function Projects() {
 	return (
 		<div className="projects">
-			<div className="project-title">
-				{window.matchMedia('(min-width: 420px)').matches ? (
-					<h2>Here are some of my projects</h2>
+			<div className="project-titles">
+				{window.matchMedia('(min-width: 512px)').matches ? (
+					<Typed
+						className="project-title"
+						strings={['Here are some of my projects']}
+						typeSpeed={40}
+					/>
 				) : (
-					<h2>Projects</h2>
+					<Typed
+						className="project-title"
+						strings={['Projects']}
+						typeSpeed={40}
+					/>
 				)}
 			</div>
 			<div className="project-list">

@@ -4,17 +4,26 @@ import { Card } from '@material-ui/core';
 import { Code, Web, CallMade } from '@material-ui/icons';
 import AOS from 'aos';
 import 'aos/dist/aos.css';
+import Typed from 'react-typed';
 
 export default function Services() {
 	AOS.init();
 
 	return (
 		<div className="services">
-			<div className="text">
+			<div>
 				{window.matchMedia('(min-width: 512px)').matches ? (
-					<h2>Here are some of the skills and services I offer</h2>
+					<Typed
+						className="services-title"
+						strings={['Here are some of the skills and services I offer']}
+						typeSpeed={40}
+					/>
 				) : (
-					<h2>Skills & Services</h2>
+					<Typed
+						className="services-title"
+						strings={['Skills and Services']}
+						typeSpeed={40}
+					/>
 				)}
 			</div>
 			<div className="skill-cards">

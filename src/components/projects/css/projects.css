@@ -13,6 +13,14 @@
   padding: 2rem 1vw;
 }
 
+.projects .project-titles {
+  margin: 1rem 0;
+}
+
+.projects .project-titles .project-title {
+  font-size: calc(2vw + 1rem);
+}
+
 .projects .project-list {
   display: -webkit-box;
   display: -ms-flexbox;

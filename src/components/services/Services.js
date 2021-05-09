@@ -11,19 +11,14 @@ export default function Services() {
 
 	return (
 		<div className="services">
-			<div>
+			<div className="services-title">
 				{window.matchMedia('(min-width: 512px)').matches ? (
 					<Typed
-						className="services-title"
 						strings={['Here are some of the skills and services I offer']}
 						typeSpeed={40}
 					/>
 				) : (
-					<Typed
-						className="services-title"
-						strings={['Skills and Services']}
-						typeSpeed={40}
-					/>
+					<Typed strings={['Skills and Services']} typeSpeed={40} />
 				)}
 			</div>
 			<div className="skill-cards">

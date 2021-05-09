@@ -1,5 +1,5 @@
 .services {
-  height: 95vh;
+  height: 91vh;
   padding-top: 3rem;
   display: -webkit-box;
   display: -ms-flexbox;
@@ -16,7 +16,7 @@
 
 .services .services-title {
   font-size: calc(2vw + 1rem);
-  margin: 1rem 0;
+  margin: 2rem 0;
 }
 
 .services .skill-cards {
@@ -78,7 +78,7 @@
 }
 
 @media only screen and (max-width: 512px) {
-  .services .text {
+  .services .services-title {
     margin: 0;
   }
   .services .skill-cards {

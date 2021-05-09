@@ -11,7 +11,9 @@ export default function About() {
 
 	return (
 		<div className="about">
-			<Typed className="about-title" strings={['About Me']} typeSpeed={40} />
+			<div className="about-title">
+				<Typed strings={['About Me']} typeSpeed={40} />
+			</div>
 			<h6 className="about-body">
 				Hi, I like to code and make stuff. My favourite tech stack currently is:
 				MongoDB, Express, React, Node, Redux. I like to constantly learn new

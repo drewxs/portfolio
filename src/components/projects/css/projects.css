@@ -1,5 +1,5 @@
 .projects {
-  height: 95vh;
+  height: 90vh;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -10,15 +10,12 @@
   -webkit-box-align: center;
       -ms-flex-align: center;
           align-items: center;
-  padding: 2rem 1vw;
+  padding: 3rem 1vw 0;
 }
 
-.projects .project-titles {
-  margin: 1rem 0;
-}
-
-.projects .project-titles .project-title {
+.projects .project-title {
   font-size: calc(2vw + 1rem);
+  margin: 2rem 0;
 }
 
 .projects .project-list {
@@ -27,5 +24,11 @@
   display: flex;
   -ms-flex-wrap: wrap;
       flex-wrap: wrap;
+}
+
+@media only screen and (max-width: 512px) {
+  .projects .project-title {
+    margin: 1rem 0;
+  }
 }
 /*# sourceMappingURL=projects.css.map */

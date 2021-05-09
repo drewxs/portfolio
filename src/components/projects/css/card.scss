@@ -153,7 +153,7 @@ $padding: 1.5rem;
 	.card {
 		margin: 0.8vw;
 		width: 31vw;
-		height: 7vw;
+		height: 7.5vw;
 
 		.card-content {
 			transform: translateY(-55%);
@@ -191,4 +191,7 @@ $padding: 1.5rem;
 }
 .plannr {
 	background-image: url('/src/images/plannr.gif');
+}
+.zeroscript {
+	background-image: url('/src/images/zeroscript.gif');
 }

@@ -152,7 +152,7 @@
   .card {
     margin: 0.8vw;
     width: 31vw;
-    height: 7vw;
+    height: 7.5vw;
   }
   .card .card-content {
     -webkit-transform: translateY(-55%);
@@ -195,5 +195,9 @@
 
 .plannr {
   background-image: url("/src/images/plannr.gif");
+}
+
+.zeroscript {
+  background-image: url("/src/images/zeroscript.gif");
 }
 /*# sourceMappingURL=card.css.map */

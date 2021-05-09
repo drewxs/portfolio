@@ -6,19 +6,11 @@ import Typed from 'react-typed';
 export default function Projects() {
 	return (
 		<div className="projects">
-			<div className="project-titles">
+			<div className="project-title">
 				{window.matchMedia('(min-width: 512px)').matches ? (
-					<Typed
-						className="project-title"
-						strings={['Here are some of my projects']}
-						typeSpeed={40}
-					/>
+					<Typed strings={['Here are some of my projects']} typeSpeed={40} />
 				) : (
-					<Typed
-						className="project-title"
-						strings={['Projects']}
-						typeSpeed={40}
-					/>
+					<Typed strings={['Projects']} typeSpeed={40} />
 				)}
 			</div>
 			<div className="project-list">
@@ -29,7 +21,7 @@ export default function Projects() {
 				/>
 				<Card
 					title="Ciel"
-					body="A ERC-20 Standard Cryptocurrency"
+					body="A ERC-20 standard cryptocurrency"
 					link="https://github.com/kito0/ciel-token"
 				/>
 				<Card
@@ -39,8 +31,13 @@ export default function Projects() {
 				/>
 				<Card
 					title="Object Detection"
-					body="Object Detection with Tensorflow"
+					body="Object detection with Tensorflow"
 					link="https://github.com/kito0/object-detection"
+				/>
+				<Card
+					title="ZeroScript"
+					body="Interpreted programming language"
+					link="https://github.com/kito0/zeroscript"
 				/>
 				<Card
 					title="Zapr"
@@ -49,7 +46,7 @@ export default function Projects() {
 				/>
 				<Card
 					title="Plannr"
-					body="Personal Task Planner"
+					body="Personal task planner"
 					link="https://github.com/kito0/plannr"
 				/>
 				<Card

@@ -5,7 +5,7 @@ import Typed from 'react-typed';
 import AOS from 'aos';
 import 'aos/dist/aos.css';
 
-export default function Home() {
+export default function Home({ setCurrentPage }) {
 	AOS.init();
 
 	return (
@@ -31,7 +31,12 @@ export default function Home() {
 				loop
 			/>
 			<div className="line" />
-			<Button variant="contained" color="secondary" className="contact-button">
+			<Button
+				variant="contained"
+				color="secondary"
+				className="contact-button"
+				onClick={() => setCurrentPage(4)}
+			>
 				Contact Me
 			</Button>
 		</div>

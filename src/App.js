@@ -1,11 +1,11 @@
 import React, { useState } from 'react';
-import { AccountCircle } from '@material-ui/icons';
-import { AppBar, Toolbar, IconButton, Tabs, Tab } from '@material-ui/core';
+import { AppBar, Toolbar, Tabs, Tab } from '@material-ui/core';
 import ReactPageScroller from 'react-page-scroller';
 import Home from './components/home/Home';
 import Services from './components/services/Services';
 import About from './components/about/About';
 import Projects from './components/projects/Projects';
+import Contact from './components/contact/Contact';
 import './css/app.css';
 import logo from './images/logo.png';
 import AOS from 'aos';
@@ -16,10 +16,10 @@ function App() {
 	const [currentPage, setCurrentPage] = useState(0);
 	AOS.init();
 
-	const handlePageChange = (number) => {
+	function handlePageChange(number) {
 		setCurrentPage(number);
 		AOS.refresh();
-	};
+	}
 
 	return (
 		<div className="app">
@@ -51,17 +51,9 @@ function App() {
 						<Tab label="About" onClick={() => handlePageChange(1)} />
 						<Tab label="Skills" onClick={() => handlePageChange(2)} />
 						<Tab label="Projects" onClick={() => handlePageChange(3)} />
+						<Tab label="Contact" onClick={() => handlePageChange(4)} />
 					</Tabs>
-					<div className="profile">
-						<IconButton
-							edge="end"
-							aria-label="User Account"
-							aria-haspopup="true"
-							color="inherit"
-						>
-							<AccountCircle />
-						</IconButton>
-					</div>
+					<div className="profile"></div>
 				</Toolbar>
 			</AppBar>
 			<div className="screen">
@@ -69,10 +61,11 @@ function App() {
 					pageOnChange={handlePageChange}
 					customPageNumber={currentPage}
 				>
-					<Home />
+					<Home setCurrentPage={setCurrentPage} />
 					<About />
 					<Services />
 					<Projects />
+					<Contact />
 				</ReactPageScroller>
 			</div>
 		</div>

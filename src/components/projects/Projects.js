@@ -20,6 +20,11 @@ export default function Projects() {
 					link="https://ravenx.vercel.app"
 				/>
 				<Card
+					title="ZeroScript"
+					body="Interpreted programming language"
+					link="https://github.com/kito0/zeroscript"
+				/>
+				<Card
 					title="Ciel"
 					body="A ERC-20 standard cryptocurrency"
 					link="https://github.com/kito0/ciel-token"
@@ -35,20 +40,20 @@ export default function Projects() {
 					link="https://github.com/kito0/object-detection"
 				/>
 				<Card
-					title="ZeroScript"
-					body="Interpreted programming language"
-					link="https://github.com/kito0/zeroscript"
-				/>
-				<Card
 					title="Zapr"
 					body="A blogging web app"
 					link="https://zapr.netlify.app"
 				/>
 				<Card
+					title="MeowCache"
+					body="Shopify dropshipping store"
+					link="https://meowcache.com"
+				/>
+				{/* <Card
 					title="Plannr"
 					body="Personal task planner"
 					link="https://github.com/kito0/plannr"
-				/>
+				/> */}
 				<Card
 					title="Raven (Unsupported)"
 					body="Older rendition of Raven"

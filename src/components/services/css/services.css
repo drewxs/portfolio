@@ -15,7 +15,7 @@
 }
 
 .services .services-title {
-  font-size: calc(2vw + 1rem);
+  font-size: calc(1.5vw + 1rem);
   margin: 2rem 0;
 }
 
@@ -31,6 +31,7 @@
           flex: 1;
   background: transparent;
   width: 100%;
+  height: 70vh;
   -webkit-box-shadow: 1px 3px 3px black;
           box-shadow: 1px 3px 3px black;
   margin: 0.5rem;

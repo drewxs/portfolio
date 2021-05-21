@@ -155,17 +155,17 @@
     height: 7.5vw;
   }
   .card .card-content {
-    -webkit-transform: translateY(-55%);
-            transform: translateY(-55%);
+    -webkit-transform: translateY(-62.5%);
+            transform: translateY(-62.5%);
   }
   .card .card-content .card-title {
-    font-size: 1.8vw;
+    font-size: 2vw;
   }
   .card .card-content .card-body {
     font-size: 1.2vw;
   }
   .card .card-content .button {
-    font-size: 0.8vw;
+    font-size: 1.5vw;
   }
 }
 

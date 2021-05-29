@@ -34,7 +34,7 @@ export default function Services() {
 							<div>
 								<br />
 								<h5 className="skill-card-description">
-									RESTful API's for interactive and secure data access
+									RESTful APIs and database design
 								</h5>
 								<br />
 								<br />
@@ -61,7 +61,7 @@ export default function Services() {
 							<div>
 								<br />
 								<h5 className="skill-card-description">
-									Responsive and interactive user-friendly interfaces
+									Responsive and interactive user interfaces
 								</h5>
 								<br />
 								<br />
@@ -94,7 +94,7 @@ export default function Services() {
 								<div>
 									<br />
 									<h5 className="skill-card-description">
-										Integration, testing, scaling, managing, deploying
+										Integration, testing, scaling, and deploying
 									</h5>
 									<br />
 									<br />

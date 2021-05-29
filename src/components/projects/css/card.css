@@ -41,10 +41,10 @@
           transform: scaleX(0);
   -webkit-transform-origin: left;
           transform-origin: left;
-  -webkit-transition: -webkit-transform 500ms ease;
-  transition: -webkit-transform 500ms ease;
-  transition: transform 500ms ease;
-  transition: transform 500ms ease, -webkit-transform 500ms ease;
+  -webkit-transition: -webkit-transform 300ms ease;
+  transition: -webkit-transform 300ms ease;
+  transition: transform 300ms ease;
+  transition: transform 300ms ease, -webkit-transform 300ms ease;
 }
 
 .card .card-content .card-body {
@@ -71,13 +71,13 @@
   .card:hover .card-content, .card:focus-within .card-content {
     -webkit-transform: translateY(-2.8rem);
             transform: translateY(-2.8rem);
-    -webkit-transition-delay: 500ms;
-            transition-delay: 500ms;
+    -webkit-transition-delay: 300ms;
+            transition-delay: 300ms;
   }
   .card:hover .card-content > *:not(.card-title), .card:focus-within .card-content > *:not(.card-title) {
     opacity: 1;
-    -webkit-transition-delay: 750ms;
-            transition-delay: 750ms;
+    -webkit-transition-delay: 500ms;
+            transition-delay: 500ms;
   }
   .card:hover .card-content .card-title::after, .card:focus-within .card-content .card-title::after {
     -webkit-transform: scaleX(1);
@@ -86,15 +86,15 @@
   .card .card-content {
     -webkit-transform: translateY(2.5rem);
             transform: translateY(2.5rem);
-    -webkit-transition: -webkit-transform 500ms ease;
-    transition: -webkit-transform 500ms ease;
-    transition: transform 500ms ease;
-    transition: transform 500ms ease, -webkit-transform 500ms ease;
+    -webkit-transition: -webkit-transform 300ms ease;
+    transition: -webkit-transform 300ms ease;
+    transition: transform 300ms ease;
+    transition: transform 300ms ease, -webkit-transform 300ms ease;
   }
   .card .card-content > *:not(.card-title) {
     opacity: 0;
-    -webkit-transition: opacity 500ms linear;
-    transition: opacity 500ms linear;
+    -webkit-transition: opacity 300ms linear;
+    transition: opacity 300ms linear;
   }
   .card .button:hover, .card .button:focus {
     background-color: #13171b;

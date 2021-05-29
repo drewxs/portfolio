@@ -39,7 +39,7 @@ $padding: 1.5rem;
 				background: $accent;
 				transform: scaleX(0);
 				transform-origin: left;
-				transition: transform 500ms ease;
+				transition: transform 300ms ease;
 			}
 		}
 
@@ -69,11 +69,11 @@ $padding: 1.5rem;
 
 			.card-content {
 				transform: translateY(-2.8rem);
-				transition-delay: 500ms;
+				transition-delay: 300ms;
 
 				> *:not(.card-title) {
 					opacity: 1;
-					transition-delay: 750ms;
+					transition-delay: 500ms;
 				}
 
 				.card-title::after {
@@ -84,11 +84,11 @@ $padding: 1.5rem;
 
 		.card-content {
 			transform: translateY(2.5rem);
-			transition: transform 500ms ease;
+			transition: transform 300ms ease;
 
 			> *:not(.card-title) {
 				opacity: 0;
-				transition: opacity 500ms linear;
+				transition: opacity 300ms linear;
 			}
 		}
 

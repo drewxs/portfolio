@@ -27,7 +27,7 @@ export default function Home({ setCurrentPage }) {
 					'Testing / Debugging',
 				]}
 				typeSpeed={40}
-				backSpeed={50}
+				backSpeed={30}
 				loop
 			/>
 			<div className="line" />

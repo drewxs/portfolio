@@ -94,7 +94,7 @@ export default function Services() {
 								<div>
 									<br />
 									<h5 className="skill-card-description">
-										Integration, testing, scaling, optimizing, deploying
+										Integration, testing, scaling, deploying
 									</h5>
 									<br />
 									<br />

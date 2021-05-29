@@ -102,13 +102,13 @@ export default function Services() {
 								</div>
 							)}
 							<h6 className="skill-card-list">
+								Git <br />
 								Kubernetes <br />
 								Docker <br />
-								Git <br />
-								OpenShift <br />
 								CircleCI <br />
-								AWS <br />
-								Azure
+								Amazon S3 <br />
+								Vercel <br />
+								Heroku
 							</h6>
 						</div>
 					</Card>

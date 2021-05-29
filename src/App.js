@@ -47,11 +47,31 @@ function App() {
 						variant="fullWidth"
 						aria-label="tabs"
 					>
-						<Tab label="Home" onClick={() => handlePageChange(0)} />
-						<Tab label="About" onClick={() => handlePageChange(1)} />
-						<Tab label="Skills" onClick={() => handlePageChange(2)} />
-						<Tab label="Projects" onClick={() => handlePageChange(3)} />
-						<Tab label="Contact" onClick={() => handlePageChange(4)} />
+						<Tab
+							label="Home"
+							onClick={() => handlePageChange(0)}
+							className="tab"
+						/>
+						<Tab
+							label="About"
+							onClick={() => handlePageChange(1)}
+							className="tab"
+						/>
+						<Tab
+							label="Skills"
+							onClick={() => handlePageChange(2)}
+							className="tab"
+						/>
+						<Tab
+							label="Projects"
+							onClick={() => handlePageChange(3)}
+							className="tab"
+						/>
+						<Tab
+							label="Contact"
+							onClick={() => handlePageChange(4)}
+							className="tab"
+						/>
 					</Tabs>
 					<div className="profile"></div>
 				</Toolbar>

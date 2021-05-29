@@ -25,6 +25,10 @@
   height: auto;
 }
 
+.app .toolbar .tab {
+  font-size: 1rem;
+}
+
 .app .screen {
   padding-top: 3rem;
   position: relative;

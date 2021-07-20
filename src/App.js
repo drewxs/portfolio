@@ -26,14 +26,42 @@ function App() {
 			<Particles
 				params={{
 					particles: {
-						number: { value: 30, density: { enable: true, value_area: 2000 } },
+						number: {
+							value: 30,
+							density: { enable: true, value_area: 2000 },
+						},
 						shape: {
 							type: 'circle',
 							stroke: {
-								width: 6,
+								width: 5,
 								color: '#422a2a',
 							},
 						},
+						interactivity: {
+							detect_on: 'canvas',
+							events: {
+								onhover: {
+									enable: true,
+									mode: 'grab',
+								},
+								onclick: {
+									enable: true,
+									mode: 'push',
+								},
+							},
+							modes: {
+								grab: {
+									distance: 150,
+									line_linked: {
+										opacity: 1,
+									},
+								},
+								push: {
+									particles_nb: 4,
+								},
+							},
+						},
+						retina_detect: true,
 					},
 				}}
 			/>

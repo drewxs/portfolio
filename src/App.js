@@ -27,7 +27,7 @@ function App() {
 				params={{
 					particles: {
 						number: {
-							value: 30,
+							value: 20,
 							density: { enable: true, value_area: 2000 },
 						},
 						shape: {
@@ -38,7 +38,7 @@ function App() {
 							},
 						},
 						interactivity: {
-							detect_on: 'canvas',
+							detect_on: 'window',
 							events: {
 								onhover: {
 									enable: true,

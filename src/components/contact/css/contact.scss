@@ -14,6 +14,9 @@
 		display: flex;
 		flex-direction: column;
 		margin-top: 5vh;
+		background-color: rgba($color: #58587c, $alpha: 0.1);
+		padding: 1rem 3rem;
+		border-radius: 2%;
 
 		.contact-input {
 			width: 720px;

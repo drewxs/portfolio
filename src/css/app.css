@@ -18,6 +18,7 @@
       -ms-flex-align: center;
           align-items: center;
   z-index: 2;
+  background: rgba(0, 0, 0, 0.2);
 }
 
 .app .toolbar img {
@@ -41,6 +42,5 @@
   left: 0;
   height: 100vh;
   width: 100vw;
-  z-index: -1;
 }
 /*# sourceMappingURL=app.css.map */

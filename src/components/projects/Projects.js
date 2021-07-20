@@ -46,7 +46,7 @@ export default function Projects() {
 				/>
 				<Card
 					title="MeowCache"
-					body="Shopify dropshipping store"
+					body="ECommerce store for cat products"
 					link="https://meowcache.com"
 				/>
 				{/* <Card

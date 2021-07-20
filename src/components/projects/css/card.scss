@@ -8,7 +8,7 @@ $padding: 1.5rem;
 	background-size: cover;
 	padding: 10rem 0 0;
 	width: 18.2vw;
-	height: 12vh;
+	height: 9rem;
 	margin: 0.7vw;
 	border-radius: 0.5rem;
 	overflow: hidden;
@@ -17,6 +17,7 @@ $padding: 1.5rem;
 
 	.card-content {
 		padding: $padding;
+		padding-bottom: 3rem;
 		background: linear-gradient(
 			hsla(0, 0%, 0%, 0),
 			hsla(20, 0%, 0%, 0.3) 20%,
@@ -57,6 +58,8 @@ $padding: 1.5rem;
 			padding: 0.5em 1.25em;
 			border-radius: 0.25em;
 			font-size: 0.8rem;
+			margin-bottom: 2rem;
+			transition: background-color 50ms ease;
 		}
 	}
 }
@@ -68,7 +71,7 @@ $padding: 1.5rem;
 			transform: scale(1.05);
 
 			.card-content {
-				transform: translateY(-2.8rem);
+				transform: translateY(-18%);
 				transition-delay: 300ms;
 
 				> *:not(.card-title) {
@@ -83,7 +86,7 @@ $padding: 1.5rem;
 		}
 
 		.card-content {
-			transform: translateY(2.5rem);
+			transform: translateY(20%);
 			transition: transform 300ms ease;
 
 			> *:not(.card-title) {
@@ -96,6 +99,7 @@ $padding: 1.5rem;
 			&:hover,
 			&:focus {
 				background-color: $primary;
+				transition: background-color 50ms linear;
 			}
 		}
 	}
@@ -111,7 +115,7 @@ $padding: 1.5rem;
 		height: 7vw;
 
 		.card-content {
-			transform: translateY(-55%);
+			transform: translateY(-10%);
 
 			.card-title {
 				font-size: 2vw;
@@ -156,7 +160,7 @@ $padding: 1.5rem;
 		height: 7.5vw;
 
 		.card-content {
-			transform: translateY(-62.5%);
+			transform: translateY(-45%);
 
 			.card-title {
 				font-size: 2vw;

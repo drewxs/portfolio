@@ -3,7 +3,7 @@
   background-size: cover;
   padding: 10rem 0 0;
   width: 18.2vw;
-  height: 12vh;
+  height: 9rem;
   margin: 0.7vw;
   border-radius: 0.5rem;
   overflow: hidden;
@@ -16,6 +16,7 @@
 
 .card .card-content {
   padding: 1.5rem;
+  padding-bottom: 3rem;
   background: -webkit-gradient(linear, left top, left bottom, from(rgba(0, 0, 0, 0)), color-stop(20%, rgba(0, 0, 0, 0.3)), to(black));
   background: linear-gradient(rgba(0, 0, 0, 0), rgba(0, 0, 0, 0.3) 20%, black);
 }
@@ -61,6 +62,9 @@
   padding: 0.5em 1.25em;
   border-radius: 0.25em;
   font-size: 0.8rem;
+  margin-bottom: 2rem;
+  -webkit-transition: background-color 50ms ease;
+  transition: background-color 50ms ease;
 }
 
 @media (hover) {
@@ -69,8 +73,8 @@
             transform: scale(1.05);
   }
   .card:hover .card-content, .card:focus-within .card-content {
-    -webkit-transform: translateY(-2.8rem);
-            transform: translateY(-2.8rem);
+    -webkit-transform: translateY(-18%);
+            transform: translateY(-18%);
     -webkit-transition-delay: 300ms;
             transition-delay: 300ms;
   }
@@ -84,8 +88,8 @@
             transform: scaleX(1);
   }
   .card .card-content {
-    -webkit-transform: translateY(2.5rem);
-            transform: translateY(2.5rem);
+    -webkit-transform: translateY(20%);
+            transform: translateY(20%);
     -webkit-transition: -webkit-transform 300ms ease;
     transition: -webkit-transform 300ms ease;
     transition: transform 300ms ease;
@@ -98,6 +102,8 @@
   }
   .card .button:hover, .card .button:focus {
     background-color: #13171b;
+    -webkit-transition: background-color 50ms linear;
+    transition: background-color 50ms linear;
   }
   .card :focus-within .card-content {
     -webkit-transition-duration: 250ms;
@@ -112,8 +118,8 @@
     height: 7vw;
   }
   .card .card-content {
-    -webkit-transform: translateY(-55%);
-            transform: translateY(-55%);
+    -webkit-transform: translateY(-10%);
+            transform: translateY(-10%);
   }
   .card .card-content .card-title {
     font-size: 2vw;
@@ -155,8 +161,8 @@
     height: 7.5vw;
   }
   .card .card-content {
-    -webkit-transform: translateY(-62.5%);
-            transform: translateY(-62.5%);
+    -webkit-transform: translateY(-45%);
+            transform: translateY(-45%);
   }
   .card .card-content .card-title {
     font-size: 2vw;

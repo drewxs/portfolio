@@ -1,5 +1,5 @@
 import React, { useState } from 'react';
-import './css/contact.css';
+import './contact.scss';
 import emailjs from 'emailjs-com';
 import { TextField, Button } from '@material-ui/core';
 import Typed from 'react-typed';

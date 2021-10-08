@@ -1,6 +1,6 @@
 import React from 'react';
 import { Button } from '@material-ui/core';
-import './css/home.css';
+import './home.scss';
 import Typed from 'react-typed';
 import AOS from 'aos';
 import 'aos/dist/aos.css';

@@ -16,7 +16,8 @@
     "react-scripts": "4.0.1",
     "react-scroll": "^1.8.1",
     "react-swipeable-views": "^0.13.9",
-    "react-typed": "^1.2.0"
+    "react-typed": "^1.2.0",
+    "sass": "^1.42.1"
   },
   "scripts": {
     "start": "react-scripts start",

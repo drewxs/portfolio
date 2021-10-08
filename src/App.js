@@ -6,7 +6,7 @@ import Services from './components/services/Services';
 import About from './components/about/About';
 import Projects from './components/projects/Projects';
 import Contact from './components/contact/Contact';
-import './css/app.css';
+import './css/app.scss';
 import logo from './images/logo.png';
 import AOS from 'aos';
 import 'aos/dist/aos.css';

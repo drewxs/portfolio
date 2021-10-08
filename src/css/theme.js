@@ -14,6 +14,9 @@ const themeFile = {
 		tonalOffset: 0.2,
 		spacing: 2,
 	},
+	typography: {
+		fontFamily: 'Montserrat',
+	},
 };
 
 const theme = createMuiTheme(themeFile);

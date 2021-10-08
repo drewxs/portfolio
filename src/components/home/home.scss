@@ -1,0 +1,28 @@
+.home {
+	height: 96vh;
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+	text-align: center;
+	justify-content: center;
+
+	.typed-name {
+		font-size: calc(5vw + 3px);
+	}
+
+	.typed-text {
+		font-size: calc(2vw + 3px);
+		margin: 2vh 0;
+		font-weight: 400;
+	}
+
+	.line {
+		border-bottom: 1px solid #422a2a;
+		margin: 3rem auto;
+		width: calc(20vw + 2px);
+	}
+
+	.contact-button {
+		font-size: calc(1vw + 2px);
+	}
+}

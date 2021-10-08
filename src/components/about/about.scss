@@ -1,0 +1,27 @@
+.about {
+	width: auto;
+	height: 90vh;
+	padding: 4rem 10vw;
+	text-align: center;
+
+	.about-title {
+		font-size: calc(2vw + 1rem);
+		margin: 1rem 0;
+	}
+	.about-body {
+		font-size: calc(1vw + 1rem);
+		font-weight: 400;
+		max-width: 65ch;
+		margin: 7vh auto;
+		line-height: 2;
+	}
+	.about-btn {
+		margin: 0 10px;
+	}
+	.about-btn:hover {
+		background-color: #422a2a;
+		color: rgb(20, 20, 20);
+		transition: background-color 1000ms ease;
+		transition: color 750ms ease;
+	}
+}

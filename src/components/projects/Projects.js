@@ -1,5 +1,5 @@
 import React from 'react';
-import './css/projects.css';
+import './projects.scss';
 import Card from './Card';
 import Typed from 'react-typed';
 
@@ -8,7 +8,10 @@ export default function Projects() {
 		<div className="projects">
 			<div className="project-title">
 				{window.matchMedia('(min-width: 512px)').matches ? (
-					<Typed strings={['Here are some of my projects']} typeSpeed={40} />
+					<Typed
+						strings={['Here are some of my projects']}
+						typeSpeed={40}
+					/>
 				) : (
 					<Typed strings={['Projects']} typeSpeed={40} />
 				)}
@@ -30,6 +33,16 @@ export default function Projects() {
 					link="https://github.com/kito0/ciel-token"
 				/>
 				<Card
+					title="Echo UI"
+					body="React UI library"
+					link="https://github.com/kito0/echo-ui"
+				/>
+				<Card
+					title="ECommerce API"
+					body="E-Commerce REST API"
+					link="https://github.com/kito0/ecommerce-api"
+				/>
+				<Card
 					title="Digit Classification"
 					body="ANN for digit classification"
 					link="https://github.com/kito0/digit-classification"
@@ -44,16 +57,6 @@ export default function Projects() {
 					body="A blogging web app"
 					link="https://zapr.netlify.app"
 				/>
-				<Card
-					title="MeowCache"
-					body="ECommerce store for cat products"
-					link="https://meowcache.com"
-				/>
-				{/* <Card
-					title="Plannr"
-					body="Personal task planner"
-					link="https://github.com/kito0/plannr"
-				/> */}
 				<Card
 					title="Raven (Unsupported)"
 					body="Older rendition of Raven"

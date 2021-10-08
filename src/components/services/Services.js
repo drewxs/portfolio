@@ -1,5 +1,5 @@
 import React from 'react';
-import './css/services.css';
+import './services.scss';
 import { Card } from '@material-ui/core';
 import { Code, Web, CallMade } from '@material-ui/icons';
 import AOS from 'aos';
@@ -14,11 +14,13 @@ export default function Services() {
 			<div className="services-title">
 				{window.matchMedia('(min-width: 512px)').matches ? (
 					<Typed
-						strings={['Here are some of the skills and services I offer']}
+						strings={[
+							'Here are some of the technologies I work with',
+						]}
 						typeSpeed={40}
 					/>
 				) : (
-					<Typed strings={['Skills and Services']} typeSpeed={40} />
+					<Typed strings={['Skills & Tech']} typeSpeed={40} />
 				)}
 			</div>
 			<div className="skill-cards">
@@ -38,23 +40,32 @@ export default function Services() {
 								</h5>
 								<br />
 								<br />
-								<h5 className="skill-card-description">Languages/tools:</h5>
+								<h5 className="skill-card-description">
+									Languages/tools:
+								</h5>
 							</div>
 						)}
 						<h6 className="skill-card-list">
 							Node.js <br />
 							Express.js <br />
 							Ruby on Rails <br />
+							Flask <br />
 							Django <br />
+							Amazon S3 <br />
 							MongoDB <br />
 							Firebase <br />
+							PostgreSQL <br />
 							MySQL <br />
-							PostgreSQL
+							OracleDB
 						</h6>
 					</div>
 				</Card>
 				<Card className="skill-card">
-					<Web color="secondary" className="skill-card-icon" fontSize="large" />
+					<Web
+						color="secondary"
+						className="skill-card-icon"
+						fontSize="large"
+					/>
 					<div className="skill-card-text">
 						<h4 className="skill-card-title">Frontend</h4>
 						{window.matchMedia('(min-width: 768px)').matches && (
@@ -65,7 +76,9 @@ export default function Services() {
 								</h5>
 								<br />
 								<br />
-								<h5 className="skill-card-description">Languages/tools:</h5>
+								<h5 className="skill-card-description">
+									Languages/tools:
+								</h5>
 							</div>
 						)}
 						<h6 className="skill-card-list">
@@ -77,7 +90,9 @@ export default function Services() {
 							Sass <br />
 							Material-UI <br />
 							Tailwind <br />
-							Bootstrap
+							Bootstrap <br />
+							Socket.io <br />
+							Pusher <br />
 						</h6>
 					</div>
 				</Card>
@@ -90,23 +105,31 @@ export default function Services() {
 						/>
 						<div className="skill-card-text">
 							<h4 className="skill-card-title">DevOps</h4>
-							{window.matchMedia('(min-width: 768px)').matches && (
+							{window.matchMedia('(min-width: 768px)')
+								.matches && (
 								<div>
 									<br />
 									<h5 className="skill-card-description">
-										Integration, testing, scaling, and deploying
+										Integration, testing, scaling, and
+										deploying
 									</h5>
 									<br />
 									<br />
-									<h5 className="skill-card-description">Tools:</h5>
+									<h5 className="skill-card-description">
+										Tools:
+									</h5>
 								</div>
 							)}
 							<h6 className="skill-card-list">
 								Git <br />
+								CircleCI <br />
+								Storybook <br />
+								Jest <br />
+								Mocha <br />
+								AVA <br />
 								Kubernetes <br />
 								Docker <br />
-								CircleCI <br />
-								Amazon S3 <br />
+								Netlify <br />
 								Vercel <br />
 								Heroku
 							</h6>

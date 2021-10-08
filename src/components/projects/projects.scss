@@ -1,0 +1,25 @@
+.projects {
+	height: 90vh;
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+	padding: 3rem 1vw 0;
+
+	.project-title {
+		font-size: calc(1.5vw + 1rem);
+		margin: 2rem 0;
+	}
+
+	.project-list {
+		display: flex;
+		flex-wrap: wrap;
+	}
+}
+
+@media only screen and (max-width: 512px) {
+	.projects {
+		.project-title {
+			margin: 1rem 0;
+		}
+	}
+}

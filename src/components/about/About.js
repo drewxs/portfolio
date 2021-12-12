@@ -18,11 +18,8 @@ export default function About() {
 				Hi, I like to code and make stuff I find interesting. I
 				experiment with a range of topics from machine learning,
 				programming languages, decentralized applications to full stack
-				web development. If I'm not working, I'm learning. I also love
-				collaboration. Reach out to any of the following to collaborate
-				or simply chat with me.
-				<br />
-				<br />
+				web development. I also love collaboration. Reach out to any of
+				the following to collaborate or simply chat with me.
 			</h6>
 			<IconButton
 				href="https://github.com/kito0"

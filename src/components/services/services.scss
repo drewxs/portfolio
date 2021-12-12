@@ -13,6 +13,8 @@
 
 	.skill-cards {
 		display: flex;
+		justify-content: center;
+		align-items: center;
 
 		.skill-card {
 			background: linear-gradient(
@@ -45,12 +47,17 @@
 				.skill-card-description {
 					font-size: calc(0.3vw + 1rem);
 					font-weight: 400;
-					margin: 0;
+					margin: 1em 0 2em;
 				}
 				.skill-card-list {
 					font-size: calc(0.2vw + 1rem);
 					font-weight: 400;
 					margin: 0;
+
+					p {
+						margin: 0;
+						line-height: 1.5;
+					}
 				}
 			}
 		}
@@ -58,17 +65,6 @@
 }
 
 @media only screen and (max-width: 768px) {
-	.services {
-		.skill-card {
-			margin: 0.2rem;
-
-			.skill-card-title {
-				margin: 1rem 0;
-			}
-		}
-	}
-}
-@media only screen and (max-width: 512px) {
 	.services {
 		.services-title {
 			margin: 0;
@@ -78,8 +74,10 @@
 			justify-content: space-between;
 
 			.skill-card {
-				width: 80vw;
-				height: 40vh;
+				width: 80%;
+				max-width: none;
+				height: 25.5vh;
+				margin: 1em;
 
 				.skill-card-icon {
 					margin-top: 1rem;
@@ -87,6 +85,19 @@
 				.skill-card-text {
 					.skill-card-title {
 						margin: -1rem 0 1rem;
+					}
+
+					.skill-card-list {
+						max-width: 70vw;
+						display: flex;
+						flex-wrap: wrap;
+						justify-content: center;
+						align-items: center;
+
+						p {
+							display: inline;
+							margin: 0 0.5em;
+						}
 					}
 				}
 			}

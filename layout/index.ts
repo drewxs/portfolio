@@ -1,1 +1,1 @@
-export {};
+export { Layout } from 'layout/default-layout';

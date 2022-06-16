@@ -1,0 +1,57 @@
+// Colors
+$primary: #02111b;
+$secondary: #3f4045;
+$red: #aa759f;
+$error: #e57373;
+$black: #080808;
+$white: #fcfcfc;
+$grey: #666666;
+$lightgrey: #999999;
+
+// Breakpoints
+$breakpoints: (
+  xs: 480px,
+  sm: 768px,
+  md: 1080px,
+  lg: 1200px,
+  xl: 1440px,
+);
+
+// Fonts
+$font_body: Montserrat;
+$font_body_fallback: Helvetica, Futura, Segoe UI, Arial, sans-serif;
+$font_heading: Montserrat;
+$font_heading_fallback: Helvetica, Futura, Segoe UI, Arial, sans-serif;
+$font_face_url: '../fonts/Montserrat-Thin.ttf';
+$font_face_format: 'ttf';
+
+// Fluid typography
+$font_size: 16px;
+$min_font: 14px;
+$max_font: 18px;
+$min_width: map-get($breakpoints, 'xs');
+$max_width: map-get($breakpoints, 'xl');
+
+// Padding
+$padding: (
+  sm: 1rem,
+  md: 2rem,
+  lg: 3rem,
+);
+
+// Animations
+$animation_duration: 300ms;
+$animation_easing: ease;
+
+:export {
+  primary: $primary;
+  secondary: $secondary;
+  black: $black;
+  white: $white;
+  error: $error;
+  font_body: $font_body;
+  font_body_fallback: $font_body_fallback;
+  font_heading: $font_heading;
+  font_heading_fallback: $font_body_fallback;
+  font_face_url: $font_face_url;
+}

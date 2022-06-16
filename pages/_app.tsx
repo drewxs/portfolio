@@ -1,4 +1,5 @@
 import type { NextPage } from 'next';
+import { ThemeProvider } from 'next-themes';
 import type { AppProps } from 'next/app';
 import type { ReactElement, ReactNode } from 'react';
 import 'styles/main.scss';
@@ -14,7 +15,11 @@ type AppPropsWithLayout = AppProps & {
 const App = ({ Component, pageProps }: AppPropsWithLayout) => {
   const getLayout = Component.getLayout ?? ((page) => page);
 
-  return getLayout(<Component {...pageProps} />);
+  return getLayout(
+    <ThemeProvider defaultTheme='system' attribute='class'>
+      <Component {...pageProps} />
+    </ThemeProvider>
+  );
 };
 
 export default App;

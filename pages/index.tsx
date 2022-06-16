@@ -1,4 +1,3 @@
-import type { NextPage } from 'next';
 import type { ReactElement } from 'react';
 
 import { Layout } from 'layout';

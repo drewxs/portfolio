@@ -37,15 +37,15 @@ $padding: (
 );
 
 // Animations
-$animation_duration: 300ms;
-$animation_easing: ease;
+$animation_duration: 400ms;
+$animation_timing_function: cubic-bezier(0.4, 1, 0.7, 1);
 
 :export {
-  primary: var(--color-primary);
-  secondary: var(--color-secondary);
-  black: var(--color-black);
-  white: var(--color-white);
-  error: var(--color-error);
+  primary: $primary;
+  secondary: $secondary;
+  black: $black;
+  white: $white;
+  error: $error;
   font_body: $font_body;
   font_body_fallback: $font_body_fallback;
   font_heading: $font_heading;

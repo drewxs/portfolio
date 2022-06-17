@@ -17,7 +17,7 @@
   animation-timing-function: $animation_timing_function;
 }
 
-html {
+:root {
   color: color(black);
   background-color: color(white);
   transition: color $animation_duration $animation_timing_function,

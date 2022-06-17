@@ -38,12 +38,6 @@
   }
 }
 
-@mixin text-overflow {
-  white-space: nowrap;
-  overflow: hidden;
-  text-overflow: ellipsis;
-}
-
 @mixin headings {
   h1,
   .h1,
@@ -59,9 +53,4 @@
   .h6 {
     @content;
   }
-}
-
-@mixin highlight {
-  background: rgba($color: var(--color-black), $alpha: 0.9);
-  border: 1px solid rgba($color: var(--color-white), $alpha: 0.15);
 }

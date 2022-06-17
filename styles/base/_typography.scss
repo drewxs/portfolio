@@ -8,7 +8,6 @@
 
 html {
   font-family: $font_body, $font_body_fallback;
-  color: var(--color-black);
   font-smooth: always;
   text-rendering: optimizeLegibility;
   -webkit-font-smoothing: antialiased;
@@ -51,12 +50,12 @@ h6,
 }
 
 a {
-  color: var(--color-primary);
+  color: color(primary);
   text-decoration: none;
 
   &:hover,
   &:focus {
-    color: rgba($color: var(--color-primary), $alpha: 0.5);
+    color: rgba($color: color(primary), $alpha: 0.5);
   }
 }
 
@@ -67,6 +66,6 @@ li:not([class]) {
 }
 
 .error {
-  color: var(--color-error);
+  color: color(error);
   margin-bottom: 1rem;
 }

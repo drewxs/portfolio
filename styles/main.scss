@@ -1,5 +1,19 @@
-@use 'abstract';
-@use 'base';
-@use 'components';
-@use 'layout';
-@use 'pages';
+// Abstracts
+@use 'abstract/functions';
+@use 'abstract/mixins';
+@use 'abstract/variables';
+
+// Base
+@use 'base/base';
+@use 'base/reset';
+@use 'base/typography';
+
+// Components
+@use 'components/nav';
+
+// Layouts
+@use 'layout/container';
+@use 'layout/section';
+
+// Pages
+@use 'pages/home';

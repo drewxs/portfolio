@@ -1,4 +1,5 @@
-@use '../abstract' as *;
+@use '../abstract/variables' as *;
+@use '../abstract/mixins' as *;
 
 @font-face {
   font-family: $font_body;

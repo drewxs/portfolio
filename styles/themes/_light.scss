@@ -1,0 +1,6 @@
+@use 'styles/abstract' as *;
+
+[data-theme='dark'] {
+  --color-black: #{$white};
+  --color-white: #{$black};
+}

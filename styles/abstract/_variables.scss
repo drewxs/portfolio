@@ -1,17 +1,9 @@
 // Colors
-:root {
-  --color-primary: #02111b;
-  --color-secondary: #3f4045;
-  --color-tertiary: #30292f;
-  --color-error: #e57373;
-  --color-black: #080808;
-  --color-white: #fcfcfc;
-}
-
-[data-theme='dark'] {
-  --color-black: #fcfcfc;
-  --color-white: #080808;
-}
+$primary: #02111b;
+$secondary: #3f4045;
+$error: #e57373;
+$black: #080808;
+$white: #fcfcfc;
 
 // Breakpoints
 $breakpoints: (

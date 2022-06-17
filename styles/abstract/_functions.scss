@@ -1,9 +1,13 @@
 @use 'variables' as *;
 
-@function strip-unit($value) {
-	@return $value / ($value * 0 + 1);
+@function color($color-name) {
+  @return var(--color-#{$color-name});
 }
 
 @function rem($pixels) {
-	@return ($pixels / $font_size) * 1rem;
+  @return ($pixels / $font_size) * 1rem;
+}
+
+@function strip-unit($value) {
+  @return $value / ($value * 0 + 1);
 }

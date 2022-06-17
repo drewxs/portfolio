@@ -1,4 +1,4 @@
-@use '../abstract/variables' as *;
+@use 'styles/abstract' as *;
 
 .container {
   width: map-get($breakpoints, 'lg');

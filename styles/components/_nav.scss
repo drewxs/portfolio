@@ -1,7 +1,12 @@
-@use '../abstract/variables' as *;
+@use 'styles/abstract' as *;
 
 .nav {
-  background: transparent;
+  background: rgba($color: color(black), $alpha: 1);
   box-shadow: inset 0 -1px 0 rgba(0, 0, 0, 0.1);
   backdrop-filter: blur(10px);
+
+  &__container {
+    display: flex;
+    justify-content: space-between;
+  }
 }

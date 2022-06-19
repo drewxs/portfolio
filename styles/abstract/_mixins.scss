@@ -9,13 +9,13 @@
   @if $u1 == $u2 and $u1 == $u3 and $u1 == $u4 {
     & {
       font-size: $min-font-size;
-      @media screen and (min-width: $min-vw) {
+      @include breakpoint-up($min-vw) {
         font-size: calc(
           #{$min-font-size} + #{strip-unit($max-font-size - $min-font-size)} *
             ((100vw - #{$min-vw}) / #{strip-unit($max-vw - $min-vw)})
         );
       }
-      @media screen and (min-width: $max-vw) {
+      @include breakpoint-up($max-vw) {
         font-size: $max-font-size;
       }
     }
@@ -55,12 +55,12 @@
   }
 }
 
-@mixin theme($theme) {
-  :root[data-theme='#{$theme}'] {
-    --color-primary: #{map-get($themes, $theme, 'primary')};
-    --color-secondary: #{map-get($themes, $theme, 'secondary')};
-    --color-error: #{map-get($themes, $theme, 'error')};
-    --color-text: #{map-get($themes, $theme, 'text')};
-    --color-bg: #{map-get($themes, $theme, 'bg')};
+@mixin theme() {
+  @each $theme, $map in $themes {
+    [data-theme='#{$theme}'] {
+      @each $key, $value in $map {
+        --color-#{$key}: #{$value};
+      }
+    }
   }
 }

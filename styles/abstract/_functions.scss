@@ -1,7 +1,7 @@
 @use 'variables' as *;
 
-@function color($color-name) {
-  @return var(--color-#{$color-name});
+@function color($color) {
+  @return var(--color-#{$color});
 }
 
 @function rem($pixels) {

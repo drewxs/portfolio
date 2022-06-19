@@ -24,6 +24,4 @@
     background-color $animation_duration $animation_timing_function;
 }
 
-@each $theme in $theme-keys {
-  @include theme($theme);
-}
+@include theme();

@@ -54,3 +54,13 @@
     @content;
   }
 }
+
+@mixin theme($theme) {
+  :root[data-theme='#{$theme}'] {
+    --color-primary: #{map-get($themes, $theme, 'primary')};
+    --color-secondary: #{map-get($themes, $theme, 'secondary')};
+    --color-error: #{map-get($themes, $theme, 'error')};
+    --color-text: #{map-get($themes, $theme, 'text')};
+    --color-bg: #{map-get($themes, $theme, 'bg')};
+  }
+}

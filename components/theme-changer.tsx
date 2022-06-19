@@ -5,15 +5,25 @@ export const ThemeChanger = () => {
   const [mounted, setMounted] = useState(false);
   const { theme, setTheme } = useTheme();
 
-  useEffect(() => setMounted(true), []);
+  const handleThemeToggle = () => {
+    setTheme(theme === 'dark' ? 'light' : 'dark');
+  };
+
+  useEffect(() => {
+    setMounted(true);
+  }, []);
 
   if (!mounted) return null;
 
   return (
-    <div>
-      The current theme is: {theme}
-      <button onClick={() => setTheme('light')}>Light Mode</button>
-      <button onClick={() => setTheme('dark')}>Dark Mode</button>
+    <div className={`theme-changer ${theme}`} onClick={handleThemeToggle}>
+      <div className='gear'></div>
+      <div className='gear tooth'></div>
+      <div className='gear tooth'></div>
+      <div className='gear tooth'></div>
+      <div className='gear tooth'></div>
+      <div className='circle'></div>
+      <div className='circle inner'></div>
     </div>
   );
 };

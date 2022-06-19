@@ -18,8 +18,13 @@
 }
 
 :root {
-  color: color(black);
-  background-color: color(white);
+  color: color(text);
+  background-color: color(bg);
   transition: color $animation_duration $animation_timing_function,
     background-color $animation_duration $animation_timing_function;
+}
+
+$theme-keys: map-keys($themes);
+@each $theme in $theme-keys {
+  @include theme($theme);
 }

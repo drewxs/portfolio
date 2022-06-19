@@ -1,9 +1,0 @@
-@use 'styles/abstract' as *;
-
-:root[data-theme='light'] {
-  --color-primary: #{$primary};
-  --color-secondary: #{$secondary};
-  --color-error: #{$error};
-  --color-black: #{$black};
-  --color-white: #{$white};
-}

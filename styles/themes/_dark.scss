@@ -1,6 +1,0 @@
-@use 'styles/abstract' as *;
-
-:root[data-theme='dark'] {
-  --color-black: #{$white};
-  --color-white: #{$black};
-}

@@ -1,9 +1,21 @@
 // Colors
-$primary: #02111b;
-$secondary: #3f4045;
-$error: #e57373;
-$black: #080808;
-$white: #fcfcfc;
+
+$themes: (
+  'light': (
+    'primary': #02111b,
+    'secondary': #3f4045,
+    'text': #080808,
+    'bg': #fcfcfc,
+    'error': #e57373,
+  ),
+  'dark': (
+    'primary': #3f4045,
+    'secondary': #02111b,
+    'text': #fcfcfc,
+    'bg': #080808,
+    'error': #e57373,
+  ),
+);
 
 // Breakpoints
 $breakpoints: (
@@ -37,18 +49,23 @@ $padding: (
 );
 
 // Animations
-$animation_duration: 400ms;
+$animation_duration_fast: 200ms;
+$animation_duration: 500ms;
+$animation_duration_slow: 1000ms;
 $animation_timing_function: cubic-bezier(0.4, 1, 0.7, 1);
+$animation_timing_function_2: cubic-bezier(0.35, 1, 0.75, 1);
+$animation_timing_function_3: cubic-bezier(0.3, 1, 0.8, 1);
+$animation_timing_function_4: cubic-bezier(0.25, 1, 0.9, 1);
 
-:export {
-  primary: $primary;
-  secondary: $secondary;
-  black: $black;
-  white: $white;
-  error: $error;
-  font_body: $font_body;
-  font_body_fallback: $font_body_fallback;
-  font_heading: $font_heading;
-  font_heading_fallback: $font_body_fallback;
-  font_face_url: $font_face_url;
-}
+// :export {
+//   primary: $primary;
+//   secondary: $secondary;
+//   black: $text;
+//   white: $bg;
+//   error: $error;
+//   font_body: $font_body;
+//   font_body_fallback: $font_body_fallback;
+//   font_heading: $font_heading;
+//   font_heading_fallback: $font_body_fallback;
+//   font_face_url: $font_face_url;
+// }

@@ -1,6 +1,14 @@
 import { default as NextHead } from 'next/head';
 import { useRouter } from 'next/router';
 
+const sitename = 'Andrew Shah';
+const domain = `andrewshah.dev`;
+const meta = {
+  title: `Andrew Shah | Software Engineer`,
+  description: `An eternal work in progress.`,
+  ogImg: `og-1260x630.png`,
+};
+
 /**
  * Head component.
  * Built on top of Next.js Head component.
@@ -11,19 +19,14 @@ import { useRouter } from 'next/router';
  * @param {boolean} noIndex - whether to index the page
  * @returns {JSX.Element} - rendered component
  */
-export const Head = ({ title, description, ogImage = 'og-1260x630.png', noindex = false }) => {
+export const Head = ({ title = meta.title, description = meta.description, ogImage = meta.ogImg, noindex = false }) => {
   const router = useRouter();
-
-  const sitename = 'Andrew Shah';
-  const domain = `andrewshah.dev`;
-  const titleFallback = `Andrew Shah | Software Engineer`;
-  const descriptionFallback = `An eternal work in progress.`;
 
   return (
     <NextHead>
       {/* General */}
-      <title>{title ?? titleFallback}</title>
-      <meta name='description' content={description ?? descriptionFallback} />
+      <title>{title}</title>
+      <meta name='description' content={description} />
 
       {/* Open Graph */}
       <meta property='og:site_name' content={sitename} />

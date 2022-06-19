@@ -1,12 +1,13 @@
 @use 'styles/abstract' as *;
 
 .nav {
-  position: sticky;
+  position: fixed;
   top: 0;
   z-index: 100;
-  background: alpha(text, 0.05);
-  box-shadow: 0 rem(4px) rem(8px) 0 alpha(text, 0.05);
+  background-color: alpha(primary, 0.01);
+  box-shadow: 0 rem(4px) rem(10px) 0 alpha(text, 0.05);
   backdrop-filter: saturate(150%) blur(4px);
+  @include transition(background-color box-shadow);
 
   &__container {
     display: flex;
@@ -15,5 +16,12 @@
 
   h4 {
     margin-bottom: 0;
+  }
+}
+
+@include theme(dark) {
+  .nav {
+    background-color: alpha(primary, 0.05);
+    box-shadow: 0 rem(4px) rem(20px) 0 alpha(text, 0.01);
   }
 }

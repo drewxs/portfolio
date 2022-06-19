@@ -24,7 +24,6 @@
     background-color $animation_duration $animation_timing_function;
 }
 
-$theme-keys: map-keys($themes);
 @each $theme in $theme-keys {
   @include theme($theme);
 }

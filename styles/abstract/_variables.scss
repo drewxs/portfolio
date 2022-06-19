@@ -1,5 +1,4 @@
-// Colors
-
+// Themes
 $themes: (
   'light': (
     'primary': #02111b,
@@ -16,6 +15,7 @@ $themes: (
     'error': #e57373,
   ),
 );
+$theme-keys: map-keys($themes);
 
 // Breakpoints
 $breakpoints: (
@@ -56,16 +56,3 @@ $animation_timing_function: cubic-bezier(0.4, 1, 0.7, 1);
 $animation_timing_function_2: cubic-bezier(0.35, 1, 0.75, 1);
 $animation_timing_function_3: cubic-bezier(0.3, 1, 0.8, 1);
 $animation_timing_function_4: cubic-bezier(0.25, 1, 0.9, 1);
-
-// :export {
-//   primary: $primary;
-//   secondary: $secondary;
-//   black: $text;
-//   white: $bg;
-//   error: $error;
-//   font_body: $font_body;
-//   font_body_fallback: $font_body_fallback;
-//   font_heading: $font_heading;
-//   font_heading_fallback: $font_body_fallback;
-//   font_face_url: $font_face_url;
-// }

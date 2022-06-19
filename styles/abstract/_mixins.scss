@@ -59,10 +59,17 @@
   }
 }
 
+// Applies styles for the given theme.
+@mixin theme($theme) {
+  [data-theme='#{$theme}'] {
+    @content;
+  }
+}
+
 // Sets color theme variables from themes.
-@mixin theme() {
+@mixin set-themes() {
   @each $theme, $map in $themes {
-    [data-theme='#{$theme}'] {
+    @include theme($theme) {
       @each $key, $value in $map {
         --color-#{$key}: #{$value};
         --color-#{$key}-rgb: #{hex-to-rgb($value)};

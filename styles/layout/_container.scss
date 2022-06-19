@@ -1,7 +1,7 @@
 @use 'styles/abstract' as *;
 
 .container {
-  width: map-get($breakpoints, 'lg');
+  width: breakpoint(lg);
   max-width: 90%;
   position: relative;
 }

@@ -14,8 +14,7 @@
     inset: 0;
     background-color: color(primary);
     border-radius: 50%;
-    transition: transform $animation_duration $animation_timing_function,
-      background-color $animation_duration $animation_timing_function;
+    @include transition(transform background-color);
 
     &.tooth {
       border-radius: rem(2px);
@@ -24,19 +23,19 @@
       left: -10%;
       top: auto;
       bottom: auto;
-      transition: transform $animation_duration_slow $animation_timing_function;
+      @include transition(transform, $animation-duration-slow);
 
       &:nth-child(2) {
         transform: rotate(45deg);
-        transition: transform $animation_duration_slow $animation_timing_function_2;
+        @include transition(transform, $animation-duration-slow, $animation-timing-function-2);
       }
       &:nth-child(3) {
         transform: rotate(90deg);
-        transition: transform $animation_duration_slow $animation_timing_function_3;
+        @include transition(transform, $animation-duration-slow, $animation-timing-function-3);
       }
       &:nth-child(4) {
         transform: rotate(135deg);
-        transition: transform $animation_duration_slow $animation_timing_function_4;
+        @include transition(transform, $animation-duration-slow, $animation-timing-function-4);
       }
     }
   }
@@ -47,8 +46,7 @@
     height: 50%;
     background-color: color(secondary);
     border-radius: 50%;
-    transition: transform $animation_duration $animation_timing_function,
-      width $animation_duration $animation_timing_function, height $animation_duration $animation_timing_function;
+    @include transition(transform width height);
 
     &.inner {
       background-color: color(primary);

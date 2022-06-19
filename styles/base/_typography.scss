@@ -1,26 +1,26 @@
 @use 'styles/abstract' as *;
 
 @font-face {
-  font-family: $font_body;
-  src: local($font_body) url($font_face_url) format($font_face_format);
+  font-family: $font-body;
+  src: local($font-body) url($font-face-url) format($font-face-format);
   font-display: swap;
 }
 
 html {
-  font-family: $font_body, $font_body_fallback;
+  font-family: $font-body, $font-body-fallback;
   font-smooth: always;
   text-rendering: optimizeLegibility;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
 
-  @include fluid-type($min_width, $max_width, $min_font, $max_font);
-  @include breakpoint-up('desktop') {
-    font-size: $font_size;
+  @include fluid-type($min-vw, $max-vw, $min-font-size, $max-font-size);
+  @include breakpoint(lg, up) {
+    font-size: $font-size;
   }
 }
 
 @include headings {
-  font-family: $font_heading, $font_body_fallback;
+  font-family: $font-heading, $font-body-fallback;
   font-weight: 500;
   margin-bottom: 0.2rem;
 }
@@ -55,7 +55,7 @@ a {
 
   &:hover,
   &:focus {
-    color: rgba($color: color(primary), $alpha: 0.5);
+    color: alpha(primary, 0.5);
   }
 }
 

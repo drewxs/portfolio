@@ -1,5 +1,7 @@
 @use 'variables' as *;
+@use 'functions' as *;
 
+// Scales font-size based on viewport width.
 @mixin fluid-type($min-vw, $max-vw, $min-font-size, $max-font-size) {
   $u1: unit($min-vw);
   $u2: unit($max-vw);
@@ -9,35 +11,37 @@
   @if $u1 == $u2 and $u1 == $u3 and $u1 == $u4 {
     & {
       font-size: $min-font-size;
-      @include breakpoint-up($min-vw) {
+      @include breakpoint($min-vw, up) {
         font-size: calc(
           #{$min-font-size} + #{strip-unit($max-font-size - $min-font-size)} *
             ((100vw - #{$min-vw}) / #{strip-unit($max-vw - $min-vw)})
         );
       }
-      @include breakpoint-up($max-vw) {
+      @include breakpoint($max-vw, up) {
         font-size: $max-font-size;
       }
     }
   }
 }
 
-@mixin breakpoint-up($key) {
+// Responds to the given breakpoint.
+// Responds below the given breakpoint by default.
+// Respond above by passing $direction: up.
+@mixin breakpoint($key, $direction: down) {
   $size: map-get($breakpoints, $key);
 
-  @media only screen and (min-width: $size) {
-    @content;
+  @if $direction == 'down' {
+    @media only screen and (max-width: $size) {
+      @content;
+    }
+  } @else {
+    @media only screen and (min-width: $size) {
+      @content;
+    }
   }
 }
 
-@mixin breakpoint-down($key) {
-  $size: map-get($breakpoints, $key);
-
-  @media only screen and (max-width: $size) {
-    @content;
-  }
-}
-
+// Applies styles to all headings.
 @mixin headings {
   h1,
   .h1,
@@ -55,12 +59,35 @@
   }
 }
 
+// Sets color theme variables from themes.
 @mixin theme() {
   @each $theme, $map in $themes {
     [data-theme='#{$theme}'] {
       @each $key, $value in $map {
         --color-#{$key}: #{$value};
+        --color-#{$key}-rgb: #{hex-to-rgb($value)};
       }
     }
+  }
+}
+
+// Applies multiple transitions.
+@mixin transition(
+  $properties: all,
+  $duration: $animation-duration,
+  $method: $animation-timing-function,
+  $delay: $animation-delay
+) {
+  $prefixes: -webkit- -moz- -ms- -o-;
+  @each $prefix in $prefixes {
+    $value: ();
+    @each $property in $properties {
+      @if length($value) > 0 {
+        $value: append($value, unquote(',') #{$property} $duration $method $delay);
+      } @else {
+        $value: append($value, #{$property} $duration $method $delay);
+      }
+    }
+    #{$prefix}transition: $value;
   }
 }

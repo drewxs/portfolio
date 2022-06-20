@@ -1,6 +1,9 @@
+export { Code } from 'components/code';
 export { Footer } from 'components/footer';
 export { Head } from 'components/head';
 export { Hero } from 'components/hero';
+export { Link } from 'components/link';
 export { Navbar } from 'components/navbar';
 export { Projects } from 'components/projects';
+export { RepoCard } from 'components/repo-card';
 export { ThemeChanger } from 'components/theme-changer';

@@ -37,7 +37,7 @@ export const Head = ({ title = meta.title, description = meta.description, ogIma
       <meta property='og:image' content={`/${ogImage}`} />
 
       {/* Icons */}
-      <link rel='icon' href='/favicons/favicon.ico' />
+      <link rel='icon' href='favicon.ico' />
       <link rel='apple-touch-icon-precomposed' sizes='57x57' href='apple-touch-icon-57x57.png' />
       <link rel='apple-touch-icon-precomposed' sizes='114x114' href='apple-touch-icon-114x114.png' />
       <link rel='apple-touch-icon-precomposed' sizes='72x72' href='apple-touch-icon-72x72.png' />

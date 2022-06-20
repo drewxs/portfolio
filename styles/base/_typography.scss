@@ -12,6 +12,7 @@ html {
   text-rendering: optimizeLegibility;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
+  line-height: 1.5;
 
   @include fluid-type($min-vw, $max-vw, $min-font-size, $max-font-size);
   @include breakpoint(lg, up) {
@@ -22,7 +23,7 @@ html {
 @include headings {
   font-family: $font-heading, $font-body-fallback;
   font-weight: 500;
-  margin-bottom: 0.2rem;
+  margin-bottom: 1rem;
 }
 
 h1,
@@ -50,19 +51,22 @@ h6,
 }
 
 a {
-  color: color(primary);
+  color: color(text);
   text-decoration: none;
+  display: flex;
+  @include transition(color);
 
   &:hover,
   &:focus {
-    color: alpha(primary, 0.5);
+    color: color(primary);
   }
 }
 
-p:not([class]),
-ul:not([class]),
-li:not([class]) {
+p,
+ul,
+li {
   max-width: 60ch;
+  margin-bottom: 1rem;
 }
 
 .error {

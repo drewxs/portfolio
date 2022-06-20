@@ -44,14 +44,14 @@
     position: absolute;
     width: 50%;
     height: 50%;
-    background-color: color(secondary);
+    background-color: hsl(45, 100%, 70%);
     border-radius: 50%;
     @include transition(transform width height);
 
     &.inner {
-      background-color: color(primary);
-      width: 30%;
-      height: 30%;
+      background-color: hsl(45, 100%, 40%);
+      width: 25%;
+      height: 25%;
     }
   }
 
@@ -77,6 +77,7 @@
         width: 50%;
         height: 50%;
         transform: translateX(-35%);
+        background-color: color(primary);
       }
     }
   }

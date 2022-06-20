@@ -2,7 +2,6 @@
 node_modules
 .pnp
 .pnp.js
-.yarn
 
 # testing
 coverage
@@ -18,6 +17,9 @@ dist
 # misc
 .DS_Store
 *.pem
+
+# cache
+cache
 .dccache
 
 # debug

@@ -9,4 +9,56 @@
       align-items: center;
     }
   }
+
+  &.code {
+    min-height: 100vh;
+
+    h1 {
+      font-size: 10rem;
+      font-weight: 700;
+      line-height: 1;
+      margin-bottom: -10%;
+      opacity: 20%;
+      text-shadow: rem(2px) rem(2px) rem(20px) alpha(text, 0.5);
+    }
+
+    .repo {
+      &-list {
+        position: relative;
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: stretch;
+        z-index: 2;
+      }
+
+      &-card {
+        width: 30%;
+        height: 10rem;
+
+        p {
+          opacity: 50%;
+        }
+      }
+
+      &-link {
+        &__chevron {
+          &:first-of-type {
+            margin-left: 0.5em;
+            opacity: 0;
+            width: 0em;
+            @include transition(opacity width);
+          }
+        }
+
+        &:hover {
+          .repo-link__chevron {
+            &:first-of-type {
+              opacity: 1;
+              width: 1em;
+            }
+          }
+        }
+      }
+    }
+  }
 }

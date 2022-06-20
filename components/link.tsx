@@ -1,15 +1,15 @@
 import { default as NextLink } from 'next/link';
+import { ReactElement } from 'react';
 
 /**
- * Link wrapper component.
- * Wrapper built on top of Next.js Link component.
+ * Link wrapper built on top of Next.js Link component.
  * Allows for additional props to be passed to the component.
  * Renders a div if no href is provided.
  *
- * @param {object} props - component props
- * @returns {JSX.Element} - rendered component
+ * @param props - Component props
+ * @returns Link component
  */
-export const Link = (props: LinkProps) => {
+export const Link = (props: LinkProps): ReactElement => {
   const { href, children, ...rest } = props;
 
   return href ? (
@@ -17,8 +17,6 @@ export const Link = (props: LinkProps) => {
       <a {...rest}>{children}</a>
     </NextLink>
   ) : (
-    <div>
-      <a {...rest}>{children}</a>
-    </div>
+    <div {...rest}>{children}</div>
   );
 };

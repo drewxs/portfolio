@@ -1,10 +1,13 @@
+import { Typewriter } from 'components';
+
 export const Hero = () => {
   return (
     <section className='home hero'>
       <div className='container'>
         <h1>
-          Hi there, <br />
-          welcome to my site :)
+          <Typewriter text='Hi there,' />
+          <br />
+          <Typewriter text='welcome to my site :)' delay={2000} linger />
         </h1>
       </div>
     </section>

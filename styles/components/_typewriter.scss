@@ -1,0 +1,19 @@
+@use 'styles/abstract' as *;
+
+.typewriter {
+  &:after {
+    @include transition(opacity);
+  }
+  &.typing {
+    &:after {
+      content: '|';
+      animation: blink 1s $animation-timing-function infinite;
+    }
+  }
+}
+
+@keyframes blink {
+  50% {
+    opacity: 0;
+  }
+}

@@ -7,3 +7,4 @@ export { Navbar } from 'components/navbar';
 export { Projects } from 'components/projects';
 export { RepoCard } from 'components/repo-card';
 export { ThemeChanger } from 'components/theme-changer';
+export { Typewriter } from 'components/typewriter';

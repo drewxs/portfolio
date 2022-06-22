@@ -16,7 +16,7 @@ type RepoType = Endpoints['GET /user/repos']['response']['data'][0];
 export const RepoCard = ({ repo }: { repo: RepoType }): ReactElement => {
   return (
     <div className='repo-card'>
-      <h2>{repo.name}</h2>
+      <h2 className='h4'>{repo.name}</h2>
       <p>{repo.description}</p>
       <Link className='repo-link' href={repo.url}>
         View Repository

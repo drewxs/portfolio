@@ -17,8 +17,8 @@
       font-size: 10rem;
       font-weight: 700;
       line-height: 1;
-      margin-bottom: -10%;
       opacity: 20%;
+      margin-bottom: 2rem;
       text-shadow: rem(2px) rem(2px) rem(20px) alpha(text, 0.5);
     }
 
@@ -26,22 +26,41 @@
       &-list {
         position: relative;
         display: flex;
+        gap: 2rem;
         flex-wrap: wrap;
         justify-content: stretch;
         z-index: 2;
       }
 
       &-card {
-        width: 30%;
-        height: 10rem;
-        margin-bottom: 2rem;
+        width: calc((100% - 4rem) / 3);
+        min-height: 100%;
+        padding: 2rem 3rem;
+        background-color: alpha(bg, 0.5);
+        @include transition(transform box-shadow background-color);
+
+        @include breakpoint(md) {
+          width: calc((100% - 4rem) / 2);
+          padding: 2rem;
+        }
+        @include breakpoint(sm) {
+          width: 100%;
+        }
 
         p {
           opacity: 50%;
+          @include text-overflow();
+        }
+
+        &:hover {
+          transform: translateY(-4%);
+          box-shadow: rem(2px) rem(8px) rem(20px) rem(4px) alpha(text, 0.05);
         }
       }
 
       &-link {
+        max-width: max-content;
+
         &__chevron {
           &:first-of-type {
             margin-left: 0.5em;

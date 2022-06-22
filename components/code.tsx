@@ -15,10 +15,7 @@ export const Code = ({ repos }: { repos: ReposType }): ReactElement => {
   return (
     <section className='home code'>
       <div className='container'>
-        <h1>
-          Recent <br />
-          Code
-        </h1>
+        <h1>Code</h1>
         <div className='repo-list'>
           {repos?.map((repo) => {
             return <RepoCard repo={repo} key={repo.id} />;

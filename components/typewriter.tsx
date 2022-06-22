@@ -1,5 +1,4 @@
 import { ReactElement, useEffect, useState } from 'react';
-import { TypewriterProps } from 'types';
 
 import { sleep } from 'utils';
 

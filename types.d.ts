@@ -1,5 +1,3 @@
-import { Typewriter } from './components/typewriter';
-
 interface LayoutProps {
   children: React.ReactNode;
 }

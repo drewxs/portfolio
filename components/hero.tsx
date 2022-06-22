@@ -1,6 +1,8 @@
+import { ReactElement } from 'react';
+
 import { Typewriter } from 'components';
 
-export const Hero = () => {
+export const Hero = (): ReactElement => {
   return (
     <section className='home hero'>
       <div className='container'>

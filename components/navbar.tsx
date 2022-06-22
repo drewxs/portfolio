@@ -1,6 +1,8 @@
+import { ReactElement } from 'react';
+
 import { ThemeChanger } from 'components';
 
-export const Navbar = () => {
+export const Navbar = (): ReactElement => {
   return (
     <nav className='nav'>
       <div className='container nav__container'>

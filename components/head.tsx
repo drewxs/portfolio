@@ -1,5 +1,6 @@
 import { default as NextHead } from 'next/head';
 import { useRouter } from 'next/router';
+import { ReactElement } from 'react';
 
 const sitename = 'Andrew Shah';
 const domain = `andrewshah.dev`;
@@ -19,7 +20,12 @@ const meta = {
  * @param {boolean} noIndex - whether to index the page
  * @returns {JSX.Element} - rendered component
  */
-export const Head = ({ title = meta.title, description = meta.description, ogImage = meta.ogImg, noindex = false }) => {
+export const Head = ({
+  title = meta.title,
+  description = meta.description,
+  ogImage = meta.ogImg,
+  noindex = false,
+}): ReactElement => {
   const router = useRouter();
 
   return (

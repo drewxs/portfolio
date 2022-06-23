@@ -18,7 +18,7 @@ export const RepoCard = ({ repo }: { repo: RepoType }): ReactElement => {
     <div className='repo-card'>
       <h2 className='h4'>{repo.name}</h2>
       <p>{repo.description}</p>
-      <Link className='repo-link' href={repo.url}>
+      <Link className='repo-link' href={repo.html_url} target='_blank'>
         View Repository
         <FontAwesomeIcon icon={faChevronRight} className='repo-link__chevron' />
         <FontAwesomeIcon icon={faChevronRight} className='repo-link__chevron' />

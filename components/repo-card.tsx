@@ -11,7 +11,6 @@ type RepoType = Endpoints['GET /user/repos']['response']['data'][0];
  * A card containing information about a GitHub repository.
  *
  * @param repo - GitHub repository object
- * @returns RepoCard component
  */
 export const RepoCard = ({ repo }: { repo: RepoType }): ReactElement => {
   return (

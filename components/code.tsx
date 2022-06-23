@@ -9,7 +9,6 @@ type ReposType = Endpoints['GET /user/repos']['response']['data'];
  * Section for showcasing recent GitHub repositories.
  *
  * @param repos - Array of GitHub repository objects
- * @returns GitHub repositories section component
  */
 export const Code = ({ repos }: { repos: ReposType }): ReactElement => {
   return (

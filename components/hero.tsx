@@ -2,6 +2,9 @@ import { ReactElement } from 'react';
 
 import { Typewriter } from 'components';
 
+/**
+ * Home page hero section.
+ */
 export const Hero = (): ReactElement => {
   return (
     <section className='home hero'>

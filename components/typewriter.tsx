@@ -11,7 +11,6 @@ import { sleep } from 'utils';
  * @param delay - Animation start delay in milliseconds
  * @param linger - Whether to keep the caret after the text is finished
  * @param lingerDuration - How long to keep the caret after the text is finished
- * @returns Typewriter component
  */
 export const Typewriter = ({
   text,

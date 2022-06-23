@@ -14,11 +14,10 @@ const meta = {
  * Head component.
  * Built on top of Next.js Head component.
  *
- * @param {string} title - page title
- * @param {string} description - page description
- * @param {string} ogImage - open graph image filename
- * @param {boolean} noIndex - whether to index the page
- * @returns {JSX.Element} - rendered component
+ * @param title - page title
+ * @param description - page description
+ * @param ogImage - open graph image filename
+ * @param noIndex - whether to index the page
  */
 export const Head = ({
   title = meta.title,

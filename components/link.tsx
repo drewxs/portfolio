@@ -7,7 +7,6 @@ import { ReactElement } from 'react';
  * Renders a div if no href is provided.
  *
  * @param props - Component props
- * @returns Link component
  */
 export const Link = (props: LinkProps): ReactElement => {
   const { href, children, ...rest } = props;

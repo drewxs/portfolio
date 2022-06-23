@@ -3,10 +3,10 @@ import { ReactElement, useEffect, useState } from 'react';
 
 export const ThemeChanger = (): ReactElement | null => {
   const [mounted, setMounted] = useState(false);
-  const { theme, setTheme } = useTheme();
+  const { setTheme, resolvedTheme } = useTheme();
 
   const handleThemeToggle = () => {
-    setTheme(theme === 'dark' ? 'light' : 'dark');
+    setTheme(resolvedTheme === 'dark' ? 'light' : 'dark');
   };
 
   useEffect(() => {
@@ -16,7 +16,7 @@ export const ThemeChanger = (): ReactElement | null => {
   if (!mounted) return null;
 
   return (
-    <div className={`theme-changer ${theme}`} onClick={handleThemeToggle}>
+    <div className={`theme-changer ${resolvedTheme}`} onClick={handleThemeToggle}>
       <div className='gear'></div>
       <div className='gear tooth'></div>
       <div className='gear tooth'></div>

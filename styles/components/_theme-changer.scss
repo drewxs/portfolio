@@ -4,10 +4,11 @@
   position: relative;
   width: 1.5rem;
   height: 1.5rem;
-  cursor: pointer;
   display: flex;
   align-items: center;
   justify-content: center;
+  margin-left: 2rem;
+  cursor: pointer;
 
   .gear {
     position: absolute;

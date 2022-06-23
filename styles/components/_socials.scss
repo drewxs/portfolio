@@ -1,0 +1,36 @@
+@use 'styles/abstract' as *;
+
+.socials {
+  display: flex;
+
+  &__link {
+    margin-left: 1rem;
+    @include transition(opacity);
+
+    &:hover {
+      svg {
+        filter: brightness(300%);
+      }
+    }
+  }
+
+  svg {
+    height: 1.5rem;
+    color: color(primary);
+    @include transition(filter);
+  }
+}
+
+@include theme(light) {
+  .socials {
+    &__link {
+      &:hover {
+        opacity: 50%;
+
+        svg {
+          filter: brightness(100%);
+        }
+      }
+    }
+  }
+}

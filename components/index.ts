@@ -6,5 +6,6 @@ export { Link } from 'components/link';
 export { Navbar } from 'components/navbar';
 export { Projects } from 'components/projects';
 export { RepoCard } from 'components/repo-card';
+export { Socials } from 'components/socials';
 export { ThemeChanger } from 'components/theme-changer';
 export { Typewriter } from 'components/typewriter';

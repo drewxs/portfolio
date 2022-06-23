@@ -62,11 +62,12 @@
         max-width: max-content;
 
         &__chevron {
+          @include transition(opacity width margin);
+
           &:first-of-type {
             margin-left: 0.5em;
             opacity: 0;
             width: 0em;
-            @include transition(opacity width);
           }
         }
 
@@ -75,6 +76,9 @@
             &:first-of-type {
               opacity: 1;
               width: 1em;
+            }
+            &:last-of-type {
+              margin-left: -0.4em;
             }
           }
         }

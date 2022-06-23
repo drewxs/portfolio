@@ -12,9 +12,9 @@ export const useScrollPosition = (): number => {
     const updatePosition = (): void => {
       setScrollPosition(window.pageYOffset);
     };
-    window.addEventListener('scroll', () => throttle(updatePosition, 100));
+    window.addEventListener('scroll', updatePosition);
     updatePosition();
-    return () => window.removeEventListener('scroll', () => updatePosition);
+    return () => window.removeEventListener('scroll', updatePosition);
   }, []);
 
   return scrollPosition;

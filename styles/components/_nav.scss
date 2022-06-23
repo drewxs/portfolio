@@ -7,18 +7,19 @@
   background-color: alpha(primary, 0.01);
   box-shadow: 0 rem(4px) rem(10px) 0 alpha(text, 0.05);
   backdrop-filter: saturate(150%) blur(4px);
-  padding: 1rem 0;
-  @include transition(background-color box-shadow);
+  @include transition(background-color box-shadow padding);
+
+  &.min {
+    padding: 1rem 0;
+  }
 
   &__container {
     display: flex;
     justify-content: space-between;
   }
-
   &__title {
     margin-bottom: 0;
   }
-
   &__links {
     display: flex;
     align-items: center;

@@ -1,7 +1,5 @@
 import { useEffect, useState } from 'react';
 
-import { throttle } from 'utils';
-
 /**
  * Hook that keeps track of the window scroll position.
  */

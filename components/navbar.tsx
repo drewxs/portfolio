@@ -1,4 +1,4 @@
-import { ReactElement, useEffect } from 'react';
+import { ReactElement } from 'react';
 
 import { Socials, ThemeChanger } from 'components';
 import { useScrollPosition } from 'utils';

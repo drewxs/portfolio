@@ -8,16 +8,8 @@
     @include transition(opacity);
 
     &:hover {
-      @include theme(light) {
-        opacity: 50%;
-      }
-
       svg {
         filter: brightness(300%);
-
-        @include theme(light) {
-          filter: brightness(100%);
-        }
       }
     }
   }
@@ -26,5 +18,19 @@
     height: 1.5rem;
     color: color(primary);
     @include transition(filter);
+  }
+}
+
+@include theme(light) {
+  .socials {
+    &__link {
+      &:hover {
+        opacity: 50%;
+
+        svg {
+          filter: brightness(100%);
+        }
+      }
+    }
   }
 }

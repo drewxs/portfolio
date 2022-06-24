@@ -9,11 +9,6 @@
   backdrop-filter: saturate(150%) blur(4px);
   @include transition(background-color box-shadow padding);
 
-  @include theme(dark) {
-    background-color: alpha(primary, 0.05);
-    box-shadow: 0 rem(4px) rem(20px) 0 alpha(text, 0.01);
-  }
-
   &.min {
     padding: 1rem 0;
   }
@@ -28,5 +23,12 @@
   &__links {
     display: flex;
     align-items: center;
+  }
+}
+
+@include theme(dark) {
+  .nav {
+    background-color: alpha(primary, 0.05);
+    box-shadow: 0 rem(4px) rem(20px) 0 alpha(text, 0.01);
   }
 }

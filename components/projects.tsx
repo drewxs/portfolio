@@ -1,23 +1,21 @@
 import { Endpoints } from '@octokit/types';
 import { ReactElement } from 'react';
 
-import { RepoCard } from 'components';
-
-type ReposType = Endpoints['GET /user/repos']['response']['data'];
+import { ProjectCard } from 'components';
 
 /**
  * Section for showcasing featured projects.
  *
  * @param projects - Array of GitHub repository objects
  */
-export const Projects = ({ repos }: { repos: ReposType }): ReactElement => {
+export const Projects = ({ projects }: { projects: Project[] }): ReactElement => {
   return (
-    <section className='home code'>
+    <section className='home section projects'>
       <div className='container'>
-        <h1>Projects</h1>
-        <div className='repo-list'>
-          {repos?.map((repo) => {
-            return <RepoCard repo={repo} key={repo.id} />;
+        <h1 className='projects-title'>Projects</h1>
+        <div className='project-list'>
+          {projects?.map((project) => {
+            return <ProjectCard project={project} key={project._id} />;
           })}
         </div>
       </div>

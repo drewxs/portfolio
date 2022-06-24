@@ -20,6 +20,11 @@
   @return rgba(color-rgb($color), $alpha);
 }
 
+// Converts a pixel value to an em value.
+@function em($pixels) {
+  @return ($pixels / $font_size) * 1em;
+}
+
 // Converts a pixel value to a rem value.
 @function rem($pixels) {
   @return ($pixels / $font_size) * 1rem;

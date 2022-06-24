@@ -9,7 +9,7 @@ import { ReactElement } from 'react';
  * @param props - Component props
  * @returns Image component
  */
-export const Image = (props: ImageProps): ReactElement => {
+export const Img = (props: ImageProps): ReactElement => {
   const { src, alt, ...rest } = props;
 
   return <NextImage src={src} alt={alt ?? ''} {...rest} />;

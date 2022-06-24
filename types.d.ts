@@ -21,3 +21,10 @@ interface TypewriterProps {
   linger?: boolean;
   lingerDuration?: number;
 }
+
+interface Project {
+  _id: string;
+  title: string;
+  url: string;
+  img: string;
+}

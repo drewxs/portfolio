@@ -12,7 +12,7 @@ type ReposType = Endpoints['GET /user/repos']['response']['data'];
  */
 export const Code = ({ repos }: { repos: ReposType }): ReactElement => {
   return (
-    <section className='home code'>
+    <section className='home section code'>
       <div className='container'>
         <h1>Code</h1>
         <div className='repo-list'>

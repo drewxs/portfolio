@@ -1,18 +1,24 @@
 // Themes
+$primary: #02111b;
+$secondary: #3f4045;
+$black: #080808;
+$white: #fcfcfc;
+$error: #e57373;
+
 $themes: (
   'light': (
-    'primary': #02111b,
-    'secondary': #3f4045,
-    'text': #080808,
-    'bg': #fcfcfc,
-    'error': #e57373,
+    'primary': $primary,
+    'secondary': $secondary,
+    'text': $black,
+    'bg': $white,
+    'error': $error,
   ),
   'dark': (
-    'primary': #3f4045,
-    'secondary': #02111b,
-    'text': #fcfcfc,
-    'bg': #080808,
-    'error': #e57373,
+    'primary': $secondary,
+    'secondary': $primary,
+    'text': $white,
+    'bg': $black,
+    'error': $error,
   ),
 );
 
@@ -39,6 +45,8 @@ $min-font-size: 14px;
 $max-font-size: 18px;
 $min-vw: map-get($breakpoints, xs);
 $max-vw: map-get($breakpoints, xl);
+
+$grid-gutter: 30px;
 
 // Padding
 $padding: (

@@ -8,7 +8,7 @@ module.exports = {
   singleQuote: true,
   trailingComma: 'es5',
   useTabs: false,
-  importOrder: ['^(components|layout|pages|styles|utils)$', '^[./]'],
+  importOrder: ['^(components|data|layout|pages|styles|utils)$', '^[./]'],
   importOrderSeparation: true,
   importOrderSortSpecifiers: true,
 };

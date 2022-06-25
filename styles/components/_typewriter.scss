@@ -7,12 +7,12 @@
   &.typing {
     &:after {
       content: '|';
-      animation: blink 1s $animation-timing-function infinite;
+      @include animation('blink 1s #{$animation-timing-function} infinite');
     }
   }
 }
 
-@keyframes blink {
+@include keyframes(blink) {
   50% {
     opacity: 0;
   }

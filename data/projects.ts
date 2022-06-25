@@ -7,18 +7,14 @@ export const projects = [
   },
   {
     _id: '02',
-    title: 'Raven',
-    url: 'https://ravenx.vercel.app',
-    img: 'raven.gif',
+    title: 'Crylog',
+    url: 'https://github.com/kito0/crylog',
+    img: 'crylog.gif',
   },
   {
     _id: '03',
-    title: 'Raven',
-    url: 'https://ravenx.vercel.app',
-    img: 'raven.gif',
+    title: 'Coversy',
+    url: 'https://coversy.vercel.app',
+    img: 'coversy.gif',
   },
-  // {
-  //   _id: '02',
-  //   title: 'Coversy'
-  // }
 ];

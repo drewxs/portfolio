@@ -108,48 +108,12 @@
   overflow: hidden;
 }
 
-// Applies keyframes for all browsers
-@mixin keyframes($animation-name) {
-  @-webkit-keyframes #{$animation-name} {
-    @content;
-  }
-  @-moz-keyframes #{$animation-name} {
-    @content;
-  }
-  @-ms-keyframes #{$animation-name} {
-    @content;
-  }
-  @-o-keyframes #{$animation-name} {
-    @content;
-  }
-  @keyframes #{$animation-name} {
-    @content;
-  }
-}
-
-// Applies animation property for all browsers
-@mixin animation($str) {
-  -webkit-animation: #{$str};
-  -moz-animation: #{$str};
-  -ms-animation: #{$str};
-  -o-animation: #{$str};
-  animation: #{$str};
-}
-
-// Applies background gradients for all browsers
-@mixin background-gradient($start-color, $end-color, $orientation) {
-  background: $start-color;
-
-  @if $orientation == 'vertical' {
-    background: -webkit-linear-gradient(top, $start-color, $end-color);
-    background: linear-gradient(to bottom, $start-color, $end-color);
-  } @else if $orientation == 'horizontal' {
-    background: -webkit-linear-gradient(left, $start-color, $end-color);
-    background: linear-gradient(to right, $start-color, $end-color);
-  } @else {
-    background: -webkit-radial-gradient(center, ellipse cover, $start-color, $end-color);
-    background: radial-gradient(ellipse at center, $start-color, $end-color);
-  }
+// Applies margins, allows null values to omit properties
+@mixin inset($top, $right, $bottom, $left) {
+  top: $top;
+  right: $right;
+  bottom: $bottom;
+  left: $left;
 }
 
 // Applies margins, allows null values to omit properties
@@ -166,4 +130,12 @@
   padding-right: $right;
   padding-bottom: $bottom;
   padding-left: $left;
+}
+
+// Applies styles to hover and focus states
+@mixin focus {
+  &:hover,
+  &:focus {
+    @content;
+  }
 }

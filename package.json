@@ -1,6 +1,6 @@
 {
   "name": "portfolio",
-  "version": "0.1.1",
+  "version": "0.0.0-development",
   "private": true,
   "description": "An eternal work in progress.",
   "author": "Andrew X. Shah",
@@ -11,8 +11,9 @@
     "start": "next start",
     "lint": "next lint",
     "lint-staged": "lint-staged",
-    "release": "standard-version",
-    "prepare": "husky install"
+    "prepare": "husky install",
+    "standard-release": "standard-version",
+    "semantic-release": "semantic-release"
   },
   "dependencies": {
     "@fortawesome/fontawesome-svg-core": "^6.1.1",
@@ -42,12 +43,17 @@
     "prettier": "^2.7.0",
     "sass": "^1.52.3",
     "standard-version": "^9.5.0",
-    "typescript": "4.7.3"
+    "typescript": "4.7.3",
+    "semantic-release": "^19.0.3"
   },
   "packageManager": "yarn@3.2.1",
   "browserslist": [
     "defaults",
     "not IE 11",
     "maintained node versions"
-  ]
+  ],
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/kito0/portfolio.git"
+  }
 }

@@ -32,6 +32,9 @@
   "devDependencies": {
     "@octokit/types": "^6.35.0",
     "@semantic-release/changelog": "^6.0.1",
+    "@semantic-release/commit-analyzer": "^9.0.2",
+    "@semantic-release/git": "^10.0.1",
+    "@semantic-release/release-notes-generator": "^10.0.3",
     "@trivago/prettier-plugin-sort-imports": "^3.2.0",
     "@types/node": "18.0.0",
     "@types/react": "18.0.12",

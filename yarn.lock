@@ -981,7 +981,7 @@ __metadata:
   languageName: node
   linkType: hard
 
-"@semantic-release/npm@npm:^9.0.0, @semantic-release/npm@npm:^9.0.1":
+"@semantic-release/npm@npm:^9.0.0":
   version: 9.0.1
   resolution: "@semantic-release/npm@npm:9.0.1"
   dependencies:
@@ -5745,7 +5745,6 @@ __metadata:
     "@fortawesome/react-fontawesome": ^0.1.18
     "@octokit/core": ^3.6.0
     "@octokit/types": ^6.35.0
-    "@semantic-release/npm": ^9.0.1
     "@sendgrid/mail": ^7.7.0
     "@trivago/prettier-plugin-sort-imports": ^3.2.0
     "@types/node": 18.0.0

@@ -24,3 +24,28 @@
 }
 
 @include set-themes();
+
+textarea {
+  resize: vertical;
+  min-height: 8rem;
+  max-height: 24rem;
+}
+
+.button {
+  border-radius: rem(8px);
+  padding: rem(8px) rem(16px);
+  border: rem(2px) solid $primary;
+  background-color: rgba($primary, 0.9);
+  color: rgba($white, 0.5);
+  @include transition(color background-color, $animation-duration-fast);
+
+  &:not(:disabled) {
+    cursor: pointer;
+    color: $white;
+
+    &:hover {
+      background-color: $primary;
+      color: $white;
+    }
+  }
+}

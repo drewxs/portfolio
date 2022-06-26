@@ -168,4 +168,28 @@
       }
     }
   }
+
+  &.contact {
+    .contact {
+      &-row {
+        display: flex;
+
+        @include breakpoint(sm) {
+          flex-direction: column;
+        }
+      }
+      &-col {
+        flex-basis: 50%;
+        width: 100%;
+        padding-right: rem(40px);
+      }
+      &-form {
+        display: flex;
+        flex-direction: column;
+        padding: rem(55px) rem(50px);
+        border-radius: rem(20px);
+        background-color: alpha(primary, 0.05);
+      }
+    }
+  }
 }

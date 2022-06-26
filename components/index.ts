@@ -4,6 +4,7 @@ export { Footer } from 'components/footer';
 export { Head } from 'components/head';
 export { Hero } from 'components/hero';
 export { Img } from 'components/image';
+export { Input } from 'components/input';
 export { Link } from 'components/link';
 export { Navbar } from 'components/navbar';
 export { ProjectCard } from 'components/project-card';

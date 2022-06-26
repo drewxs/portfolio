@@ -14,6 +14,11 @@ interface ImageProps {
   alt: string;
 }
 
+interface InputProps {
+  [key: string]: any;
+  type: string;
+}
+
 interface TypewriterProps {
   text: string;
   speed?: number;
@@ -27,4 +32,9 @@ interface Project {
   title: string;
   url: string;
   img: string;
+}
+
+class NextApiError {
+  statusCode: number;
+  message: string;
 }

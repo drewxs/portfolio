@@ -1,6 +1,9 @@
+import { faEnvelope, faLocationDot, faPhone } from '@fortawesome/free-solid-svg-icons';
+import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
+import { contact } from 'data/contact';
 import { ReactElement, SyntheticEvent, useState } from 'react';
 
-import { Input } from 'components';
+import { Input, Link, Socials } from 'components';
 
 /**
  * Section for contacting me.
@@ -54,10 +57,32 @@ export const Contact = (): ReactElement => {
       <div className='container'>
         <h1 className='contact-title'>Contact</h1>
         <div className='contact-row'>
-          <div className='contact-col'>
-            <h2 className='h4'>{`Let's talk`}</h2>
-            <p>Fill in the form to send me a message.</p>
-            <p>Alternatively, reach out to me at my email address.</p>
+          <div className='contact-col content'>
+            <div className='contact-col__row'>
+              <h2 className='contact-heading h4'>{contact.heading}</h2>
+              <p className='contact-message'>{contact.message}</p>
+            </div>
+            <div className='contact-col__row'>
+              <div className='contact-block'>
+                <Link href={`tel:${contact.phone}`}>
+                  <FontAwesomeIcon icon={faPhone} />
+                </Link>
+                <p className='contact-block__text'>{contact.phone}</p>
+              </div>
+              <div className='contact-block'>
+                <Link href={`mailto:${contact.email}`}>
+                  <FontAwesomeIcon icon={faEnvelope} />
+                </Link>
+                <p className='contact-block__text'>{contact.email}</p>
+              </div>
+              <div className='contact-block'>
+                <FontAwesomeIcon icon={faLocationDot} />
+                <p className='contact-block__text'>{contact.location}</p>
+              </div>
+            </div>
+            <div className='contact-col__row'>
+              <Socials />
+            </div>
           </div>
           {!success ? (
             <form className='contact-col contact-form' onSubmit={handleSubmit}>
@@ -86,7 +111,7 @@ export const Contact = (): ReactElement => {
               </button>
             </form>
           ) : (
-            <div className='contact-col'>Thanks for reaching out! I will respond as soon as I get a chance!</div>
+            <div className='contact-col'>{contact.successMessage}</div>
           )}
         </div>
       </div>

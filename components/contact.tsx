@@ -1,9 +1,9 @@
 import { faEnvelope, faLocationDot, faPhone } from '@fortawesome/free-solid-svg-icons';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
-import { contact } from 'data/contact';
 import { ReactElement, SyntheticEvent, useState } from 'react';
 
 import { Input, Link, Socials } from 'components';
+import { contact } from 'data';
 
 /**
  * Section for contacting me.

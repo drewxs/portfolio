@@ -27,7 +27,8 @@ cache
 *.log*
 
 # env
-.env.*
+*.env.*
+!*.example
 
 # vercel
 .vercel

@@ -1,0 +1,32 @@
+name: Update dependencies
+
+on:
+  workflow_dispatch:
+
+  schedule:
+    - cron: '0 0 * * 0'
+
+jobs:
+  update-dependencies:
+    name: Update dependencies
+
+    runs-on: ubuntu-latest
+
+    steps:
+      - name: Checkout
+        uses: actions/checkout@v2
+
+      - name: Set up Node.js
+        uses: actions/setup-node@v2
+        with:
+          node-version: '16.x'
+
+      - name: Upgrade packages
+        run: yarn upgrade
+
+      - name: Commit and create PR
+        uses: peter-evans/create-pull-request@v3
+        with:
+          title: 'build(deps): update dependencies (automated)'
+          branch: 'build-deps-update-dependencies-automated'
+          commit-message: 'build(deps): update dependencies (automated)'

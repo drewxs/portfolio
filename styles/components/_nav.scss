@@ -4,7 +4,7 @@
   position: fixed;
   top: 0;
   z-index: 100;
-  background-color: alpha(primary, 0.01);
+  background-color: alpha(bg, 0.4);
   box-shadow: 0 rem(4px) rem(10px) 0 alpha(text, 0.05);
   backdrop-filter: saturate(150%) blur(4px);
   @include transition(background-color box-shadow padding);

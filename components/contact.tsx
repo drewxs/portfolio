@@ -64,7 +64,7 @@ export const Contact = (): ReactElement => {
             </div>
             <div className='contact-col__row'>
               <div className='contact-block'>
-                <Link href={`tel:${contact.phone}`}>
+                <Link href={`tel:${contact.phone.replace(/\s/g, '')}`}>
                   <FontAwesomeIcon icon={faPhone} />
                 </Link>
                 <p className='contact-block__text'>{contact.phone}</p>

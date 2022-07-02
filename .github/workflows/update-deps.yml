@@ -22,7 +22,7 @@ jobs:
           node-version: '16.x'
 
       - name: Upgrade packages
-        run: yarn upgrade
+        run: yarn up
 
       - name: Commit and create PR
         uses: peter-evans/create-pull-request@v3

@@ -217,7 +217,7 @@
 						height: #{$size}rem;
 						background-color: color(text);
 						border-radius: 50%;
-						animation: ping $animation-duration-slow ease-out infinite;
+						animation: ping calc($animation-duration-slow * 2) ease-out infinite;
 					}
 				}
 
@@ -230,19 +230,22 @@
 					inset: -3rem auto 0 -2.6rem;
 					opacity: 0.1;
 					font-weight: 700;
+
+					@include breakpoint(xs) {
+						left: 0;
+					}
 				}
 				&__title {
 					margin: 0;
 				}
 				&__company {
+					display: inline-flex;
 					margin-bottom: 0.75rem;
 					opacity: 0.5;
 				}
 				&__description {
 					margin-bottom: 0.5rem;
 					opacity: 0.7;
-				}
-				&__ping {
 				}
 			}
 		}
@@ -252,10 +255,6 @@
 		.contact {
 			&-message {
 				max-width: 40ch;
-
-				@include breakpoint(sm, up) {
-					margin-bottom: 0;
-				}
 			}
 			&-row {
 				display: flex;
@@ -294,6 +293,10 @@
 			}
 		}
 	}
+}
+
+.youveactivatedmycard {
+	display: none;
 }
 
 @include theme(dark) {

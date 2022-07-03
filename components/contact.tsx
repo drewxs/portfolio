@@ -12,21 +12,24 @@ export const Contact = (): ReactElement => {
 	const [name, setName] = useState('');
 	const [email, setEmail] = useState('');
 	const [message, setMessage] = useState('');
+	const [monster, setMonster] = useState('');
+	const [spell, setSpell] = useState('');
 	const [success, setSuccess] = useState(false);
+	const [cardactivated, setCardactivated] = useState(false);
 
-	const handleChangeName = (e: React.ChangeEvent<HTMLInputElement>) => {
-		setName(e.target.value);
-	};
-	const handleChangeEmail = (e: React.ChangeEvent<HTMLInputElement>) => {
-		setEmail(e.target.value);
-	};
-	const handleChangeMessage = (e: React.ChangeEvent<HTMLInputElement>) => {
-		setMessage(e.target.value);
-	};
+	const handleChangeName = (e: React.ChangeEvent<HTMLInputElement>) => setName(e.target.value);
+	const handleChangeEmail = (e: React.ChangeEvent<HTMLInputElement>) => setEmail(e.target.value);
+	const handleChangeMessage = (e: React.ChangeEvent<HTMLInputElement>) => setMessage(e.target.value);
+	const handleChangeMonster = (e: React.ChangeEvent<HTMLInputElement>) => setMonster(e.target.value);
+	const handleChangeSpell = (e: React.ChangeEvent<HTMLInputElement>) => setSpell(e.target.value);
 
 	const handleValidation = () => {
-		if (name && email && message) return true;
-		return false;
+		if (!name || !email || !message) return false;
+		if (monster || spell) {
+			setCardactivated(true);
+			return false;
+		}
+		return true;
 	};
 
 	const handleSubmit = async (e: SyntheticEvent) => {
@@ -43,13 +46,11 @@ export const Contact = (): ReactElement => {
 
 		const { error } = await res.json();
 		if (error) {
-			console.log(error);
 			setSuccess(false);
 			return;
 		}
 
 		setSuccess(true);
-		console.log(name, email, message);
 	};
 
 	return (
@@ -84,15 +85,15 @@ export const Contact = (): ReactElement => {
 							<Socials />
 						</div>
 					</div>
-					{!success ? (
+					{!success && !cardactivated && (
 						<form className='contact-col contact-form' onSubmit={handleSubmit}>
-							<Input type='text' name='name' label='Name' value={name} onChange={handleChangeName} required fullwidth />
+							<Input type='text' name='name' label='Name' value={name} onInput={handleChangeName} required fullwidth />
 							<Input
 								type='email'
 								name='email'
 								label='Email'
 								value={email}
-								onChange={handleChangeEmail}
+								onInput={handleChangeEmail}
 								required
 								fullwidth
 							/>
@@ -101,18 +102,43 @@ export const Contact = (): ReactElement => {
 								name='message'
 								label='Message'
 								value={message}
-								onChange={handleChangeMessage}
+								onInput={handleChangeMessage}
 								required
 								fullwidth
 								multiline
 							/>
-							<button className='button' type='submit' disabled={!name || !email || !message}>
+							<div className='youveactivatedmycard'>
+								<Input
+									type='text'
+									name='phone'
+									label='Phone'
+									value={monster}
+									onChange={handleChangeMonster}
+									autoComplete='new-card'
+								/>
+								<Input
+									type='text'
+									name='address'
+									label='Address'
+									value={spell}
+									onChange={handleChangeSpell}
+									autoComplete='new-card'
+								/>
+							</div>
+							<button
+								className='button g-recaptcha'
+								type='submit'
+								disabled={!name || !email || !message}
+								data-sitekey={process.env.NEXT_PUBLIC_RECAPTCHA_SITE_KEY}
+								data-callback='onSubmit'
+								data-action='submit'
+							>
 								Send
 							</button>
 						</form>
-					) : (
-						<div className='contact-col'>{contact.successMessage}</div>
 					)}
+					{success && !cardactivated && <div className='contact-col'>{contact.successMessage}</div>}
+					{cardactivated && <div className='contact-col'>{contact.errorMessage}</div>}
 				</div>
 			</div>
 		</section>

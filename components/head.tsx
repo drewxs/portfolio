@@ -1,5 +1,6 @@
 import { default as NextHead } from 'next/head';
 import { useRouter } from 'next/router';
+import Script from 'next/script';
 import { ReactElement } from 'react';
 
 const sitename = 'Andrew Shah';
@@ -70,6 +71,9 @@ export const Head = ({
 
 			{/* Index by default, only add noindex if specified */}
 			{noindex ? <meta name='robots' content='noindex'></meta> : <meta name='robots' content='follow, index' />}
+
+			{/* Scripts */}
+			<Script src={`https://www.google.com/recaptcha/api.js`} />
 		</NextHead>
 	);
 };

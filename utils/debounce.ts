@@ -5,13 +5,13 @@
  * @param timeout - debounce timeout in milliseconds
  */
 export const debounce = (callback: Function, timeout: number) => {
-  let timer: NodeJS.Timeout;
+	let timer: NodeJS.Timeout;
 
-  return (...args: any) => {
-    clearTimeout(timer);
+	return (...args: any) => {
+		clearTimeout(timer);
 
-    timer = setTimeout(() => {
-      callback(...args);
-    }, timeout);
-  };
+		timer = setTimeout(() => {
+			callback(...args);
+		}, timeout);
+	};
 };

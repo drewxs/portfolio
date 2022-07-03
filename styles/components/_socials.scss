@@ -1,38 +1,38 @@
 @use 'styles/abstract' as *;
 
 .socials {
-  display: flex;
+	display: flex;
 
-  &__link {
-    @include transition(opacity);
+	&__link {
+		@include transition(opacity);
 
-    &:hover {
-      svg {
-        filter: brightness(300%);
-      }
-    }
-    &:not(:first-of-type) {
-      margin-left: 1rem;
-    }
-  }
+		&:hover {
+			svg {
+				filter: brightness(300%);
+			}
+		}
+		&:not(:first-of-type) {
+			margin-left: 1rem;
+		}
+	}
 
-  svg {
-    height: 1.5rem;
-    color: color(primary);
-    @include transition(filter);
-  }
+	svg {
+		height: 1.5rem;
+		color: color(primary);
+		@include transition(filter);
+	}
 }
 
 @include theme(light) {
-  .socials {
-    &__link {
-      &:hover {
-        opacity: 50%;
+	.socials {
+		&__link {
+			&:hover {
+				opacity: 50%;
 
-        svg {
-          filter: brightness(100%);
-        }
-      }
-    }
-  }
+				svg {
+					filter: brightness(100%);
+				}
+			}
+		}
+	}
 }

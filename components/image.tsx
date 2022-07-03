@@ -10,7 +10,7 @@ import { ReactElement } from 'react';
  * @returns Image component
  */
 export const Img = (props: ImageProps): ReactElement => {
-  const { src, alt, ...rest } = props;
+	const { src, alt, ...rest } = props;
 
-  return <NextImage src={src} alt={alt ?? ''} {...rest} />;
+	return <NextImage src={src} alt={alt ?? ''} {...rest} />;
 };

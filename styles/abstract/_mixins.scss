@@ -3,139 +3,139 @@
 
 // Scales font-size based on viewport width.
 @mixin fluid-type($min-vw, $max-vw, $min-font-size, $max-font-size) {
-  $u1: unit($min-vw);
-  $u2: unit($max-vw);
-  $u3: unit($min-font-size);
-  $u4: unit($max-font-size);
+	$u1: unit($min-vw);
+	$u2: unit($max-vw);
+	$u3: unit($min-font-size);
+	$u4: unit($max-font-size);
 
-  @if $u1 == $u2 and $u1 == $u3 and $u1 == $u4 {
-    & {
-      font-size: $min-font-size;
-      @include breakpoint($min-vw, up) {
-        font-size: calc(
-          #{$min-font-size} + #{strip-unit($max-font-size - $min-font-size)} *
-            ((100vw - #{$min-vw}) / #{strip-unit($max-vw - $min-vw)})
-        );
-      }
-      @include breakpoint($max-vw, up) {
-        font-size: $max-font-size;
-      }
-    }
-  }
+	@if $u1 == $u2 and $u1 == $u3 and $u1 == $u4 {
+		& {
+			font-size: $min-font-size;
+			@include breakpoint($min-vw, up) {
+				font-size: calc(
+					#{$min-font-size} + #{strip-unit($max-font-size - $min-font-size)} *
+						((100vw - #{$min-vw}) / #{strip-unit($max-vw - $min-vw)})
+				);
+			}
+			@include breakpoint($max-vw, up) {
+				font-size: $max-font-size;
+			}
+		}
+	}
 }
 
 // Responds to the given breakpoint.
 // Responds below the given breakpoint by default.
 // Respond above by passing $direction: up.
 @mixin breakpoint($key, $direction: down) {
-  $size: map-get($breakpoints, $key);
+	$size: map-get($breakpoints, $key);
 
-  @if $direction == 'down' {
-    @media only screen and (max-width: $size) {
-      @content;
-    }
-  } @else {
-    @media only screen and (min-width: $size) {
-      @content;
-    }
-  }
+	@if $direction == 'down' {
+		@media only screen and (max-width: $size) {
+			@content;
+		}
+	} @else {
+		@media only screen and (min-width: $size) {
+			@content;
+		}
+	}
 }
 
 // Applies styles to all headings.
 @mixin headings {
-  h1,
-  .h1,
-  h2,
-  .h2,
-  h3,
-  .h3,
-  h4,
-  .h4,
-  h5,
-  .h5,
-  h6,
-  .h6 {
-    @content;
-  }
+	h1,
+	.h1,
+	h2,
+	.h2,
+	h3,
+	.h3,
+	h4,
+	.h4,
+	h5,
+	.h5,
+	h6,
+	.h6 {
+		@content;
+	}
 }
 
 // Applies styles for the given theme.
 @mixin theme($theme) {
-  [data-theme='#{$theme}'] {
-    @content;
-  }
+	[data-theme='#{$theme}'] {
+		@content;
+	}
 }
 
 // Sets color theme variables from themes.
 @mixin set-themes() {
-  @each $theme, $map in $themes {
-    @include theme($theme) {
-      @each $key, $value in $map {
-        --color-#{$key}: #{$value};
-        --color-#{$key}-rgb: #{hex-to-rgb($value)};
-      }
-    }
-  }
+	@each $theme, $map in $themes {
+		@include theme($theme) {
+			@each $key, $value in $map {
+				--color-#{$key}: #{$value};
+				--color-#{$key}-rgb: #{hex-to-rgb($value)};
+			}
+		}
+	}
 }
 
 // Applies multiple transitions.
 @mixin transition(
-  $properties: all,
-  $duration: $animation-duration,
-  $method: $animation-timing-function,
-  $delay: $animation-delay
+	$properties: all,
+	$duration: $animation-duration,
+	$method: $animation-timing-function,
+	$delay: $animation-delay
 ) {
-  $prefixes: -webkit- -moz- -ms- -o-;
-  @each $prefix in $prefixes {
-    $value: ();
-    @each $property in $properties {
-      @if length($value) > 0 {
-        $value: append($value, unquote(',') #{$property} $duration $method $delay);
-      } @else {
-        $value: append($value, #{$property} $duration $method $delay);
-      }
-    }
-    #{$prefix}transition: $value;
-  }
+	$prefixes: -webkit- -moz- -ms- -o-;
+	@each $prefix in $prefixes {
+		$value: ();
+		@each $property in $properties {
+			@if length($value) > 0 {
+				$value: append($value, unquote(',') #{$property} $duration $method $delay);
+			} @else {
+				$value: append($value, #{$property} $duration $method $delay);
+			}
+		}
+		#{$prefix}transition: $value;
+	}
 }
 
 // Applies text overflow for given number of lines
 @mixin text-overflow($lines: 2, $orientation: vertical) {
-  display: -webkit-box;
-  -webkit-line-clamp: $lines;
-  -webkit-box-orient: $orientation;
-  text-overflow: ellipsis;
-  overflow: hidden;
+	display: -webkit-box;
+	-webkit-line-clamp: $lines;
+	-webkit-box-orient: $orientation;
+	text-overflow: ellipsis;
+	overflow: hidden;
 }
 
 // Applies margins, allows null values to omit properties
 @mixin inset($top, $right, $bottom, $left) {
-  top: $top;
-  right: $right;
-  bottom: $bottom;
-  left: $left;
+	top: $top;
+	right: $right;
+	bottom: $bottom;
+	left: $left;
 }
 
 // Applies margins, allows null values to omit properties
 @mixin margin($top, $right, $bottom, $left) {
-  margin-top: $top;
-  margin-right: $right;
-  margin-bottom: $bottom;
-  margin-left: $left;
+	margin-top: $top;
+	margin-right: $right;
+	margin-bottom: $bottom;
+	margin-left: $left;
 }
 
 // Applies paddings, allows null values to omit properties
 @mixin padding($top, $right, $bottom, $left) {
-  padding-top: $top;
-  padding-right: $right;
-  padding-bottom: $bottom;
-  padding-left: $left;
+	padding-top: $top;
+	padding-right: $right;
+	padding-bottom: $bottom;
+	padding-left: $left;
 }
 
 // Applies styles to hover and focus states
 @mixin focus {
-  &:hover,
-  &:focus {
-    @content;
-  }
+	&:hover,
+	&:focus {
+		@content;
+	}
 }

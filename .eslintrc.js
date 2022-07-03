@@ -1,4 +1,4 @@
 module.exports = {
-  plugins: [],
-  extends: ['next/core-web-vitals', 'prettier'],
+	plugins: [],
+	extends: ['next/core-web-vitals', 'prettier'],
 };

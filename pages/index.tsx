@@ -5,31 +5,31 @@ import { Code, Contact, Head, Hero, Projects } from 'components';
 import { projects } from 'data';
 
 const Home = ({ repos }: { repos: any }) => {
-  return (
-    <>
-      <Head />
-      <Hero />
-      <Code repos={repos} />
-      <Projects projects={projects} />
-      <Contact />
-    </>
-  );
+	return (
+		<>
+			<Head />
+			<Hero />
+			<Code repos={repos} />
+			<Projects projects={projects} />
+			<Contact />
+		</>
+	);
 };
 
 export const getStaticProps: GetStaticProps = async () => {
-  const octokit = new Octokit({ auth: process.env.PERSONAL_ACCESS_TOKEN });
-  const res = await octokit.request(`GET /user/repos`, {
-    type: 'public',
-    page: 1,
-    per_page: 6,
-    sort: 'updated',
-  });
-  const repos = res.data;
+	const octokit = new Octokit({ auth: process.env.PERSONAL_ACCESS_TOKEN });
+	const res = await octokit.request(`GET /user/repos`, {
+		type: 'public',
+		page: 1,
+		per_page: 6,
+		sort: 'updated',
+	});
+	const repos = res.data;
 
-  return {
-    props: { repos },
-    revalidate: 10,
-  };
+	return {
+		props: { repos },
+		revalidate: 10,
+	};
 };
 
 export default Home;

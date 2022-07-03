@@ -2,40 +2,40 @@
 
 // Return CSS variable with the given color.
 @function color($color) {
-  @return var(--color-#{$color});
+	@return var(--color-#{$color});
 }
 
 // Return CSS RGB variable with the given color.
 @function color-rgb($color) {
-  @return var(--color-#{$color}-rgb);
+	@return var(--color-#{$color}-rgb);
 }
 
 // Converts a hex color to a RGB color.
 @function hex-to-rgb($hex) {
-  @return red($hex), green($hex), blue($hex);
+	@return red($hex), green($hex), blue($hex);
 }
 
 // Returns an RGBA color with the given color and alpha.
 @function alpha($color, $alpha) {
-  @return rgba(color-rgb($color), $alpha);
+	@return rgba(color-rgb($color), $alpha);
 }
 
 // Converts a pixel value to an em value.
 @function em($pixels) {
-  @return ($pixels / $font_size) * 1em;
+	@return ($pixels / $font_size) * 1em;
 }
 
 // Converts a pixel value to a rem value.
 @function rem($pixels) {
-  @return ($pixels / $font_size) * 1rem;
+	@return ($pixels / $font_size) * 1rem;
 }
 
 // Strips the unit from a value.
 @function strip-unit($value) {
-  @return $value / ($value * 0 + 1);
+	@return $value / ($value * 0 + 1);
 }
 
 // Returns breakpoint value in px for the given key.
 @function breakpoint($key) {
-  @return map-get($breakpoints, $key);
+	@return map-get($breakpoints, $key);
 }

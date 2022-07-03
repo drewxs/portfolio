@@ -1,8 +1,4 @@
 {
-	"editor.formatOnSave": true,
-	"typescript.suggest.autoImports": true,
-	"typescript.suggest.paths": true,
-	"editor.codeActionsOnSave": {
-		"source.fixAll.eslint": true
-	}
+	"editor.defaultFormatter": "esbenp.prettier-vscode",
+	"editor.formatOnSave": true
 }

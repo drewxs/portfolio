@@ -34,6 +34,15 @@ interface Project {
 	img: string;
 }
 
+interface Experience {
+	_id: string;
+	year: number;
+	title: string;
+	description: string;
+	company: string;
+	url: string;
+}
+
 class NextApiError {
 	statusCode: number;
 	message: string;

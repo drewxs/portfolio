@@ -8,12 +8,12 @@
 
 @keyframes ping {
 	0% {
-		box-shadow: 0 0 0.3em 0 rgba($primary, 0);
+		box-shadow: 0 0 0 0 alpha(text, 1);
 	}
-	60% {
-		box-shadow: 0 0 1em 0.2em rgba($primary, 0.1);
+	50% {
+		box-shadow: 0 0 0 0.3em alpha(text, 0.1);
 	}
 	100% {
-		box-shadow: 0 0 0.3 0 rgba($primary, 0);
+		box-shadow: 0 0 0 0 alpha(text, 0.1);
 	}
 }

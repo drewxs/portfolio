@@ -1,8 +1,7 @@
 import { Octokit } from '@octokit/core';
 import { GetStaticProps } from 'next';
 
-import { Code, Contact, Head, Hero, Projects } from 'components';
-import { projects } from 'data';
+import { Code, Contact, Experience, Head, Hero, Projects } from 'components';
 
 const Home = ({ repos }: { repos: any }) => {
 	return (
@@ -10,7 +9,8 @@ const Home = ({ repos }: { repos: any }) => {
 			<Head />
 			<Hero />
 			<Code repos={repos} />
-			<Projects projects={projects} />
+			<Projects />
+			<Experience />
 			<Contact />
 		</>
 	);

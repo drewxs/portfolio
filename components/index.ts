@@ -1,5 +1,7 @@
 export { Code } from 'components/code';
 export { Contact } from 'components/contact';
+export { ExperienceCard } from 'components/experience-card';
+export { Experience } from 'components/experience';
 export { Footer } from 'components/footer';
 export { Head } from 'components/head';
 export { Hero } from 'components/hero';

@@ -1,0 +1,8 @@
+{
+	"editor.formatOnSave": true,
+	"typescript.suggest.autoImports": true,
+	"typescript.suggest.paths": true,
+	"editor.codeActionsOnSave": {
+		"source.fixAll.eslint": true
+	}
+}

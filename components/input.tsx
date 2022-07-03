@@ -18,7 +18,7 @@ export const Input = (props: InputProps): ReactElement => {
 	};
 
 	return (
-		<div className={clsx('input', props.className, { focused, fullwidth })}>
+		<div className={clsx('input', props.className, { focused, fullwidth }, { focused: value })}>
 			<label className='input-label' htmlFor={name}>
 				{label}
 				<span>{required && ' *'}</span>

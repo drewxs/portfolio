@@ -12,7 +12,14 @@ export const ProjectCard = ({ project }: { project: Project }): ReactElement => 
 
 	return (
 		<Link className='project-card' href={url} target='_blank'>
-			<Img className='project-card__img' src={`/projects/${img}`} alt={title} layout='fill' objectFit='cover' />
+			<Img
+				className='project-card__img'
+				src={`/projects/${img}`}
+				alt={title}
+				layout='fill'
+				objectFit='cover'
+				lazyBoundary='400px'
+			/>
 			<div className='project-card__overlay' />
 			<div className='project-card__inner'>
 				<h2 className='project-card__title h4'>{title}</h2>

@@ -53,14 +53,37 @@
 					width: 100%;
 				}
 
-				p {
-					opacity: 50%;
-					@include text-overflow();
-				}
-
 				&:hover {
 					transform: translateY(-4%);
 					box-shadow: rem(2px) rem(8px) rem(20px) rem(4px) alpha(text, 0.05);
+				}
+
+				&__title {
+					margin-bottom: 0.5rem;
+				}
+				&__description {
+					opacity: 70%;
+					@include text-overflow();
+				}
+				&__language {
+					font-size: 0.8em;
+					font-style: italic;
+					opacity: 60%;
+					margin-bottom: 0.6rem;
+				}
+			}
+
+			&-count {
+				&__row {
+					display: flex;
+					opacity: 0.9;
+					margin-bottom: 0.6rem;
+				}
+				&__icon {
+					height: 0.8em;
+				}
+				&__num {
+					margin: 0 0.7rem 0 0.5rem;
 				}
 			}
 

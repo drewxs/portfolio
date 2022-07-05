@@ -290,6 +290,9 @@
 				&__text {
 					@include margin(null, null, 0, 1rem);
 				}
+				&__icon {
+					width: 1em;
+				}
 			}
 		}
 	}

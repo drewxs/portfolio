@@ -66,18 +66,18 @@ export const Contact = (): ReactElement => {
 						<div className='contact-col__row'>
 							<div className='contact-block'>
 								<Link href={`tel:${contact.phone.replace(/\s/g, '')}`}>
-									<FontAwesomeIcon icon={faPhone} />
+									<FontAwesomeIcon className='contact-block__icon' icon={faPhone} />
 								</Link>
 								<p className='contact-block__text'>{contact.phone}</p>
 							</div>
 							<div className='contact-block'>
 								<Link href={`mailto:${contact.email}`}>
-									<FontAwesomeIcon icon={faEnvelope} />
+									<FontAwesomeIcon className='contact-block__icon' icon={faEnvelope} />
 								</Link>
 								<p className='contact-block__text'>{contact.email}</p>
 							</div>
 							<div className='contact-block'>
-								<FontAwesomeIcon icon={faLocationDot} />
+								<FontAwesomeIcon className='contact-block__icon' icon={faLocationDot} />
 								<p className='contact-block__text'>{contact.location}</p>
 							</div>
 						</div>

@@ -23,6 +23,7 @@ export const getStaticProps: GetStaticProps = async () => {
 		page: 1,
 		per_page: 6,
 		sort: 'updated',
+		direction: 'desc',
 	});
 	const repos = res.data;
 

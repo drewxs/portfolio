@@ -5,6 +5,9 @@
 	"description": "An eternal work in progress.",
 	"author": "Andrew X. Shah",
 	"license": "MIT",
+	"engines": {
+    		"node": "^16"
+  	},
 	"scripts": {
 		"dev": "next dev",
 		"build": "next build",

@@ -1,6 +1,7 @@
 import { ReactElement } from 'react';
 
-import { Socials, ThemeChanger } from 'components';
+import { NavLink, Socials, ThemeChanger } from 'components';
+import { nav } from 'data';
 import { useScrollPosition } from 'utils';
 
 /**
@@ -13,9 +14,16 @@ export const Navbar = (): ReactElement => {
 		<nav className={`nav ${scrollPosition > 50 ? 'min' : ''}`}>
 			<div className='container nav__container'>
 				<div className='nav__brand'>
-					<h4 className='nav__title'>Andrew Shah</h4>
+					<h4 className='nav__title'>
+						Andrew <span className='nav__title nav__title--initial'>X. </span>Shah
+					</h4>
 				</div>
 				<div className='nav__links'>
+					{nav?.map((link: NavLink) => (
+						<NavLink href={link.url} key={link.text}>
+							{link.text}
+						</NavLink>
+					))}
 					<Socials />
 					<ThemeChanger />
 				</div>

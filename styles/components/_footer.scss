@@ -7,6 +7,11 @@
 		align-items: center;
 		justify-content: space-between;
 		margin-top: 1.5rem;
+
+		@include breakpoint(xs) {
+			flex-direction: column;
+			align-items: flex-start;
+		}
 	}
 
 	&__divider {
@@ -16,5 +21,9 @@
 
 	&__copyright {
 		margin: 0;
+
+		@include breakpoint(xs) {
+			margin-bottom: 1rem;
+		}
 	}
 }

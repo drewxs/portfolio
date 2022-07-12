@@ -43,6 +43,11 @@ interface Experience {
 	url: string;
 }
 
+interface NavLink {
+	text: string;
+	url: string;
+}
+
 class NextApiError {
 	statusCode: number;
 	message: string;

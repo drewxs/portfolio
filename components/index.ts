@@ -8,6 +8,7 @@ export { Hero } from 'components/hero';
 export { Img } from 'components/image';
 export { Input } from 'components/input';
 export { Link } from 'components/link';
+export { NavLink } from 'components/nav-link';
 export { Navbar } from 'components/navbar';
 export { ProjectCard } from 'components/project-card';
 export { Projects } from 'components/projects';

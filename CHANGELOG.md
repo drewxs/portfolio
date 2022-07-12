@@ -1,3 +1,13 @@
+## [1.1.0](https://github.com/kito0/portfolio/compare/v1.0.0...v1.1.0) (2022-07-12)
+
+
+### Features
+
+* add link data ([43666c3](https://github.com/kito0/portfolio/commit/43666c34fd4a935e1fe7d2d5739ee9def74e59f0))
+* add medium link ([b637380](https://github.com/kito0/portfolio/commit/b637380ffffbdf7eec3ccb9748c207f29637dc6b))
+* create nav-link component ([1bf8980](https://github.com/kito0/portfolio/commit/1bf898060987be0cfa972ddaaebb9da3b089b542))
+* update nav and footer responsiveness ([30a442e](https://github.com/kito0/portfolio/commit/30a442ec00c4d24a75ba2fb63bd8aab464545700))
+
 ## 1.0.0 (2022-07-07)
 
 

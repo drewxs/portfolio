@@ -1153,6 +1153,15 @@ __metadata:
   languageName: node
   linkType: hard
 
+"@types/react-fontawesome@npm:^1.6.5":
+  version: 1.6.5
+  resolution: "@types/react-fontawesome@npm:1.6.5"
+  dependencies:
+    "@types/react": "*"
+  checksum: 655d5eaa0131a98fc598eff8dca063aa13f9d9a12743e0e13db690c4a781736edf1bc14445bcac0c593c236b1ec3b27e0b61d33951ec6eeb4ded83dceebfe87c
+  languageName: node
+  linkType: hard
+
 "@types/react@npm:*, @types/react@npm:18.0.12":
   version: 18.0.12
   resolution: "@types/react@npm:18.0.12"
@@ -5463,6 +5472,7 @@ __metadata:
     "@types/node": 18.0.0
     "@types/react": 18.0.12
     "@types/react-dom": 18.0.5
+    "@types/react-fontawesome": ^1.6.5
     clsx: ^1.1.1
     conventional-changelog-conventionalcommits: ^5.0.0
     eslint: 8.17.0

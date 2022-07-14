@@ -9,13 +9,13 @@ import { ReactElement } from 'react';
  * @param props - Component props
  */
 export const Link = (props: LinkProps): ReactElement => {
-	const { href, children, ...rest } = props;
+  const { href, children, ...rest } = props;
 
-	return href ? (
-		<NextLink href={href}>
-			<a {...rest}>{children}</a>
-		</NextLink>
-	) : (
-		<div {...rest}>{children}</div>
-	);
+  return href ? (
+    <NextLink href={href}>
+      <a {...rest}>{children}</a>
+    </NextLink>
+  ) : (
+    <div {...rest}>{children}</div>
+  );
 };

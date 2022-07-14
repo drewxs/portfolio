@@ -5,13 +5,13 @@ import 'styles/_main.scss';
 import { Layout } from 'layout';
 
 const App = ({ Component, pageProps }: AppProps) => {
-	return (
-		<ThemeProvider defaultTheme='system'>
-			<Layout>
-				<Component {...pageProps} />
-			</Layout>
-		</ThemeProvider>
-	);
+  return (
+    <ThemeProvider defaultTheme='system'>
+      <Layout>
+        <Component {...pageProps} />
+      </Layout>
+    </ThemeProvider>
+  );
 };
 
 export default App;

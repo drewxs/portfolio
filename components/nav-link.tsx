@@ -7,13 +7,13 @@ import { ReactElement } from 'react';
  * @param props - Component props
  */
 export const NavLink = (props: LinkProps): ReactElement => {
-	const { href, children, ...rest } = props;
+  const { href, children, ...rest } = props;
 
-	return (
-		<NextLink href={href}>
-			<a className='nav-link' {...rest}>
-				{children}
-			</a>
-		</NextLink>
-	);
+  return (
+    <NextLink href={href}>
+      <a className='nav-link' {...rest}>
+        {children}
+      </a>
+    </NextLink>
+  );
 };

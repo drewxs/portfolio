@@ -1,51 +1,51 @@
 @use 'styles/abstract' as *;
 
 ::-webkit-scrollbar {
-	width: rem(10px);
+  width: rem(10px);
 }
 ::-webkit-scrollbar-track {
-	background-color: alpha(primary, 0.1);
+  background-color: alpha(primary, 0.1);
 }
 ::-webkit-scrollbar-thumb {
-	background-color: color(primary);
+  background-color: color(primary);
 }
 
 *,
 *::before,
 *::after {
-	animation-duration: $animation-duration;
-	animation-timing-function: $animation-timing-function;
+  animation-duration: $animation-duration;
+  animation-timing-function: $animation-timing-function;
 }
 
 :root {
-	color: color(text);
-	background-color: color(bg);
-	@include transition(color background-color);
+  color: color(text);
+  background-color: color(bg);
+  @include transition(color background-color);
 }
 
 @include set-themes();
 
 textarea {
-	resize: vertical;
-	min-height: 8rem;
-	max-height: 24rem;
+  resize: vertical;
+  min-height: 8rem;
+  max-height: 24rem;
 }
 
 .button {
-	border-radius: rem(8px);
-	padding: rem(8px) rem(16px);
-	border: rem(2px) solid $primary;
-	background-color: rgba($primary, 0.9);
-	color: rgba($white, 0.5);
-	@include transition(color background-color, $animation-duration-fast);
+  border-radius: rem(8px);
+  padding: rem(8px) rem(16px);
+  border: rem(2px) solid $primary;
+  background-color: rgba($primary, 0.9);
+  color: rgba($white, 0.5);
+  @include transition(color background-color, $animation-duration-fast);
 
-	&:not(:disabled) {
-		cursor: pointer;
-		color: $white;
+  &:not(:disabled) {
+    cursor: pointer;
+    color: $white;
 
-		&:hover {
-			background-color: $primary;
-			color: $white;
-		}
-	}
+    &:hover {
+      background-color: $primary;
+      color: $white;
+    }
+  }
 }

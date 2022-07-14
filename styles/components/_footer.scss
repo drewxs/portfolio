@@ -1,29 +1,29 @@
 @use 'styles/abstract' as *;
 
 .footer {
-	&__row {
-		width: 100%;
-		display: flex;
-		align-items: center;
-		justify-content: space-between;
-		margin-top: 1.5rem;
+  &__row {
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    margin-top: 1.5rem;
 
-		@include breakpoint(xs) {
-			flex-direction: column;
-			align-items: flex-start;
-		}
-	}
+    @include breakpoint(xs) {
+      flex-direction: column;
+      align-items: flex-start;
+    }
+  }
 
-	&__divider {
-		height: rem(1px);
-		background-color: color(primary);
-	}
+  &__divider {
+    height: rem(1px);
+    background-color: color(primary);
+  }
 
-	&__copyright {
-		margin: 0;
+  &__copyright {
+    margin: 0;
 
-		@include breakpoint(xs) {
-			margin-bottom: 1rem;
-		}
-	}
+    @include breakpoint(xs) {
+      margin-bottom: 1rem;
+    }
+  }
 }

@@ -1,58 +1,58 @@
 @use 'styles/abstract' as *;
 
 .input {
-	position: relative;
-	display: inline-flex;
-	width: 20rem;
-	margin-bottom: rem(40px);
+  position: relative;
+  display: inline-flex;
+  width: 20rem;
+  margin-bottom: rem(40px);
 
-	&.fullwidth {
-		width: 100%;
-	}
-	&.halfwidth {
-		width: 50%;
-	}
-	&.focused {
-		.input {
-			&-label {
-				transform: translateY(-75%) scale(0.75);
-				transition: transform $animation-duration-fast $animation-timing-function;
-			}
-			&-base {
-				&::after {
-					transform: scale(1);
-					transition: transform $animation-duration-fast $animation-timing-function;
-				}
-			}
-		}
-	}
+  &.fullwidth {
+    width: 100%;
+  }
+  &.halfwidth {
+    width: 50%;
+  }
+  &.focused {
+    .input {
+      &-label {
+        transform: translateY(-75%) scale(0.75);
+        transition: transform $animation-duration-fast $animation-timing-function;
+      }
+      &-base {
+        &::after {
+          transform: scale(1);
+          transition: transform $animation-duration-fast $animation-timing-function;
+        }
+      }
+    }
+  }
 
-	&-label {
-		position: absolute;
-		@include inset(0, null, null, 0);
-		pointer-events: none;
-		transform-origin: top left;
-		transition: transform $animation-duration $animation-timing-function;
-	}
-	&-base {
-		position: relative;
-		display: inline-flex;
-		flex-direction: column;
-		width: 100%;
+  &-label {
+    position: absolute;
+    @include inset(0, null, null, 0);
+    pointer-events: none;
+    transform-origin: top left;
+    transition: transform $animation-duration $animation-timing-function;
+  }
+  &-base {
+    position: relative;
+    display: inline-flex;
+    flex-direction: column;
+    width: 100%;
 
-		&::before,
-		&::after {
-			content: '';
-			position: absolute;
-			@include inset(auto, 0, 0, 0);
-		}
-		&::before {
-			border-bottom: rem(2px) solid alpha(text, 0.1);
-		}
-		&::after {
-			border-bottom: rem(2px) solid color(primary);
-			transform: scale(0);
-			transition: transform $animation-duration-fast $animation-timing-function;
-		}
-	}
+    &::before,
+    &::after {
+      content: '';
+      position: absolute;
+      @include inset(auto, 0, 0, 0);
+    }
+    &::before {
+      border-bottom: rem(2px) solid alpha(text, 0.1);
+    }
+    &::after {
+      border-bottom: rem(2px) solid color(primary);
+      transform: scale(0);
+      transition: transform $animation-duration-fast $animation-timing-function;
+    }
+  }
 }

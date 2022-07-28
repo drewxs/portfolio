@@ -297,6 +297,13 @@
           justify-content: space-between;
           margin-bottom: rem(40px);
         }
+
+        &__row {
+          .socials {
+            margin-top: 1rem;
+            margin-bottom: 1rem;
+          }
+        }
       }
       &-form {
         display: flex;
@@ -304,6 +311,11 @@
         padding: rem(55px) rem(50px);
         border-radius: rem(20px);
         background-color: alpha(primary, 0.05);
+
+        @include breakpoint(sm) {
+          padding: 0;
+          background: none;
+        }
       }
       &-block {
         display: flex;

@@ -1,3 +1,10 @@
+## [1.2.0](https://github.com/kito0/portfolio/compare/v1.1.0...v1.2.0) (2022-07-28)
+
+
+### Features
+
+* update icons ([70a4469](https://github.com/kito0/portfolio/commit/70a446958c9a578f25fda19cea1e0ad7be00012d))
+
 ## [1.1.0](https://github.com/kito0/portfolio/compare/v1.0.0...v1.1.0) (2022-07-12)
 
 ### Features

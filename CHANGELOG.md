@@ -1,3 +1,10 @@
+## [1.3.0](https://github.com/kito0/portfolio/compare/v1.2.0...v1.3.0) (2022-07-28)
+
+
+### Features
+
+* update contact form responsiveness ([75b5121](https://github.com/kito0/portfolio/commit/75b5121fb61b897b0ff4919a34ac01df10395a5d))
+
 ## [1.2.0](https://github.com/kito0/portfolio/compare/v1.1.0...v1.2.0) (2022-07-28)
 
 

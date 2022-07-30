@@ -66,7 +66,7 @@ export const Head = ({
       <meta name='msapplication-square310x310logo' content='mstile-310x310.png' />
 
       {/* Other */}
-      <meta name='viewport' content='width=device-width,initial-scale=1'></meta>
+      <meta name='viewport' content='width=device-width, initial-scale=1.0, user-scalable=no'></meta>
       <link rel='canonical' href={`https://www.${domain}/${router.asPath}`}></link>
 
       {/* Index by default, only add noindex if specified */}

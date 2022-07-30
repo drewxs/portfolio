@@ -1,3 +1,10 @@
+## [1.3.1](https://github.com/kito0/portfolio/compare/v1.3.0...v1.3.1) (2022-07-30)
+
+
+### Bug Fixes
+
+* prevent viewport auto-resizing on mobile input focus ([863468c](https://github.com/kito0/portfolio/commit/863468c31cf649ccac82bac57bd2c23e1450e550))
+
 ## [1.3.0](https://github.com/kito0/portfolio/compare/v1.2.0...v1.3.0) (2022-07-28)
 
 

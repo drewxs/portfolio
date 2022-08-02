@@ -67,7 +67,7 @@ export const Head = ({
 
       {/* Other */}
       <meta name='viewport' content='width=device-width, initial-scale=1.0, user-scalable=no'></meta>
-      <link rel='canonical' href={`https://www.${domain}/${router.asPath}`}></link>
+      <link rel='canonical' href={`https://www.${domain}${router.asPath}`}></link>
 
       {/* Index by default, only add noindex if specified */}
       {noindex ? <meta name='robots' content='noindex'></meta> : <meta name='robots' content='follow, index' />}

@@ -1,3 +1,10 @@
+## [1.3.3](https://github.com/kito0/portfolio/compare/v1.3.2...v1.3.3) (2022-08-03)
+
+
+### Bug Fixes
+
+* override webkit autofill default color ([6730617](https://github.com/kito0/portfolio/commit/6730617c50d139701270c1550cc244756c6e2230))
+
 ## [1.3.1](https://github.com/kito0/portfolio/compare/v1.3.0...v1.3.1) (2022-07-30)
 
 

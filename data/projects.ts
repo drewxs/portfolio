@@ -2,7 +2,7 @@ export const projects = [
   {
     _id: '01',
     title: 'Raven',
-    url: 'https://ravenx.vercel.app',
+    url: 'https://github.com/kito0/raven',
     img: 'raven.gif',
   },
   {
@@ -13,8 +13,8 @@ export const projects = [
   },
   {
     _id: '03',
-    title: 'Coversy',
-    url: 'https://coversy.vercel.app',
-    img: 'coversy.gif',
+    title: 'EasyRedir',
+    url: 'https://www.easyredir.com',
+    img: 'easyredir.webp',
   },
 ];

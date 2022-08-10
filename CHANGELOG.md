@@ -1,3 +1,10 @@
+## [1.4.0](https://github.com/kito0/portfolio/compare/v1.3.3...v1.4.0) (2022-08-10)
+
+
+### Features
+
+* add google-analytics ([d79a008](https://github.com/kito0/portfolio/commit/d79a008bdccb0325b916caea2b94f4eeb65c5eb7))
+
 ## [1.3.3](https://github.com/kito0/portfolio/compare/v1.3.2...v1.3.3) (2022-08-03)
 
 

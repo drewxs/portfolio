@@ -13,8 +13,9 @@
     "build": "next build",
     "start": "next start",
     "lint": "next lint",
+    "format": "prettier --write --cache .",
+    "preinstall": "npx only-allow yarn",
     "lint-staged": "lint-staged",
-    "format": "prettier --write \"**/*.{js,jsx,ts,tsx,json,md,scss}\"",
     "prepare": "husky install",
     "semantic-release": "semantic-release"
   },

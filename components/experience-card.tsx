@@ -1,6 +1,6 @@
 import { ReactElement } from 'react';
 
-import { Img, Link } from 'components';
+import { Link } from 'components';
 
 /**
  * A card containing information about an experience.
@@ -8,7 +8,7 @@ import { Img, Link } from 'components';
  * @param exp - experience object
  */
 export const ExperienceCard = ({ exp }: { exp: Experience }): ReactElement => {
-  const { _id, year, title, description, company, url } = exp;
+  const { year, title, description, company, url } = exp;
 
   return (
     <div className='experience-card'>

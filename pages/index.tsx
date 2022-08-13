@@ -1,9 +1,12 @@
 import { Octokit } from '@octokit/core';
+import { Endpoints } from '@octokit/types';
 import { GetStaticProps } from 'next';
 
 import { Code, Contact, Experience, Head, Hero, Projects } from 'components';
 
-const Home = ({ repos }: { repos: any }) => {
+type ReposType = Endpoints['GET /user/repos']['response']['data'];
+
+const Home = ({ repos }: { repos: ReposType }) => {
   return (
     <>
       <Head />

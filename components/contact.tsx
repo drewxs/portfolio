@@ -35,7 +35,7 @@ export const Contact = (): ReactElement => {
   const handleSubmit = async (e: SyntheticEvent) => {
     e.preventDefault();
 
-    let isValidForm = handleValidation();
+    const isValidForm = handleValidation();
     if (!isValidForm) return;
 
     const res = await fetch('/api/sendgrid', {

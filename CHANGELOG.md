@@ -1,3 +1,10 @@
+## [1.4.1](https://github.com/kito0/portfolio/compare/v1.4.0...v1.4.1) (2022-08-13)
+
+
+### Bug Fixes
+
+* lint warnings ([661bf8d](https://github.com/kito0/portfolio/commit/661bf8d32d1ca1b7e5ab436242795dc74d51f8c7))
+
 ## [1.4.0](https://github.com/kito0/portfolio/compare/v1.3.3...v1.4.0) (2022-08-10)
 
 ### Features

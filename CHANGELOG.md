@@ -1,37 +1,32 @@
 ## [1.4.0](https://github.com/kito0/portfolio/compare/v1.3.3...v1.4.0) (2022-08-10)
 
-
 ### Features
 
-* add google-analytics ([d79a008](https://github.com/kito0/portfolio/commit/d79a008bdccb0325b916caea2b94f4eeb65c5eb7))
+- add google-analytics ([d79a008](https://github.com/kito0/portfolio/commit/d79a008bdccb0325b916caea2b94f4eeb65c5eb7))
 
 ## [1.3.3](https://github.com/kito0/portfolio/compare/v1.3.2...v1.3.3) (2022-08-03)
 
-
 ### Bug Fixes
 
-* override webkit autofill default color ([6730617](https://github.com/kito0/portfolio/commit/6730617c50d139701270c1550cc244756c6e2230))
+- override webkit autofill default color ([6730617](https://github.com/kito0/portfolio/commit/6730617c50d139701270c1550cc244756c6e2230))
 
 ## [1.3.1](https://github.com/kito0/portfolio/compare/v1.3.0...v1.3.1) (2022-07-30)
 
-
 ### Bug Fixes
 
-* prevent viewport auto-resizing on mobile input focus ([863468c](https://github.com/kito0/portfolio/commit/863468c31cf649ccac82bac57bd2c23e1450e550))
+- prevent viewport auto-resizing on mobile input focus ([863468c](https://github.com/kito0/portfolio/commit/863468c31cf649ccac82bac57bd2c23e1450e550))
 
 ## [1.3.0](https://github.com/kito0/portfolio/compare/v1.2.0...v1.3.0) (2022-07-28)
 
-
 ### Features
 
-* update contact form responsiveness ([75b5121](https://github.com/kito0/portfolio/commit/75b5121fb61b897b0ff4919a34ac01df10395a5d))
+- update contact form responsiveness ([75b5121](https://github.com/kito0/portfolio/commit/75b5121fb61b897b0ff4919a34ac01df10395a5d))
 
 ## [1.2.0](https://github.com/kito0/portfolio/compare/v1.1.0...v1.2.0) (2022-07-28)
 
-
 ### Features
 
-* update icons ([70a4469](https://github.com/kito0/portfolio/commit/70a446958c9a578f25fda19cea1e0ad7be00012d))
+- update icons ([70a4469](https://github.com/kito0/portfolio/commit/70a446958c9a578f25fda19cea1e0ad7be00012d))
 
 ## [1.1.0](https://github.com/kito0/portfolio/compare/v1.0.0...v1.1.0) (2022-07-12)
 

@@ -6,7 +6,9 @@
   "author": "Andrew X. Shah",
   "license": "MIT",
   "engines": {
-    "node": "^16"
+    "node": "^16",
+    "yarn": "^3.2.2",
+    "npm": "use-yarn"
   },
   "repository": {
     "type": "git",
@@ -19,7 +21,6 @@
     "start": "next start",
     "lint": "next lint",
     "format": "prettier --write --cache .",
-    "preinstall": "npx only-allow yarn",
     "lint-staged": "lint-staged",
     "prepare": "husky install",
     "semantic-release": "semantic-release"

@@ -36,3 +36,6 @@ cache
 
 # typescript
 *.tsbuildinfo
+
+# docs
+CHANGELOG.md

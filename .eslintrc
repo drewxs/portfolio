@@ -1,5 +1,12 @@
 {
   "parser": "@typescript-eslint/parser",
-  "plugins": ["@typescript-eslint"],
-  "extends": ["next/core-web-vitals", "plugin:@typescript-eslint/recommended", "plugin:prettier/recommended"]
+  "plugins": ["@typescript-eslint", "prettier"],
+  "extends": ["next/core-web-vitals", "plugin:@typescript-eslint/recommended", "prettier"],
+  "rules": {
+    "prettier/prettier": "error",
+    "eqeqeq": "error",
+    "func-style": ["error", "expression", { "allowArrowFunctions": true }],
+    "prefer-arrow-callback": ["error", { "allowNamedFunctions": true }]
+  },
+  "noInlineConfig": true
 }

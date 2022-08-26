@@ -1,3 +1,5 @@
+## [1.4.2](https://github.com/kito0/portfolio/compare/v1.4.1...v1.4.2) (2022-08-26)
+
 ## [1.4.1](https://github.com/kito0/portfolio/compare/v1.4.0...v1.4.1) (2022-08-13)
 
 ### Bug Fixes

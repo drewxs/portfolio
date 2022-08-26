@@ -51,11 +51,13 @@
         }
         @include breakpoint(sm) {
           width: 100%;
+          box-shadow: 0 0 rem(16px) 0 alpha(text, 0.1);
         }
-
-        &:hover {
-          transform: translateY(-4%);
-          box-shadow: rem(2px) rem(8px) rem(20px) rem(4px) alpha(text, 0.05);
+        @include breakpoint(md, up) {
+          &:hover {
+            transform: translateY(-4%);
+            box-shadow: rem(2px) rem(8px) rem(20px) rem(4px) alpha(text, 0.05);
+          }
         }
 
         &__title {
@@ -100,14 +102,16 @@
           }
         }
 
-        &:hover {
-          .repo-link__chevron {
-            &:first-of-type {
-              opacity: 1;
-              width: 1em;
-            }
-            &:last-of-type {
-              margin-left: -0.4em;
+        @include breakpoint(md, up) {
+          &:hover {
+            .repo-link__chevron {
+              &:first-of-type {
+                opacity: 1;
+                width: 1em;
+              }
+              &:last-of-type {
+                margin-left: -0.4em;
+              }
             }
           }
         }
@@ -134,14 +138,16 @@
         width: 100%;
         color: $white;
 
-        &:hover {
-          .project {
-            &-card {
-              &__overlay {
-                opacity: 0;
-              }
-              &__img {
-                transform: scale(1.02);
+        @include breakpoint(md, up) {
+          &:hover {
+            .project {
+              &-card {
+                &__overlay {
+                  opacity: 0;
+                }
+                &__img {
+                  transform: scale(1.02);
+                }
               }
             }
           }
@@ -244,8 +250,10 @@
           }
         }
 
-        &:hover {
-          border-color: alpha(primary, 0.2);
+        @include breakpoint(md, up) {
+          &:hover {
+            border-color: alpha(primary, 0.2);
+          }
         }
 
         &__year {

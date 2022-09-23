@@ -1,3 +1,10 @@
+## [1.6.0](https://github.com/kito0/portfolio/compare/v1.5.0...v1.6.0) (2022-09-23)
+
+
+### Features
+
+* update caching strategy ([423a476](https://github.com/kito0/portfolio/commit/423a47687092116b7f4db7f0899eaeda3deee2f3))
+
 ## [1.5.0](https://github.com/kito0/portfolio/compare/v1.4.2...v1.5.0) (2022-09-23)
 
 

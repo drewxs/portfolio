@@ -31,7 +31,7 @@ interface Project {
   _id: string;
   title: string;
   url: string;
-  img: string;
+  img: StaticImageData;
 }
 
 interface Experience {
@@ -48,6 +48,7 @@ interface NavLink {
   url: string;
 }
 
+// eslint-disable-next-line @typescript-eslint/no-unused-vars
 class NextApiError {
   statusCode: number;
   message: string;

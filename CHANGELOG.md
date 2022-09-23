@@ -1,3 +1,11 @@
+## [1.5.0](https://github.com/kito0/portfolio/compare/v1.4.2...v1.5.0) (2022-09-23)
+
+
+### Features
+
+* update default theme to dark ([14ba001](https://github.com/kito0/portfolio/commit/14ba0011c41f2d152117c90bbcfdf75253834a76))
+* update experience ([30aea59](https://github.com/kito0/portfolio/commit/30aea59846992ff0d46d985440c8cffabf75cd41))
+
 ## [1.4.2](https://github.com/kito0/portfolio/compare/v1.4.1...v1.4.2) (2022-08-26)
 
 ## [1.4.1](https://github.com/kito0/portfolio/compare/v1.4.0...v1.4.1) (2022-08-13)

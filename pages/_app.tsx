@@ -19,7 +19,7 @@ const App = ({ Component, pageProps }: AppProps) => {
           gtag('config', '${GTAG_ID}');
         `}
       </Script>
-      <ThemeProvider defaultTheme='system'>
+      <ThemeProvider defaultTheme='dark'>
         <Layout>
           <Component {...pageProps} />
         </Layout>

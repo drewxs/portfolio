@@ -6,7 +6,7 @@
     "prettier/prettier": "error",
     "eqeqeq": "error",
     "func-style": ["error", "expression", { "allowArrowFunctions": true }],
-    "prefer-arrow-callback": ["error", { "allowNamedFunctions": true }]
-  },
-  "noInlineConfig": true
+    "prefer-arrow-callback": ["error", { "allowNamedFunctions": true }],
+    "@typescript-eslint/no-explicit-any": 0
+  }
 }

@@ -1,6 +1,6 @@
-export { contact } from 'data/contact';
-export { experience } from 'data/experience';
-export { hero } from 'data/hero';
-export { projects } from 'data/projects';
-export { nav } from 'data/links';
-export { socials } from 'data/links';
+export * from 'data/contact';
+export * from 'data/experience';
+export * from 'data/hero';
+export * from 'data/links';
+export * from 'data/meta';
+export * from 'data/projects';

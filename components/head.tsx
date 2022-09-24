@@ -3,13 +3,7 @@ import { useRouter } from 'next/router';
 import Script from 'next/script';
 import { ReactElement } from 'react';
 
-const sitename = 'Andrew Shah';
-const domain = `andrewshah.dev`;
-const meta = {
-  title: `Andrew Shah | Software Engineer`,
-  description: `An eternal work in progress.`,
-  ogImg: `og-1260x630.png`,
-};
+import { meta } from 'data';
 
 /**
  * Head component.
@@ -17,13 +11,13 @@ const meta = {
  *
  * @param title - page title
  * @param description - page description
- * @param ogImage - open graph image filename
+ * @param image - open graph image filename
  * @param noIndex - whether to index the page
  */
 export const Head = ({
   title = meta.title,
   description = meta.description,
-  ogImage = meta.ogImg,
+  image = meta.image,
   noindex = false,
 }): ReactElement => {
   const router = useRouter();
@@ -35,12 +29,12 @@ export const Head = ({
       <meta name='description' content={description} />
 
       {/* Open Graph */}
-      <meta property='og:site_name' content={sitename} />
-      <meta property='og:url' content={`https://${domain}/${router.asPath}`} />
+      <meta property='og:site_name' content={meta.sitename} />
+      <meta property='og:url' content={`https://${meta.domain}/${router.asPath}`} />
       <meta property='og:title' content={title} />
       <meta property='og:type' content='website' />
       <meta property='og:description' content={description} />
-      <meta property='og:image' content={`/${ogImage}`} />
+      <meta property='og:image' content={`/${image}`} />
 
       {/* Icons */}
       <link rel='icon' href='favicon.ico' />
@@ -67,7 +61,7 @@ export const Head = ({
 
       {/* Other */}
       <meta name='viewport' content='width=device-width, initial-scale=1.0, user-scalable=no'></meta>
-      <link rel='canonical' href={`https://www.${domain}${router.asPath}`}></link>
+      <link rel='canonical' href={`https://www.${meta.domain}${router.asPath}`}></link>
 
       {/* Index by default, only add noindex if specified */}
       {noindex ? <meta name='robots' content='noindex'></meta> : <meta name='robots' content='follow, index' />}

@@ -1,6 +1,6 @@
 export const socials = {
-  github: 'https://github.com/kito0',
-  linkedin: 'https://www.linkedin.com/in/andrewxshah',
+  github: 'https://github.com/drewxs',
+  linkedin: 'https://www.linkedin.com/in/drewxs',
   medium: 'https://medium.com/@drewxs',
 };
 

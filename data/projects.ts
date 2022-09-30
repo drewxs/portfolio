@@ -6,13 +6,13 @@ export const projects = [
   {
     _id: '01',
     title: 'Raven',
-    url: 'https://github.com/kito0/raven',
+    url: 'https://github.com/drewxs/raven',
     img: raven,
   },
   {
     _id: '02',
     title: 'Crylog',
-    url: 'https://github.com/kito0/crylog',
+    url: 'https://github.com/drewxs/crylog',
     img: crylog,
   },
   {

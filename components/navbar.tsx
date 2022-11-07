@@ -1,3 +1,5 @@
+'use client';
+
 import { ReactElement } from 'react';
 
 import { NavLink, Socials, ThemeChanger } from 'components';
@@ -25,7 +27,6 @@ export const Navbar = (): ReactElement => {
             </NavLink>
           ))}
           <Socials />
-          <ThemeChanger />
         </div>
       </div>
     </nav>

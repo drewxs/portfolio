@@ -1,3 +1,5 @@
+'use client';
+
 import { ReactElement, useEffect, useState } from 'react';
 
 import { sleep } from 'utils';
@@ -41,5 +43,10 @@ export const Typewriter = ({
     type().catch((err) => console.log(err));
   }, [currentText.length, text, speed, delay, isTyping, linger, lingerDuration]);
 
-  return <span className={`typewriter ${isTyping ? 'typing' : ''}`}>{currentText}</span>;
+  return (
+    <>
+      <span className={`typewriter ${isTyping ? 'typing' : ''}\n`}>{currentText}</span>
+      <br />
+    </>
+  );
 };

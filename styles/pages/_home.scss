@@ -135,6 +135,7 @@
       }
       &-card {
         position: relative;
+        overflow: hidden;
         width: 100%;
         color: $white;
 
@@ -343,6 +344,18 @@
 
 .youveactivatedmycard {
   display: none;
+}
+.disclaimer {
+  font-size: 0.8em;
+  color: alpha(text, 0.5);
+  margin-top: 2rem;
+
+  &-link {
+    display: inline-block;
+  }
+}
+.grecaptcha-badge {
+  opacity: 0;
 }
 
 @include theme(dark) {

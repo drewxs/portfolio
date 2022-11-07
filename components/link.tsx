@@ -12,8 +12,8 @@ export const Link = (props: LinkProps): ReactElement => {
   const { href, children, ...rest } = props;
 
   return href ? (
-    <NextLink href={href}>
-      <a {...rest}>{children}</a>
+    <NextLink href={href} {...rest}>
+      {children}
     </NextLink>
   ) : (
     <div {...rest}>{children}</div>

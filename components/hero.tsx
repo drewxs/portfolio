@@ -15,11 +15,8 @@ export const Hero = (): ReactElement => {
       <div className='container'>
         <h1>
           <Typewriter text={hero.line1} />
-          <br />
           <Typewriter text={hero.line2} delay={line1Delay} lingerDuration={0} />
-          <br />
           <Typewriter text=' ' delay={line2Delay} linger />
-          <br />
         </h1>
       </div>
     </section>

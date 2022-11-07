@@ -55,4 +55,7 @@
       transition: transform $animation-duration-fast $animation-timing-function;
     }
   }
+  &-field {
+    color: color(text);
+  }
 }

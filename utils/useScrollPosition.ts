@@ -1,3 +1,5 @@
+'use client';
+
 import { useEffect, useState } from 'react';
 
 /**
@@ -17,5 +19,3 @@ export const useScrollPosition = (): number => {
 
   return scrollPosition;
 };
-
-export default useScrollPosition;

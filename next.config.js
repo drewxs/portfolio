@@ -7,6 +7,9 @@ const nextConfig = {
   eslint: {
     dirs: ['components', 'layout', 'pages', 'styles'],
   },
+  experimental: {
+    appDir: true,
+  },
   async headers() {
     return [
       {

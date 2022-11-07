@@ -1,9 +1,10 @@
+'use client';
+
 export * from 'components/code';
 export * from 'components/contact';
 export * from 'components/experience-card';
 export * from 'components/experience';
 export * from 'components/footer';
-export * from 'components/head';
 export * from 'components/hero';
 export * from 'components/image';
 export * from 'components/input';

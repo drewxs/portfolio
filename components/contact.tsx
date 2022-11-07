@@ -1,6 +1,8 @@
+'use client';
+
+import { ReactElement, SyntheticEvent, useState } from 'react';
 import { faEnvelope, faLocationDot, faPhone } from '@fortawesome/free-solid-svg-icons';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
-import { ReactElement, SyntheticEvent, useState } from 'react';
 
 import { Input, Link, Socials } from 'components';
 import { contact } from 'data';
@@ -86,7 +88,7 @@ export const Contact = (): ReactElement => {
             </div>
           </div>
           {!success && !cardactivated && (
-            <form className='contact-col contact-form' onSubmit={handleSubmit}>
+            <form id='contact-form' className='contact-col contact-form' onSubmit={handleSubmit}>
               <Input type='text' name='name' label='Name' value={name} onInput={handleChangeName} required fullwidth />
               <Input
                 type='email'
@@ -127,14 +129,34 @@ export const Contact = (): ReactElement => {
               </div>
               <button
                 className='button g-recaptcha'
-                type='submit'
                 disabled={!name || !email || !message}
                 data-sitekey={process.env.NEXT_PUBLIC_RECAPTCHA_SITE_KEY}
-                data-callback='onSubmit'
-                data-action='submit'
+                onClick={handleSubmit}
               >
                 Send
               </button>
+              <p className='disclaimer'>
+                This site is protected by reCAPTCHA and the Google{' '}
+                <a
+                  className='disclaimer-link'
+                  href='https://policies.google.com/privacy'
+                  target='_blank'
+                  rel='noreferrer'
+                >
+                  Privacy Policy{' '}
+                </a>{' '}
+                and{' '}
+                <a
+                  className='disclaimer-link'
+                  href='https://policies.google.com/terms'
+                  target='_blank'
+                  rel='noreferrer'
+                >
+                  {' '}
+                  Terms of Service{' '}
+                </a>{' '}
+                apply.
+              </p>
             </form>
           )}
           {success && !cardactivated && <div className='contact-col'>{contact.successMessage}</div>}

@@ -1,3 +1,10 @@
+## [1.7.0](https://github.com/drewxs/portfolio/compare/v1.6.3...v1.7.0) (2023-02-03)
+
+
+### Features
+
+* sort repos by `created` ([c908de7](https://github.com/drewxs/portfolio/commit/c908de7f401ecf68ac9aac971e424934a097083d))
+
 ## [1.6.3](https://github.com/drewxs/portfolio/compare/v1.6.2...v1.6.3) (2023-02-03)
 
 

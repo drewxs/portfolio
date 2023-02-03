@@ -11,7 +11,7 @@ const getRepos = async () => {
     type: 'public',
     page: 1,
     per_page: 6,
-    sort: 'updated',
+    sort: 'created',
     direction: 'desc',
   });
   const repos = res.data;

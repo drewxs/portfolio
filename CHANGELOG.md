@@ -1,3 +1,11 @@
+## [1.6.3](https://github.com/drewxs/portfolio/compare/v1.6.2...v1.6.3) (2023-02-03)
+
+
+### Bug Fixes
+
+* render code segment only if fetch succeeds ([d7d9824](https://github.com/drewxs/portfolio/commit/d7d9824724bdcd4b10810971108e9ac2a7b39c01))
+* utils callback types ([60c3ccf](https://github.com/drewxs/portfolio/commit/60c3ccf88b0afa7a31e00b70478c6b10c90c135d))
+
 ## [1.6.2](https://github.com/drewxs/portfolio/compare/v1.6.1...v1.6.2) (2022-09-30)
 
 ## [1.6.1](https://github.com/drewxs/portfolio/compare/v1.6.0...v1.6.1) (2022-09-24)

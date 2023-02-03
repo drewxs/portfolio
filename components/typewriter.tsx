@@ -1,5 +1,6 @@
 'use client';
 
+import clsx from 'clsx';
 import { ReactElement, useEffect, useState } from 'react';
 
 import { sleep } from 'utils';
@@ -45,7 +46,7 @@ export const Typewriter = ({
 
   return (
     <>
-      <span className={['typewriter', isTyping ? 'typing' : null].join(' ')}>{currentText}</span>
+      <span className={clsx('typewriter', { typing: isTyping })}>{currentText}</span>
       <br />
     </>
   );

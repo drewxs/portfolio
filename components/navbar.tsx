@@ -2,9 +2,10 @@
 
 import { ReactElement } from 'react';
 
-import { NavLink, Socials, ThemeChanger } from 'components';
+import { NavLink, Socials } from 'components';
 import { nav } from 'data';
 import { useScrollPosition } from 'utils';
+import clsx from 'clsx';
 
 /**
  * Navigation bar component.
@@ -13,7 +14,7 @@ export const Navbar = (): ReactElement => {
   const scrollPosition = useScrollPosition();
 
   return (
-    <nav className={`nav ${scrollPosition > 50 ? 'min' : ''}`}>
+    <nav className={clsx('nav', { min: scrollPosition > 50 })}>
       <div className='container nav__container'>
         <div className='nav__brand'>
           <h4 className='nav__title'>

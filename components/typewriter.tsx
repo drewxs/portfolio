@@ -45,7 +45,7 @@ export const Typewriter = ({
 
   return (
     <>
-      <span className={`typewriter ${isTyping ? 'typing' : ''}\n`}>{currentText}</span>
+      <span className={['typewriter', isTyping ? 'typing' : null].join(' ')}>{currentText}</span>
       <br />
     </>
   );

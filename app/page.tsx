@@ -1,31 +1,13 @@
-import { Octokit } from '@octokit/core';
-import { Endpoints } from '@octokit/types';
-
 import { Code, Contact, Experience, Hero, Projects } from 'components';
 
-type ReposType = Endpoints['GET /user/repos']['response']['data'];
-
-const getRepos = async () => {
-  const octokit = new Octokit({ auth: process.env.PERSONAL_ACCESS_TOKEN });
-  const res = await octokit.request(`GET /user/repos`, {
-    type: 'public',
-    page: 1,
-    per_page: 6,
-    sort: 'updated',
-    direction: 'desc',
-  });
-  const repos = res.data;
-
-  return repos;
-};
-
 const Home = async () => {
-  const repos: ReposType = await getRepos();
+  const res = await fetch(`${process.env.SITE_URL}/api/repos`, { next: { revalidate: 60 } });
+  const data = await res.json();
 
   return (
     <>
       <Hero />
-      <Code repos={repos} />
+      <Code repos={data.repos} />
       <Projects />
       <Experience />
       <Contact />

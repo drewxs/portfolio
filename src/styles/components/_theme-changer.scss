@@ -1,0 +1,85 @@
+@use '@/styles/abstract' as *;
+
+.theme-changer {
+  position: relative;
+  width: 1.5rem;
+  height: 1.5rem;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin-left: 2rem;
+  cursor: pointer;
+
+  .gear {
+    position: absolute;
+    inset: 0;
+    background-color: color(primary);
+    border-radius: 50%;
+    @include transition(transform background-color);
+
+    &.tooth {
+      border-radius: rem(2px);
+      width: 120%;
+      height: 25%;
+      left: -10%;
+      top: auto;
+      bottom: auto;
+      @include transition(transform, $animation-duration-slow);
+
+      &:nth-child(2) {
+        transform: rotate(45deg);
+        @include transition(transform, $animation-duration-slow, $animation-timing-function-2);
+      }
+      &:nth-child(3) {
+        transform: rotate(90deg);
+        @include transition(transform, $animation-duration-slow, $animation-timing-function-3);
+      }
+      &:nth-child(4) {
+        transform: rotate(135deg);
+        @include transition(transform, $animation-duration-slow, $animation-timing-function-4);
+      }
+    }
+  }
+
+  .circle {
+    position: absolute;
+    width: 50%;
+    height: 50%;
+    background-color: hsl(45, 100%, 70%);
+    border-radius: 50%;
+    @include transition(transform width height);
+
+    &.inner {
+      background-color: hsl(45, 100%, 40%);
+      width: 25%;
+      height: 25%;
+    }
+  }
+
+  &.dark {
+    .gear {
+      &.tooth {
+        transform: rotate(360deg);
+
+        &:nth-child(2) {
+          transform: rotate(405deg);
+        }
+        &:nth-child(3) {
+          transform: rotate(450deg);
+        }
+        &:nth-child(4) {
+          transform: rotate(495deg);
+        }
+      }
+    }
+
+    .circle {
+      &.inner {
+        width: 50%;
+        height: 50%;
+        transform: translateX(-35%);
+        background-color: color(primary);
+      }
+    }
+  }
+}

@@ -1,0 +1,38 @@
+@use '@/styles/abstract' as *;
+
+.socials {
+  display: flex;
+
+  &__link {
+    @include transition(opacity);
+
+    &:hover {
+      svg {
+        filter: brightness(300%);
+      }
+    }
+    &:not(:first-of-type) {
+      margin-left: 1rem;
+    }
+  }
+
+  svg {
+    height: 1.5rem;
+    color: color(primary);
+    @include transition(filter);
+  }
+}
+
+@include theme(light) {
+  .socials {
+    &__link {
+      &:hover {
+        opacity: 50%;
+
+        svg {
+          filter: brightness(100%);
+        }
+      }
+    }
+  }
+}

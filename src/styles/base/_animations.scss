@@ -1,0 +1,19 @@
+@use '@/styles/abstract' as *;
+
+@keyframes blink {
+  50% {
+    opacity: 0;
+  }
+}
+
+@keyframes ping {
+  0% {
+    box-shadow: 0 0 0 0 alpha(text, 1);
+  }
+  50% {
+    box-shadow: 0 0 0 0.3em alpha(text, 0.1);
+  }
+  100% {
+    box-shadow: 0 0 0 0 alpha(text, 0.1);
+  }
+}

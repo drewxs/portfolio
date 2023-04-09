@@ -1,0 +1,7 @@
+@use '@/styles/abstract' as *;
+
+.container {
+  width: breakpoint(lg);
+  max-width: 90%;
+  position: relative;
+}

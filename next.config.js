@@ -1,11 +1,8 @@
 /** @type {import('next').NextConfig} */
-const nextConfig = {
+const config = {
   reactStrictMode: true,
   images: {
     minimumCacheTTL: 315360000,
-  },
-  eslint: {
-    dirs: ['components', 'layout', 'pages', 'styles'],
   },
   experimental: {
     appDir: true,
@@ -19,10 +16,24 @@ const nextConfig = {
           { key: 'X-Content-Type-Options', value: 'nosniff' },
           { key: 'X-XSS-Protection', value: '1; mode=block' },
           { key: 'Strict-Transport-Security', value: 'max-age=31536000' },
+          { key: 'Content-Security-Policy', value: 'upgrade-insecure-requests' },
         ],
+      },
+      {
+        source: '/sitemap.xml',
+        headers: [{ key: 'Cache-Control', value: 'public, s-maxage=300, stale-while-revalidate=600' }],
+      },
+    ];
+  },
+  async redirects() {
+    return [
+      {
+        source: '/index',
+        destination: '/',
+        permanent: true,
       },
     ];
   },
 };
 
-module.exports = nextConfig;
+export default config;

@@ -7,7 +7,7 @@ import { hero } from '@/data';
  * Home page hero section.
  */
 export const Hero = (): ReactElement => {
-  const speed = 50;
+  const speed = 30;
   const delay = 200;
   const duration = 1000;
   const line1Delay = delay + hero.line1.length * speed + duration;

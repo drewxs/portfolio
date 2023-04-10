@@ -1,3 +1,10 @@
+## [1.7.1](https://github.com/drewxs/portfolio/compare/v1.7.0...v1.7.1) (2023-04-10)
+
+
+### Bug Fixes
+
+* **typewriter:** tweak speed ([8a29489](https://github.com/drewxs/portfolio/commit/8a294890139beaf6b62f9ce8566a1b813a0217a0))
+
 ## [1.7.0](https://github.com/drewxs/portfolio/compare/v1.6.3...v1.7.0) (2023-02-03)
 
 

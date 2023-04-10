@@ -1,3 +1,4 @@
+import { Source_Code_Pro } from 'next/font/google';
 import Script from 'next/script';
 import React from 'react';
 
@@ -8,11 +9,19 @@ import '@/styles/_main.scss';
 
 const GTAG_ID = process.env.NEXT_PUBLIC_GTAG;
 
+const sourceCodePro = Source_Code_Pro({
+  weight: ['400'],
+  style: ['normal'],
+  subsets: ['latin'],
+  fallback: ['Arial', 'Helvetica', 'sans-serif'],
+  display: 'swap',
+});
+
 const Layout = ({ children }: LayoutProps) => {
   const { title, description, image, domain, sitename } = meta;
 
   return (
-    <html data-theme='dark' lang='en'>
+    <html data-theme='dark' lang='en' className={sourceCodePro.className}>
       <head>
         <title>{title}</title>
         <meta name='description' content={description} />

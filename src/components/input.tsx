@@ -23,7 +23,7 @@ export const Input = (props: InputProps): ReactElement => {
     <div className={clsx('input', props.className, { focused, fullwidth }, { focused: value })}>
       <label className='input-label' htmlFor={name}>
         {label}
-        <span>{required && ' *'}</span>
+        <span className='input-label__required'>{required && ' *'}</span>
       </label>
       <div className='input-base'>
         {!multiline ? (

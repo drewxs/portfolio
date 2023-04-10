@@ -1,13 +1,6 @@
 @use '@/styles/abstract' as *;
 
-@font-face {
-  font-family: $font-body;
-  src: local($font-body) url($font-face-url) format($font-face-format);
-  font-display: swap;
-}
-
 html {
-  font-family: $font-body, $font-body-fallback;
   font-smooth: always;
   text-rendering: optimizeLegibility;
   -webkit-font-smoothing: antialiased;
@@ -21,7 +14,6 @@ html {
 }
 
 @include headings {
-  font-family: $font-heading, $font-body-fallback;
   font-weight: 500;
   margin-bottom: 1rem;
 }

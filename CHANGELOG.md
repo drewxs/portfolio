@@ -1,3 +1,10 @@
+## [1.8.0](https://github.com/drewxs/portfolio/compare/v1.7.1...v1.8.0) (2023-04-21)
+
+
+### Features
+
+* **analytics:** add vercel analytics ([b340c49](https://github.com/drewxs/portfolio/commit/b340c4940a1a04320ff574594a6ddf2b4c188c36))
+
 ## [1.7.1](https://github.com/drewxs/portfolio/compare/v1.7.0...v1.7.1) (2023-04-10)
 
 

@@ -1,3 +1,10 @@
+## [1.8.1](https://github.com/drewxs/portfolio/compare/v1.8.0...v1.8.1) (2023-04-21)
+
+
+### Reverts
+
+* Revert "build(deps): update" ([f19a1f0](https://github.com/drewxs/portfolio/commit/f19a1f087cd993efa7178ffe50e9890f2efe8214))
+
 ## [1.8.0](https://github.com/drewxs/portfolio/compare/v1.7.1...v1.8.0) (2023-04-21)
 
 

@@ -1,3 +1,4 @@
+import { Analytics } from '@vercel/analytics/react';
 import { Source_Code_Pro } from 'next/font/google';
 import Script from 'next/script';
 import React from 'react';
@@ -77,6 +78,7 @@ const Layout = ({ children }: LayoutProps) => {
           `}
         </Script>
       </head>
+      <Analytics />
       {/* <ThemeProvider> */}
       <body>
         <Navbar />

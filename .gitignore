@@ -7,13 +7,13 @@ node_modules
 # testing
 coverage
 
-# next.js
+# output
 .next
 out
-
-# production
 build
 dist
+robots.txt
+sitemap.xml
 
 # misc
 .DS_Store

@@ -5,9 +5,10 @@
   position: fixed;
   top: 0;
   z-index: 100;
-  background-color: alpha(bg, 0.4);
-  box-shadow: 0 rem(4px) rem(10px) 0 alpha(text, 0.05);
+  background-color: rgba($color: $black, $alpha: 0.93);
+  box-shadow: 0 rem(4px) rem(20px) 0 alpha(text, 0.01);
   backdrop-filter: saturate(150%) blur(4px);
+  color: $grey;
   @include transition(background-color box-shadow padding);
 
   &.min {
@@ -30,6 +31,14 @@
   &__links {
     display: flex;
     align-items: center;
+
+    .socials {
+      &__link {
+        svg {
+          color: $secondary;
+        }
+      }
+    }
   }
   &-link {
     $link: &;
@@ -58,7 +67,7 @@
 
 @include theme(dark) {
   .nav {
-    background-color: alpha(primary, 0.05);
+    background-color: rgba($color: $primary, $alpha: 0.05);
     box-shadow: 0 rem(4px) rem(20px) 0 alpha(text, 0.01);
   }
 }

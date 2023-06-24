@@ -1,8 +1,10 @@
 // Themes
 $primary: #02111b;
-$secondary: #3f4045;
+$secondary: #393e44;
 $black: #040404;
 $white: #fafafa;
+$grey: #e0e0e0;
+$dark-grey: #0e0e0e;
 $error: #e57373;
 
 $themes: (
@@ -10,7 +12,7 @@ $themes: (
     'primary': $primary,
     'secondary': $secondary,
     'text': $black,
-    'bg': $white,
+    'bg': $grey,
     'error': $error,
   ),
   'dark': (
@@ -56,7 +58,4 @@ $animation-duration-fast: 200ms;
 $animation-duration: 500ms;
 $animation-duration-slow: 1000ms;
 $animation-timing-function: cubic-bezier(0.4, 1, 0.7, 1);
-$animation-timing-function-2: cubic-bezier(0.35, 1, 0.75, 1);
-$animation-timing-function-3: cubic-bezier(0.3, 1, 0.8, 1);
-$animation-timing-function-4: cubic-bezier(0.25, 1, 0.9, 1);
 $animation-delay: 0ms;

@@ -13,7 +13,7 @@
   .gear {
     position: absolute;
     inset: 0;
-    background-color: color(primary);
+    background-color: $secondary;
     border-radius: 50%;
     @include transition(transform background-color);
 
@@ -28,15 +28,15 @@
 
       &:nth-child(2) {
         transform: rotate(45deg);
-        @include transition(transform, $animation-duration-slow, $animation-timing-function-2);
+        @include transition(transform, $animation-duration-slow, cubic-bezier(0.35, 1, 0.75, 1));
       }
       &:nth-child(3) {
         transform: rotate(90deg);
-        @include transition(transform, $animation-duration-slow, $animation-timing-function-3);
+        @include transition(transform, $animation-duration-slow, cubic-bezier(0.3, 1, 0.8, 1));
       }
       &:nth-child(4) {
         transform: rotate(135deg);
-        @include transition(transform, $animation-duration-slow, $animation-timing-function-4);
+        @include transition(transform, $animation-duration-slow, cubic-bezier(0.25, 1, 0.9, 1));
       }
     }
   }
@@ -55,8 +55,10 @@
       height: 25%;
     }
   }
+}
 
-  &.dark {
+@include theme(dark) {
+  .theme-changer {
     .gear {
       &.tooth {
         transform: rotate(360deg);

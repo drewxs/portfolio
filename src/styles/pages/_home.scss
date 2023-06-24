@@ -11,7 +11,7 @@
   }
 
   &.section {
-    padding-bottom: rem(100px);
+    padding-bottom: rem(100);
 
     h1 {
       font-size: 10rem;
@@ -19,7 +19,7 @@
       line-height: 1;
       opacity: 20%;
       margin-bottom: 2rem;
-      text-shadow: rem(2px) rem(2px) rem(20px) alpha(text, 0.5);
+      text-shadow: rem(2) rem(2) rem(20) alpha(text, 0.5);
 
       @include breakpoint(sm) {
         font-size: calc(8vw + 2rem);
@@ -41,8 +41,9 @@
       &-card {
         width: calc((100% - ($grid-gutter * 2)) / 3);
         min-height: 100%;
-        padding: 2rem 3rem;
-        background-color: alpha(bg, 0.5);
+        padding: 2rem 3rem 2.2rem;
+        background-color: alpha(primary, 0.05);
+        border-radius: rem(10);
         @include transition(transform box-shadow background-color);
 
         @include breakpoint(md) {
@@ -51,12 +52,12 @@
         }
         @include breakpoint(sm) {
           width: 100%;
-          box-shadow: 0 0 rem(16px) 0 alpha(text, 0.1);
+          box-shadow: 0 0 rem(16) 0 alpha(text, 0.1);
         }
         @include breakpoint(md, up) {
           &:hover {
             transform: translateY(-4%);
-            box-shadow: rem(2px) rem(8px) rem(20px) rem(4px) alpha(text, 0.05);
+            box-shadow: rem(2) rem(8) rem(20) rem(4) alpha(text, 0.05);
           }
         }
 
@@ -91,6 +92,7 @@
 
       &-link {
         max-width: max-content;
+        overflow: hidden;
 
         &__chevron {
           @include transition(opacity width margin);
@@ -177,10 +179,10 @@
           align-items: flex-start;
           width: 100%;
           height: 100%;
-          padding: rem(20px) rem(30px);
+          padding: rem(20) rem(30);
         }
         &__title {
-          border-bottom: rem(1px) solid rgba($white, 0.5);
+          border-bottom: rem(1) solid rgba($white, 0.5);
         }
         &__id {
           margin: 0;
@@ -216,12 +218,12 @@
         $border: 2;
         position: relative;
         width: 100%;
-        max-width: rem(600px);
-        padding: rem(20px) rem(30px);
+        max-width: rem(600);
+        padding: rem(20) rem(30);
         border: #{$border}px solid transparent;
-        border-radius: rem(10px);
+        border-radius: rem(10);
         background-color: alpha(primary, 0.05);
-        box-shadow: 0 rem(4px) rem(16px) rem(8px) alpha(text, 0.1);
+        box-shadow: 0 rem(4) rem(16) rem(8) alpha(text, 0.1);
         @include transition(border-color);
 
         &:not(:last-child) {
@@ -233,7 +235,7 @@
             position: absolute;
             inset: 100% 0 0;
             margin: 0 auto;
-            width: rem(4px);
+            width: rem(4);
             height: calc(#{$length}rem + #{$border}px);
             background-color: $secondary;
           }
@@ -298,13 +300,14 @@
       &-col {
         flex-basis: 50%;
         width: 100%;
-        padding-right: rem(40px);
+        padding-right: rem(40);
+        white-space: pre-wrap;
 
         &.content {
           display: flex;
           flex-direction: column;
           justify-content: space-between;
-          margin-bottom: rem(40px);
+          margin-bottom: rem(40);
         }
 
         &__row {
@@ -317,8 +320,8 @@
       &-form {
         display: flex;
         flex-direction: column;
-        padding: rem(55px) rem(50px);
-        border-radius: rem(20px);
+        padding: rem(55) rem(50);
+        border-radius: rem(20);
         background-color: alpha(primary, 0.05);
 
         @include breakpoint(sm) {
@@ -329,7 +332,7 @@
       &-block {
         display: flex;
         align-items: center;
-        margin-bottom: rem(20px);
+        margin-bottom: rem(20);
 
         &__text {
           @include margin(null, null, 0, 1rem);
@@ -358,12 +361,24 @@
   opacity: 0;
 }
 
+$card-background: rgba(
+  $color: $secondary,
+  $alpha: 0.18,
+);
 @include theme(dark) {
   .home {
     &.experience {
       .experience {
         &-card {
-          box-shadow: 0 rem(4px) rem(16px) rem(8px) alpha(secondary, 0.05);
+          background-color: $card-background;
+          box-shadow: 0 rem(4) rem(16) rem(8) alpha(secondary, 0.05);
+        }
+      }
+    }
+    &.code {
+      .repo {
+        &-card {
+          background-color: $card-background;
         }
       }
     }

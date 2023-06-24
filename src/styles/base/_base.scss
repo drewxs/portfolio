@@ -54,3 +54,14 @@ textarea {
   height: 1em;
   margin: auto 0;
 }
+
+@include theme(light) {
+  input:autofill,
+  input:autofill,
+  input:autofill:hover,
+  input:autofill:focus,
+  input:autofill:active {
+    transition: background-color 5000s ease-in-out 0s;
+    -webkit-text-fill-color: $black;
+  }
+}

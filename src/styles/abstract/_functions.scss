@@ -20,19 +20,14 @@
   @return rgba(color-rgb($color), $alpha);
 }
 
-// Converts a pixel value to an em value.
-@function em($pixels) {
-  @return ($pixels / $font_size) * 1em;
-}
-
-// Converts a pixel value to a rem value.
-@function rem($pixels) {
-  @return ($pixels / $font_size) * 1rem;
-}
-
-// Strips the unit from a value.
+// Strips the unit from a value
 @function strip-unit($value) {
   @return $value / ($value * 0 + 1);
+}
+
+// Converts a pixel value to a rem value
+@function rem($pixels) {
+  @return #{strip-unit($pixels) / strip-unit($font_size)}rem;
 }
 
 // Returns breakpoint value in px for the given key.

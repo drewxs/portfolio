@@ -1,3 +1,16 @@
+## [1.9.0](https://github.com/drewxs/portfolio/compare/v1.8.1...v1.9.0) (2023-06-24)
+
+
+### Features
+
+* **app:** revert theme-changer, separate providers/scripts ([a32757c](https://github.com/drewxs/portfolio/commit/a32757caec61822c58728b7003b30bd5b316bde6))
+
+
+### Bug Fixes
+
+* cleanup ([1d73a58](https://github.com/drewxs/portfolio/commit/1d73a5805d5311eb2558d84cc32387a9d3ebf9dc))
+* **styles:** cleanup ([5379e0d](https://github.com/drewxs/portfolio/commit/5379e0dafde9c60a1da9b505a7e7cc014d4885c0))
+
 ## [1.8.1](https://github.com/drewxs/portfolio/compare/v1.8.0...v1.8.1) (2023-04-21)
 
 

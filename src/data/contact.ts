@@ -4,6 +4,6 @@ export const contact = {
   phone: `+1 506-461-0871`,
   email: `drewhshah0@gmail.com`,
   location: `Calgary, AB, Canada`,
-  successMessage: `Thanks for reaching out! I will respond as soon as I get a chance!`,
+  successMessage: `Thanks for reaching out!\nI will respond as soon as I get a chance!`,
   errorMessage: `An error has occurred. Please try again later.`,
 };

@@ -1,14 +1,7 @@
-import { ReactElement } from 'react';
-
 import { ExperienceCard } from '@/components';
 import { experience } from '@/data';
 
-/**
- * Section for showcasing featured projects.
- *
- * @param projects - Array of GitHub repository objects
- */
-export const Experience = (): ReactElement => {
+export const Experience = () => {
   return (
     <section className='home section experience'>
       <div className='container'>

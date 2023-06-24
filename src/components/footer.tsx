@@ -1,11 +1,6 @@
-import { ReactElement } from 'react';
-
 import { Socials } from '@/components';
 
-/**
- * Footer component.
- */
-export const Footer = (): ReactElement => {
+export const Footer = () => {
   return (
     <section className='footer'>
       <div className='container'>

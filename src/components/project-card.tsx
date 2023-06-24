@@ -1,13 +1,6 @@
-import { ReactElement } from 'react';
-
 import { Img, Link } from '@/components';
 
-/**
- * A card containing information about a Project.
- *
- * @param project - Project object
- */
-export const ProjectCard = ({ project }: { project: Project }): ReactElement => {
+export const ProjectCard = ({ project }: { project: Project }) => {
   const { _id, title, url, img } = project;
 
   return (

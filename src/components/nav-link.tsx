@@ -1,12 +1,6 @@
 import NextLink from 'next/link';
-import { ReactElement } from 'react';
 
-/**
- * Navigation link component.
- *
- * @param props - Component props
- */
-export const NavLink = (props: LinkProps): ReactElement => {
+export const NavLink = (props: LinkProps) => {
   const { href, children, ...rest } = props;
 
   return (

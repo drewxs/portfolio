@@ -1,14 +1,9 @@
 'use client';
 
 import clsx from 'clsx';
-import { ReactElement, useState } from 'react';
+import { useState } from 'react';
 
-/**
- * Input wrapper component.
- *
- * @param props - Component props
- */
-export const Input = (props: InputProps): ReactElement => {
+export const Input = (props: InputProps) => {
   const [focused, setFocused] = useState(false);
   const { type, value, name, label, required, fullwidth, multiline, ...rest } = props;
 
@@ -31,9 +26,9 @@ export const Input = (props: InputProps): ReactElement => {
             className='input-field'
             type={type}
             value={value}
-            {...rest}
             onFocus={handleFocus}
             onBlur={handleBlur}
+            {...rest}
           />
         ) : (
           <textarea className='input-field' value={value} {...rest} onFocus={handleFocus} onBlur={handleBlur} />

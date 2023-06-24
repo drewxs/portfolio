@@ -1,13 +1,6 @@
-import { ReactElement } from 'react';
-
 import { Link } from '@/components';
 
-/**
- * A card containing information about an experience.
- *
- * @param exp - experience object
- */
-export const ExperienceCard = ({ exp }: { exp: Experience }): ReactElement => {
+export const ExperienceCard = ({ exp }: { exp: Experience }) => {
   const { year, title, description, company, url } = exp;
 
   return (

@@ -2,15 +2,12 @@
 
 import { faEnvelope, faLocationDot, faPhone } from '@fortawesome/free-solid-svg-icons';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
-import { ReactElement, SyntheticEvent, useState } from 'react';
+import { SyntheticEvent, useState } from 'react';
 
 import { Input, Link, Socials } from '@/components';
 import { contact } from '@/data';
 
-/**
- * Section for contacting me.
- */
-export const Contact = (): ReactElement => {
+export const Contact = () => {
   const [name, setName] = useState('');
   const [email, setEmail] = useState('');
   const [message, setMessage] = useState('');
@@ -143,18 +140,17 @@ export const Contact = (): ReactElement => {
                   target='_blank'
                   rel='noreferrer'
                 >
-                  Privacy Policy{' '}
-                </a>{' '}
-                and{' '}
+                  Privacy Policy&nbsp;
+                </a>
+                and&nbsp;
                 <a
                   className='disclaimer-link'
                   href='https://policies.google.com/terms'
                   target='_blank'
                   rel='noreferrer'
                 >
-                  {' '}
-                  Terms of Service{' '}
-                </a>{' '}
+                  Terms of Service&nbsp;
+                </a>
                 apply.
               </p>
             </form>

@@ -1,12 +1,7 @@
-import { ReactElement } from 'react';
-
 import { Typewriter } from '@/components';
 import { hero } from '@/data';
 
-/**
- * Home page hero section.
- */
-export const Hero = (): ReactElement => {
+export const Hero = () => {
   const speed = 30;
   const delay = 200;
   const duration = 1000;

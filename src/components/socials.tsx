@@ -1,16 +1,12 @@
 import { faGithubSquare, faLinkedin, faMedium } from '@fortawesome/free-brands-svg-icons';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
-import { ReactElement } from 'react';
 
 import { Link } from '@/components';
 import { socials } from '@/data';
 
 const { github, linkedin, medium } = socials;
 
-/**
- * Social links component.
- */
-export const Socials = (): ReactElement => {
+export const Socials = () => {
   return (
     <div className='socials'>
       <Link className='socials__link' href={github} target='_blank'>

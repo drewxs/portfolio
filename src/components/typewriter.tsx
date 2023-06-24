@@ -1,7 +1,7 @@
 'use client';
 
 import clsx from 'clsx';
-import { ReactElement, useEffect, useState } from 'react';
+import { useEffect, useState } from 'react';
 
 import { sleep } from '@/utils';
 
@@ -21,7 +21,7 @@ export const Typewriter = ({
   delay = 200,
   linger = false,
   lingerDuration = 1000,
-}: TypewriterProps): ReactElement => {
+}: TypewriterProps) => {
   const [currentText, setCurrentText] = useState('');
   const [isTyping, setIsTyping] = useState(false);
 

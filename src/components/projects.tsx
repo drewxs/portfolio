@@ -1,14 +1,10 @@
-import { ReactElement } from 'react';
-
 import { ProjectCard } from '@/components';
 import { projects } from '@/data';
 
 /**
  * Section for showcasing featured projects.
- *
- * @param projects - Array of GitHub repository objects
  */
-export const Projects = (): ReactElement => {
+export const Projects = () => {
   return (
     <section className='home section projects'>
       <div className='container'>

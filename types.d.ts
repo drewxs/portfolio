@@ -1,4 +1,4 @@
-interface LayoutProps {
+interface Wrapper {
   children: React.ReactNode;
 }
 

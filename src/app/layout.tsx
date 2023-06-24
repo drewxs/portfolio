@@ -1,12 +1,13 @@
 import { Analytics } from '@vercel/analytics/react';
 import { Source_Code_Pro } from 'next/font/google';
-import Script from 'next/script';
 import React from 'react';
 
-// import { ThemeProvider } from 'next-themes';
 import { Footer, Navbar } from '@/components';
 import { meta } from '@/data';
 import '@/styles/_main.scss';
+
+import { Providers } from './providers';
+import { Scripts } from './scripts';
 
 const sourceCodePro = Source_Code_Pro({
   weight: ['400'],
@@ -64,33 +65,20 @@ export const metadata = {
   },
 };
 
-const Layout = ({ children }: LayoutProps) => {
+const Layout = ({ children }: Wrapper) => {
   return (
-    <html data-theme='dark' lang='en' className={sourceCodePro.className}>
+    <html lang='en' className={sourceCodePro.className}>
       <head>
-        {/* Scripts */}
-        <Script src={`https://www.google.com/recaptcha/api.js`} />
-        <Script
-          src={`https://www.googletagmanager.com/gtag/js?id=${process.env.NEXT_PUBLIC_GTAG}`}
-          strategy='afterInteractive'
-        />
-        <Script id='google-analytics' strategy='afterInteractive'>
-          {`
-            window.dataLayer = window.dataLayer || [];
-            function gtag(){dataLayer.push(arguments);}
-            gtag('js', new Date());
-            gtag('config', '${process.env.NEXT_PUBLIC_GTAG}');
-          `}
-        </Script>
+        <Scripts />
       </head>
       <Analytics />
-      {/* <ThemeProvider> */}
       <body>
-        <Navbar />
-        <main>{children}</main>
-        <Footer />
+        <Providers>
+          <Navbar />
+          <main>{children}</main>
+          <Footer />
+        </Providers>
       </body>
-      {/* </ThemeProvider> */}
     </html>
   );
 };

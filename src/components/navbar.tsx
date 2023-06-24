@@ -1,16 +1,12 @@
 'use client';
 
 import clsx from 'clsx';
-import { ReactElement } from 'react';
 
-import { NavLink, Socials } from '@/components';
+import { NavLink, Socials, ThemeChanger } from '@/components';
 import { nav } from '@/data';
 import { useScrollPosition } from '@/utils';
 
-/**
- * Navigation bar component.
- */
-export const Navbar = (): ReactElement => {
+export const Navbar = () => {
   const scrollPosition = useScrollPosition();
 
   return (
@@ -28,6 +24,7 @@ export const Navbar = (): ReactElement => {
             </NavLink>
           ))}
           <Socials />
+          <ThemeChanger />
         </div>
       </div>
     </nav>

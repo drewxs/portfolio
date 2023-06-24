@@ -1,9 +1,9 @@
 'use client';
 
 import { useTheme } from 'next-themes';
-import { ReactElement, useEffect, useState } from 'react';
+import { useEffect, useState } from 'react';
 
-export const ThemeChanger = (): ReactElement | null => {
+export const ThemeChanger = () => {
   const [mounted, setMounted] = useState(false);
   const { setTheme, resolvedTheme } = useTheme();
 
@@ -16,9 +16,8 @@ export const ThemeChanger = (): ReactElement | null => {
   }, []);
 
   if (!mounted) return null;
-
   return (
-    <div className={`theme-changer ${resolvedTheme}`} onClick={handleThemeToggle}>
+    <div className='theme-changer' onClick={handleThemeToggle}>
       <div className='gear'></div>
       <div className='gear tooth'></div>
       <div className='gear tooth'></div>

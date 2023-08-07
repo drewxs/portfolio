@@ -5,6 +5,7 @@ import React from 'react';
 import { Footer, Navbar } from '@/components';
 import { meta } from '@/data';
 import '@/styles/_main.scss';
+import { Wrapper } from '@/types';
 
 import { Providers } from './providers';
 import { Scripts } from './scripts';

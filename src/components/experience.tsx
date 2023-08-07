@@ -7,9 +7,7 @@ export const Experience = () => {
       <div className='container'>
         <h1 className='experience-title'>Timeline</h1>
         <div className='experience-list'>
-          {experience?.map((exp) => (
-            <ExperienceCard exp={exp} key={exp._id} />
-          ))}
+          {experience?.map((experience) => <ExperienceCard experience={experience} key={experience._id} />)}
         </div>
       </div>
     </section>

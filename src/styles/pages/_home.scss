@@ -306,14 +306,17 @@
         &.content {
           display: flex;
           flex-direction: column;
-          justify-content: space-between;
-          margin-bottom: rem(40);
+          gap: rem(70);
+          margin-bottom: 4rem;
+
+          @include breakpoint(sm) {
+            gap: rem(20);
+          }
         }
 
         &__row {
           .socials {
             margin-top: 1rem;
-            margin-bottom: 1rem;
           }
         }
       }

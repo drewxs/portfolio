@@ -1,5 +1,11 @@
 import NextLink from 'next/link';
 
+interface LinkProps {
+  [key: string]: any;
+  href: string;
+  children: React.ReactNode;
+}
+
 export const Link = (props: LinkProps) => {
   const { href, children, ...rest } = props;
 

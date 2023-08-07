@@ -2,8 +2,9 @@
 
 import clsx from 'clsx';
 
-import { NavLink, Socials, ThemeChanger } from '@/components';
+import { Link, Socials, ThemeChanger } from '@/components';
 import { nav } from '@/data';
+import { NavLink } from '@/types';
 import { useScrollPosition } from '@/utils';
 
 export const Navbar = () => {
@@ -19,9 +20,9 @@ export const Navbar = () => {
         </div>
         <div className='nav__links'>
           {nav?.map((link: NavLink) => (
-            <NavLink href={link.url} key={link.text}>
+            <Link className='nav-link' href={link.url} key={link.text}>
               {link.text}
-            </NavLink>
+            </Link>
           ))}
           <Socials />
           <ThemeChanger />

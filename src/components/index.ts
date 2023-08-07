@@ -9,7 +9,6 @@ export * from './hero';
 export * from './image';
 export * from './input';
 export * from './link';
-export * from './nav-link';
 export * from './navbar';
 export * from './project-card';
 export * from './projects';

@@ -3,6 +3,11 @@
 import clsx from 'clsx';
 import { useState } from 'react';
 
+type InputProps = {
+  [key: string]: any;
+  type: string;
+};
+
 export const Input = (props: InputProps) => {
   const [focused, setFocused] = useState(false);
   const { type, value, name, label, required, fullwidth, multiline, ...rest } = props;

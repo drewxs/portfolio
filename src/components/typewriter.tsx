@@ -5,6 +5,14 @@ import { useEffect, useState } from 'react';
 
 import { sleep } from '@/utils';
 
+type TypewriterProps = {
+  text: string;
+  speed?: number;
+  delay?: number;
+  linger?: boolean;
+  lingerDuration?: number;
+};
+
 /**
  * Animates typewriter effects on given text.
  *

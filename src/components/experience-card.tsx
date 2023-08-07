@@ -1,7 +1,8 @@
 import { Link } from '@/components';
+import { Experience } from '@/types';
 
-export const ExperienceCard = ({ exp }: { exp: Experience }) => {
-  const { year, title, description, company, url } = exp;
+export const ExperienceCard = ({ experience }: { experience: Experience }) => {
+  const { year, title, description, company, url } = experience;
 
   return (
     <div className='experience-card'>

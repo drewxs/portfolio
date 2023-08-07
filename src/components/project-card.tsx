@@ -1,4 +1,5 @@
 import { Img, Link } from '@/components';
+import { Project } from '@/types';
 
 export const ProjectCard = ({ project }: { project: Project }) => {
   const { _id, title, url, img } = project;

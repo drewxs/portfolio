@@ -4,6 +4,9 @@ import type { NextApiRequest, NextApiResponse } from 'next';
 const SENDGRID_API_KEY = process.env.SENDGRID_API_KEY;
 if (SENDGRID_API_KEY) sendgrid.setApiKey(SENDGRID_API_KEY);
 
+type NextApiError = { statusCode: number; message: string };
+const instanceOfNextApiError = (object: any): object is NextApiError => 'member' in object;
+
 const sendEmail = async (req: NextApiRequest, res: NextApiResponse) => {
   try {
     if (process.env.SENDGRID_FROM) {
@@ -17,8 +20,8 @@ const sendEmail = async (req: NextApiRequest, res: NextApiResponse) => {
         `,
       });
     }
-  } catch (err: unknown) {
-    if (err instanceof NextApiError) {
+  } catch (err) {
+    if (instanceOfNextApiError(err)) {
       return res.status(err.statusCode || 500).json({ error: err.message });
     } else {
       return res.status(400).json({ error: 'something went wrong' });

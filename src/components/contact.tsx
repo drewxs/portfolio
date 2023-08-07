@@ -2,7 +2,7 @@
 
 import { faEnvelope, faLocationDot, faPhone } from '@fortawesome/free-solid-svg-icons';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
-import { SyntheticEvent, useState } from 'react';
+import { ChangeEvent, SyntheticEvent, useState } from 'react';
 
 import { Input, Link, Socials } from '@/components';
 import { contact } from '@/data';
@@ -16,11 +16,11 @@ export const Contact = () => {
   const [success, setSuccess] = useState(false);
   const [cardactivated, setCardactivated] = useState(false);
 
-  const handleChangeName = (e: React.ChangeEvent<HTMLInputElement>) => setName(e.target.value);
-  const handleChangeEmail = (e: React.ChangeEvent<HTMLInputElement>) => setEmail(e.target.value);
-  const handleChangeMessage = (e: React.ChangeEvent<HTMLInputElement>) => setMessage(e.target.value);
-  const handleChangeMonster = (e: React.ChangeEvent<HTMLInputElement>) => setMonster(e.target.value);
-  const handleChangeSpell = (e: React.ChangeEvent<HTMLInputElement>) => setSpell(e.target.value);
+  const handleChangeName = (e: ChangeEvent<HTMLInputElement>) => setName(e.target.value);
+  const handleChangeEmail = (e: ChangeEvent<HTMLInputElement>) => setEmail(e.target.value);
+  const handleChangeMessage = (e: ChangeEvent<HTMLInputElement>) => setMessage(e.target.value);
+  const handleChangeMonster = (e: ChangeEvent<HTMLInputElement>) => setMonster(e.target.value);
+  const handleChangeSpell = (e: ChangeEvent<HTMLInputElement>) => setSpell(e.target.value);
 
   const handleValidation = () => {
     if (!name || !email || !message) return false;

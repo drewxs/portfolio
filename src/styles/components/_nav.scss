@@ -22,8 +22,13 @@
   &__title {
     margin-bottom: 0;
 
-    &--initial {
+    &:not(.xs) {
       @include breakpoint(xs) {
+        display: none;
+      }
+    }
+    &.xs {
+      @include breakpoint(xs, up) {
         display: none;
       }
     }

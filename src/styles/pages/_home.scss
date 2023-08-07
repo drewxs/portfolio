@@ -265,8 +265,8 @@
           opacity: 0.1;
           font-weight: 700;
 
-          @include breakpoint(xs) {
-            left: 0;
+          @include breakpoint(sm) {
+            inset: -3rem auto 0 0rem;
           }
         }
         &__title {

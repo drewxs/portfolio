@@ -9,11 +9,7 @@ export const Code = ({ repos }: { repos: ReposType }) => {
     <section className='home section code'>
       <div className='container'>
         <h1>Code</h1>
-        <div className='repo-list'>
-          {repos?.map((repo) => (
-            <RepoCard repo={repo} key={repo.id} />
-          ))}
-        </div>
+        <div className='repo-list'>{repos?.map((repo) => <RepoCard repo={repo} key={repo.id} />)}</div>
       </div>
     </section>
   );

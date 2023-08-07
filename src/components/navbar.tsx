@@ -14,9 +14,8 @@ export const Navbar = () => {
     <nav className={clsx('nav', { min: scrollPosition > 50 })}>
       <div className='container nav__container'>
         <div className='nav__brand'>
-          <h4 className='nav__title'>
-            Andrew <span className='nav__title nav__title--initial'>X. </span>Shah
-          </h4>
+          <h4 className='nav__title'>Andrew X. Shah</h4>
+          <h4 className='nav__title xs'>Andrew S.</h4>
         </div>
         <div className='nav__links'>
           {nav?.map((link: NavLink) => (

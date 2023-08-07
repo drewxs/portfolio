@@ -1,3 +1,10 @@
+## [1.9.1](https://github.com/drewxs/portfolio/compare/v1.9.0...v1.9.1) (2023-08-07)
+
+
+### Bug Fixes
+
+* **styles:** cleanup ([35823d0](https://github.com/drewxs/portfolio/commit/35823d05ae04ba21fb6709f662a634ac0b82f3a2))
+
 ## [1.9.0](https://github.com/drewxs/portfolio/compare/v1.8.1...v1.9.0) (2023-06-24)
 
 

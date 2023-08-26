@@ -2,12 +2,19 @@
 
 ::-webkit-scrollbar {
   width: rem(10px);
+
+  &-track {
+    background-color: alpha(primary, 0.1);
+  }
+  &-thumb {
+    background-color: color(primary);
+  }
 }
-::-webkit-scrollbar-track {
-  background-color: alpha(primary, 0.1);
-}
-::-webkit-scrollbar-thumb {
-  background-color: color(primary);
+
+::selection {
+  background: alpha(text, 0.5);
+  color: color(bg);
+  text-shadow: 0 0 0.1em color(bg);
 }
 
 *,

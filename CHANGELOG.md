@@ -1,3 +1,12 @@
+## [1.9.2](https://github.com/drewxs/portfolio/compare/v1.9.1...v1.9.2) (2023-08-26)
+
+
+### Bug Fixes
+
+* **hooks:** deprecation pageYOffset->scrollY ([275729b](https://github.com/drewxs/portfolio/commit/275729b0eff6dacdcc26eed573813b65f3283a4f))
+* **type:** rm callback type ([03df62a](https://github.com/drewxs/portfolio/commit/03df62a7d605abf881587f57f6c16f9524276c9b))
+* **styles:** selection colors ([24f9b79](https://github.com/drewxs/portfolio/commit/24f9b79a998061858ca49d0e1243063933f3b793))
+
 ## [1.9.1](https://github.com/drewxs/portfolio/compare/v1.9.0...v1.9.1) (2023-08-07)
 
 

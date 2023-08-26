@@ -4,8 +4,8 @@ import clsx from 'clsx';
 
 import { Link, Socials, ThemeChanger } from '@/components';
 import { nav } from '@/data';
+import { useScrollPosition } from '@/hooks';
 import { NavLink } from '@/types';
-import { useScrollPosition } from '@/utils';
 
 export const Navbar = () => {
   const scrollPosition = useScrollPosition();

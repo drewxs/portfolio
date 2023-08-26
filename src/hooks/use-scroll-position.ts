@@ -10,7 +10,7 @@ export const useScrollPosition = (): number => {
 
   useEffect(() => {
     const updatePosition = (): void => {
-      setScrollPosition(window.pageYOffset);
+      setScrollPosition(window.scrollY);
     };
     window.addEventListener('scroll', updatePosition);
     updatePosition();

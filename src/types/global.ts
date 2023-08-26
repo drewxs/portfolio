@@ -1,5 +1,5 @@
-export type Wrapper = {
-  children: React.ReactNode;
-};
+import { ReactNode } from 'react';
 
-export type Callback = (args: unknown) => unknown;
+export type Wrapper = {
+  children: ReactNode;
+};

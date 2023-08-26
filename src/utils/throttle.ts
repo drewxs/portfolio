@@ -4,7 +4,7 @@
  * @param callback - callback function
  * @param timeout - throttle timeout in milliseconds
  */
-export const throttle = (callback: Callback, timeout: number): Callback => {
+export const throttle = (callback: (...args: unknown[]) => unknown, timeout: number) => {
   let ready = true;
 
   return (...args: unknown[]) => {

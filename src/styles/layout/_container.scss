@@ -1,7 +1,7 @@
 @use '@/styles/abstract' as *;
 
 .container {
-  width: breakpoint(lg);
+  width: breakpoint(xl);
   max-width: 90%;
   position: relative;
 }

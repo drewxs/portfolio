@@ -15,9 +15,9 @@ export const experience: Experience[] = [
     _id: '03',
     year: '2021-2022',
     title: `Jr. Developer`,
-    description: `Developed and migrated applications utilizing various system/web technologies.
+    description: `Developed and migrated applications utilizing a wide variety of technologies.
 \nTranslated business and design requirements into technical solutions by collaborating with designers and leads.
-\nOptimized performance bottlenecks in existing systems to deliver high-performance applications.`,
+\nOptimized performance bottlenecks in systems to deliver high-performance software.`,
     company: `Paper Crane`,
     url: `https://www.papercrane.ca`,
   },
@@ -27,7 +27,7 @@ export const experience: Experience[] = [
     title: `Student`,
     description: `BSc Computer Science
 \nLanguages: C, C++, Assembly, Java, C#, Python, Haskell, Prolog, Bash, Go, Standard ML, Visual Basic, SQL
-\nTopics: Advanced Data Structures & Algorithms, Computing Machinery, Networks, Operating Systems, Compiler Construction, Databases, Software Engineering, Data/Machine Learning, Complexity Theory, Computer Graphics, Security/Cryptography, Distributed Systems, Human-Computer Interaction, Quantum Computing`,
+\nTopics: Data Structures & Algorithms, Computing Machinery, Networks, Operating Systems, Compiler Construction, Databases, Software Engineering, Data/Machine Learning, Complexity Theory, Computer Graphics, Security/Cryptography, Distributed Systems, Human-Computer Interaction, Quantum Computing`,
     company: `University of Calgary`,
     url: `https://www.ucalgary.ca`,
   },
@@ -37,7 +37,7 @@ export const experience: Experience[] = [
     title: `Student`,
     description: `BSc Computer Science
 \nLanguages: Java, Python
-\nTopics: Programming, Databases, Discrete Mathematics, Linear Algebra, Calculus, Statistics`,
+\nTopics: Programming, Databases, Discrete Math, Linear Algebra, Calculus, Statistics`,
     company: `University of New Brunswick`,
     url: `https://www.unb.ca`,
   },

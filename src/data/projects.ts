@@ -1,8 +1,10 @@
-import crylog from 'public/projects/crylog.gif';
+import crylog from 'public/projects/crylog.webp';
 import easyredir from 'public/projects/easyredir.webp';
 import raven from 'public/projects/raven.gif';
 
-export const projects = [
+import { Project } from '@/types';
+
+export const projects: Project[] = [
   {
     _id: '01',
     title: 'Raven',

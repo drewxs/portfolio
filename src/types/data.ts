@@ -14,7 +14,7 @@ export type Project = {
 
 export type Experience = {
   _id: string;
-  year: number;
+  year: string;
   title: string;
   description: string;
   company: string;

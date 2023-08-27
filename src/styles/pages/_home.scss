@@ -52,12 +52,12 @@
         }
         @include breakpoint(sm) {
           width: 100%;
-          box-shadow: 0 0 rem(16) 0 alpha(text, 0.1);
+          box-shadow: 0 0 rem(16) 0 alpha(primary, 0.2);
         }
         @include breakpoint(md, up) {
           &:hover {
             transform: translateY(-4%);
-            box-shadow: rem(2) rem(8) rem(20) rem(4) alpha(text, 0.05);
+            box-shadow: rem(2) rem(10) rem(20) rem(2) alpha(primary, 0.2);
           }
         }
 

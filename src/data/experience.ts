@@ -36,7 +36,7 @@ export const experience: Experience[] = [
     year: '2016-2017',
     title: `Student`,
     description: `BSc Computer Science
-\nLanguages: Java, Python
+\nLanguages: Java, Python, Bash
 \nTopics: Programming, Databases, Discrete Math, Linear Algebra, Calculus, Statistics`,
     company: `University of New Brunswick`,
     url: `https://www.unb.ca`,

@@ -1,3 +1,16 @@
+## [1.10.0](https://github.com/drewxs/portfolio/compare/v1.9.5...v1.10.0) (2023-09-05)
+
+
+### Features
+
+* **nav:** add logo to brand ([57e1ebc](https://github.com/drewxs/portfolio/commit/57e1ebc733f3ca99de508d37a268729b7b2d88ef))
+* **code:** rm repo stats, display more cards ([600e8dd](https://github.com/drewxs/portfolio/commit/600e8ddd3ea4d550c1efcb5b10f92ab2ed90010e))
+
+
+### Bug Fixes
+
+* **img:** set default quality=100 ([7478f0d](https://github.com/drewxs/portfolio/commit/7478f0d62c234324f4cd9c1c2d6bea64ad6f5f56))
+
 ## [1.9.5](https://github.com/drewxs/portfolio/compare/v1.9.4...v1.9.5) (2023-09-05)
 
 

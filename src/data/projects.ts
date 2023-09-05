@@ -1,15 +1,15 @@
 import crylog from 'public/projects/crylog.webp';
 import easyredir from 'public/projects/easyredir.webp';
-import raven from 'public/projects/raven.gif';
+import engram from 'public/projects/engram.png';
 
 import { Project } from '@/types';
 
 export const projects: Project[] = [
   {
     _id: '01',
-    title: 'Raven',
-    url: 'https://github.com/drewxs/raven',
-    img: raven,
+    title: 'Engram',
+    url: 'https://github.com/drewxs/engram',
+    img: engram,
   },
   {
     _id: '02',

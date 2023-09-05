@@ -9,5 +9,5 @@ type ImageProps = {
 export const Img = (props: ImageProps) => {
   const { src, alt, ...rest } = props;
 
-  return <NextImage src={src} alt={alt ?? ''} {...rest} />;
+  return <NextImage src={src} alt={alt ?? ''} quality={100} {...rest} />;
 };

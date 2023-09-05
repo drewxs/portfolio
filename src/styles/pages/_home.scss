@@ -3,6 +3,7 @@
 .home {
   &.hero {
     min-height: 100vh;
+    padding-left: 0.5rem;
 
     .container {
       display: flex;
@@ -41,7 +42,7 @@
       &-card {
         width: calc((100% - ($grid-gutter * 2)) / 3);
         min-height: 100%;
-        padding: 2rem 3rem 2.2rem;
+        padding: 1.8rem 2.2rem 2rem;
         background-color: alpha(primary, 0.05);
         border-radius: rem(10);
         @include transition(transform box-shadow background-color);

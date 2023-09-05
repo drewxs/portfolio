@@ -12,7 +12,7 @@ const getRepos = async () => {
   const res = await octokit.request(`GET /user/repos`, {
     type: 'public',
     page: 1,
-    per_page: 6,
+    per_page: 18,
     sort: 'created',
     direction: 'desc',
   });

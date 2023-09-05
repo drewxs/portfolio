@@ -1,10 +1,5 @@
 import { StaticImageData } from 'next/image';
 
-export type NavLink = {
-  text: string;
-  url: string;
-};
-
 export type Project = {
   _id: string;
   title: string;

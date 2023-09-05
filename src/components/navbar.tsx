@@ -3,10 +3,8 @@
 import clsx from 'clsx';
 import logo from 'public/logo.png';
 
-import { Img, Link, Socials, ThemeChanger } from '@/components';
-import { nav } from '@/data';
+import { Img, Socials, ThemeChanger } from '@/components';
 import { useScrollPosition } from '@/hooks';
-import { NavLink } from '@/types';
 
 export const Navbar = () => {
   const scrollPosition = useScrollPosition();
@@ -20,11 +18,6 @@ export const Navbar = () => {
           <h4 className='nav__title xs'>Andrew S.</h4>
         </div>
         <div className='nav__links'>
-          {nav?.map((link: NavLink) => (
-            <Link className='nav-link' href={link.url} key={link.text}>
-              {link.text}
-            </Link>
-          ))}
           <Socials />
           <ThemeChanger />
         </div>

@@ -1,3 +1,10 @@
+## [1.9.5](https://github.com/drewxs/portfolio/compare/v1.9.4...v1.9.5) (2023-09-05)
+
+
+### Bug Fixes
+
+* **theme:** default to dark ([66a0193](https://github.com/drewxs/portfolio/commit/66a01934053142797a840a85da5133bf502c6994))
+
 ## [1.9.4](https://github.com/drewxs/portfolio/compare/v1.9.3...v1.9.4) (2023-08-27)
 
 ## [1.9.3](https://github.com/drewxs/portfolio/compare/v1.9.2...v1.9.3) (2023-08-27)

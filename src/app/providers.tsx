@@ -5,5 +5,5 @@ import { ThemeProvider } from 'next-themes';
 import { Wrapper } from '@/types';
 
 export const Providers = ({ children }: Wrapper) => {
-  return <ThemeProvider enableSystem={false}>{children}</ThemeProvider>;
+  return <ThemeProvider defaultTheme='dark'>{children}</ThemeProvider>;
 };

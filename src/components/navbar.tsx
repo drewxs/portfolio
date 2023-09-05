@@ -1,8 +1,9 @@
 'use client';
 
 import clsx from 'clsx';
+import logo from 'public/logo.png';
 
-import { Link, Socials, ThemeChanger } from '@/components';
+import { Img, Link, Socials, ThemeChanger } from '@/components';
 import { nav } from '@/data';
 import { useScrollPosition } from '@/hooks';
 import { NavLink } from '@/types';
@@ -14,6 +15,7 @@ export const Navbar = () => {
     <nav className={clsx('nav', { min: scrollPosition > 50 })}>
       <div className='container nav__container'>
         <div className='nav__brand'>
+          <Img src={logo} alt='Logo' height={36} />
           <h4 className='nav__title'>Andrew X. Shah</h4>
           <h4 className='nav__title xs'>Andrew S.</h4>
         </div>

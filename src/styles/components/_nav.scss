@@ -19,6 +19,11 @@
     display: flex;
     justify-content: space-between;
   }
+  &__brand {
+    display: flex;
+    align-items: center;
+    gap: 1rem;
+  }
   &__title {
     margin-bottom: 0;
 

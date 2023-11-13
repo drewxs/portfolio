@@ -1,3 +1,10 @@
+## [1.10.3](https://github.com/drewxs/portfolio/compare/v1.10.2...v1.10.3) (2023-11-13)
+
+
+### Performance Improvements
+
+* **components:** rm circular dpes & barrel exports ([0389e77](https://github.com/drewxs/portfolio/commit/0389e775e27a47fcc0e38025764a2f3e9eb95248))
+
 ## [1.10.2](https://github.com/drewxs/portfolio/compare/v1.10.1...v1.10.2) (2023-11-13)
 
 ## [1.10.1](https://github.com/drewxs/portfolio/compare/v1.10.0...v1.10.1) (2023-11-13)

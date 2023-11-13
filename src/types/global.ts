@@ -1,5 +1,3 @@
 import { ReactNode } from 'react';
 
-export type Wrapper = {
-  children: ReactNode;
-};
+export type Wrapper = { children: ReactNode };

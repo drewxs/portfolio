@@ -1,6 +1,6 @@
 import { Analytics } from '@vercel/analytics/react';
+import { Metadata, Viewport } from 'next';
 import { Source_Code_Pro } from 'next/font/google';
-import React from 'react';
 
 import { Footer, Navbar } from '@/components';
 import { meta } from '@/data';
@@ -18,7 +18,11 @@ const sourceCodePro = Source_Code_Pro({
   display: 'swap',
 });
 
-export const metadata = {
+export const viewport: Viewport = {
+  themeColor: '#040404',
+};
+
+export const metadata: Metadata = {
   title: meta.title,
   description: meta.description,
   openGraph: {
@@ -26,44 +30,13 @@ export const metadata = {
     description: meta.description,
     url: meta.domain,
     siteName: meta.siteName,
-    images: [`/og-1260x630.jpg`],
-    locale: 'en-US',
+    images: [{ url: `/og-1260x630.jpg`, width: 1260, height: 630 }],
+    locale: 'en_US',
     type: 'website',
   },
-  alternates: {
-    canonical: meta.domain,
-  },
-  robots: {
-    index: true,
-  },
+  alternates: { canonical: meta.domain },
+  robots: { index: true },
   applicationName: 'AXS',
-  themeColor: '#040404',
-  viewport: {
-    width: 'device-width',
-    initialScale: 1,
-    maximumScale: 1,
-    userScalable: false,
-  },
-  icons: {
-    icon: [
-      'favicon.ico',
-      'favicon-16x16.png',
-      'favicon-32x32.png',
-      'favicon-96x96.png',
-      'favicon-128x128.png',
-      'favicon-196x196.png',
-    ],
-    apple: [
-      'apple-touch-icon-57x57.png',
-      'apple-touch-icon-60x60.png',
-      'apple-touch-icon-72x72.png',
-      'apple-touch-icon-76x76.png',
-      'apple-touch-icon-114x114.png',
-      'apple-touch-icon-120x120.png',
-      'apple-touch-icon-144x144.png',
-      'apple-touch-icon-152x152.png',
-    ],
-  },
 };
 
 const Layout = ({ children }: Wrapper) => {

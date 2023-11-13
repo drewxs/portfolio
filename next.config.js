@@ -4,9 +4,6 @@ const config = {
   images: {
     minimumCacheTTL: 315360000,
   },
-  experimental: {
-    appDir: true,
-  },
   async headers() {
     return [
       {

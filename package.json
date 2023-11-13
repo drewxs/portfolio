@@ -3,7 +3,7 @@
   "version": "1.10.0",
   "private": true,
   "description": "An eternal work in progress.",
-  "author": "Andrew X. Shah <drewshah0@gmail.com> (https://github.com/drewxs/)",
+  "author": "Andrew X. Shah <drewshah0@gmail.com> (https://github.com/drewxs)",
   "license": "MIT",
   "repository": {
     "type": "git",
@@ -12,11 +12,8 @@
   "type": "module",
   "engines": {
     "node": "^18.x.x",
-    "npm": "use-pnpm",
-    "yarn": "use-pnpm",
     "pnpm": "^8.x.x"
   },
-  "packageManager": "pnpm@8.6.0",
   "scripts": {
     "dev": "next dev",
     "build": "next build && next-sitemap",

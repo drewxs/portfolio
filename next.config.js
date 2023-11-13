@@ -1,9 +1,11 @@
+import withBundleAnalyzer from '@next/bundle-analyzer';
+
 /** @type {import('next').NextConfig} */
-const config = {
+const config = withBundleAnalyzer({
+  enabled: process.env.ANALYZE === 'true',
+})({
   reactStrictMode: true,
-  images: {
-    minimumCacheTTL: 315360000,
-  },
+  images: { minimumCacheTTL: 315360000 },
   async headers() {
     return [
       {
@@ -23,14 +25,8 @@ const config = {
     ];
   },
   async redirects() {
-    return [
-      {
-        source: '/index',
-        destination: '/',
-        permanent: true,
-      },
-    ];
+    return [{ source: '/index', destination: '/', permanent: true }];
   },
-};
+});
 
 export default config;

@@ -1,12 +1,14 @@
 'use client';
 
 import clsx from 'clsx';
-import { useState } from 'react';
+import { HTMLProps, useState } from 'react';
 
-type InputProps = {
-  [key: string]: any;
-  type: string;
-};
+type InputProps = HTMLProps<HTMLInputElement> &
+  HTMLProps<HTMLTextAreaElement> & {
+    type: string;
+    fullwidth?: boolean;
+    multiline?: boolean;
+  };
 
 export const Input = (props: InputProps) => {
   const [focused, setFocused] = useState(false);

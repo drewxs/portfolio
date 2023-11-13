@@ -2,7 +2,7 @@
 
 import { faEnvelope, faLocationDot, faPhone } from '@fortawesome/free-solid-svg-icons';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
-import { ChangeEvent, SyntheticEvent, useState } from 'react';
+import { SyntheticEvent, useState } from 'react';
 
 import { Input, Link, Socials } from '@/components';
 import { contact } from '@/data';
@@ -16,26 +16,11 @@ export const Contact = () => {
   const [success, setSuccess] = useState(false);
   const [cardactivated, setCardactivated] = useState(false);
 
-  const handleChangeName = (e: ChangeEvent<HTMLInputElement>) => setName(e.target.value);
-  const handleChangeEmail = (e: ChangeEvent<HTMLInputElement>) => setEmail(e.target.value);
-  const handleChangeMessage = (e: ChangeEvent<HTMLInputElement>) => setMessage(e.target.value);
-  const handleChangeMonster = (e: ChangeEvent<HTMLInputElement>) => setMonster(e.target.value);
-  const handleChangeSpell = (e: ChangeEvent<HTMLInputElement>) => setSpell(e.target.value);
-
-  const handleValidation = () => {
-    if (!name || !email || !message) return false;
-    if (monster || spell) {
-      setCardactivated(true);
-      return false;
-    }
-    return true;
-  };
-
   const handleSubmit = async (e: SyntheticEvent) => {
     e.preventDefault();
 
-    const isValidForm = handleValidation();
-    if (!isValidForm) return;
+    if (!name || !email || !message) return;
+    if (monster || spell) return setCardactivated(true);
 
     const res = await fetch('/api/sendgrid', {
       body: JSON.stringify({ name, email, message }),
@@ -44,11 +29,7 @@ export const Contact = () => {
     });
 
     const { error } = await res.json();
-    if (error) {
-      setSuccess(false);
-      return;
-    }
-
+    if (error) return setSuccess(false);
     setSuccess(true);
   };
 
@@ -86,13 +67,21 @@ export const Contact = () => {
           </div>
           {!success && !cardactivated && (
             <form id='contact-form' className='contact-col contact-form' onSubmit={handleSubmit}>
-              <Input type='text' name='name' label='Name' value={name} onInput={handleChangeName} required fullwidth />
+              <Input
+                type='text'
+                name='name'
+                label='Name'
+                value={name}
+                onInput={(e) => setName(e.currentTarget.value)}
+                required
+                fullwidth
+              />
               <Input
                 type='email'
                 name='email'
                 label='Email'
                 value={email}
-                onInput={handleChangeEmail}
+                onInput={(e) => setEmail(e.currentTarget.value)}
                 required
                 fullwidth
               />
@@ -101,7 +90,7 @@ export const Contact = () => {
                 name='message'
                 label='Message'
                 value={message}
-                onInput={handleChangeMessage}
+                onInput={(e) => setMessage(e.currentTarget.value)}
                 required
                 fullwidth
                 multiline
@@ -112,7 +101,7 @@ export const Contact = () => {
                   name='phone'
                   label='Phone'
                   value={monster}
-                  onChange={handleChangeMonster}
+                  onChange={(e) => setMonster(e.currentTarget.value)}
                   autoComplete='new-card'
                 />
                 <Input
@@ -120,7 +109,7 @@ export const Contact = () => {
                   name='address'
                   label='Address'
                   value={spell}
-                  onChange={handleChangeSpell}
+                  onChange={(e) => setSpell(e.currentTarget.value)}
                   autoComplete='new-card'
                 />
               </div>

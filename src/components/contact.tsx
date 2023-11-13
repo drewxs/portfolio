@@ -5,8 +5,10 @@ import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import Link from 'next/link';
 import { SyntheticEvent, useState } from 'react';
 
-import { Input, Socials } from '@/components';
 import { contact } from '@/data';
+
+import { Input } from './input';
+import { Socials } from './socials';
 
 export const Contact = () => {
   const [name, setName] = useState('');

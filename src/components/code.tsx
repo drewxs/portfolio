@@ -1,6 +1,6 @@
 import { Endpoints } from '@octokit/types';
 
-import { RepoCard } from '@/components';
+import { RepoCard } from './repo-card';
 
 type ReposType = Endpoints['GET /user/repos']['response']['data'];
 

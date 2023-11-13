@@ -1,5 +1,6 @@
-import { Typewriter } from '@/components';
 import { hero } from '@/data';
+
+import { Typewriter } from './typewriter';
 
 export const Hero = () => {
   const speed = 30;

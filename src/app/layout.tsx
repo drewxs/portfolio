@@ -2,7 +2,8 @@ import { Analytics } from '@vercel/analytics/react';
 import { Metadata, Viewport } from 'next';
 import { Source_Code_Pro } from 'next/font/google';
 
-import { Footer, Navbar } from '@/components';
+import { Footer } from '@/components/footer';
+import { Navbar } from '@/components/navbar';
 import { meta } from '@/data';
 import '@/styles/_main.scss';
 import { Wrapper } from '@/types';

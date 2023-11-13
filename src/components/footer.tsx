@@ -1,4 +1,4 @@
-import { Socials } from '@/components';
+import { Socials } from './socials';
 
 export const Footer = () => {
   return (

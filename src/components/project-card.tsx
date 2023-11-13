@@ -1,7 +1,8 @@
 import Link from 'next/link';
 
-import { Img } from '@/components';
 import { Project } from '@/types';
+
+import { Img } from './image';
 
 export const ProjectCard = ({ project }: { project: Project }) => {
   const { _id, title, url, img } = project;

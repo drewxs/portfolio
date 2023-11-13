@@ -1,5 +1,6 @@
-import { ExperienceCard } from '@/components';
 import { experience } from '@/data';
+
+import { ExperienceCard } from './experience-card';
 
 export const Experience = () => {
   return (

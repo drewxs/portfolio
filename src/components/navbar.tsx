@@ -3,8 +3,11 @@
 import clsx from 'clsx';
 import logo from 'public/logo.png';
 
-import { Img, Socials, ThemeChanger } from '@/components';
 import { useScrollPosition } from '@/hooks';
+
+import { Img } from './image';
+import { Socials } from './socials';
+import { ThemeChanger } from './theme-changer';
 
 export const Navbar = () => {
   const scrollPosition = useScrollPosition();

@@ -1,7 +1,11 @@
 import { Octokit } from '@octokit/core';
 import { Endpoints } from '@octokit/types';
 
-import { Code, Contact, Experience, Hero, Projects } from '@/components';
+import { Code } from '@/components/code';
+import { Contact } from '@/components/contact';
+import { Experience } from '@/components/experience';
+import { Hero } from '@/components/hero';
+import { Projects } from '@/components/projects';
 
 type ReposType = Endpoints['GET /user/repos']['response']['data'];
 

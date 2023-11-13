@@ -1,7 +1,6 @@
 import { faGithubSquare, faLinkedin } from '@fortawesome/free-brands-svg-icons';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
-
-import { Link } from '@/components';
+import Link from 'next/link';
 
 export const Socials = () => {
   return (

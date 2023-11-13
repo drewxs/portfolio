@@ -1,4 +1,5 @@
-import { Link } from '@/components';
+import Link from 'next/link';
+
 import { Experience } from '@/types';
 
 export const ExperienceCard = ({ experience }: { experience: Experience }) => {

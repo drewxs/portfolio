@@ -1,7 +1,6 @@
-import NextImage, { StaticImageData } from 'next/image';
+import NextImage, { ImageProps as DefaultImageProps, StaticImageData } from 'next/image';
 
-type ImageProps = {
-  [key: string]: any;
+type ImageProps = DefaultImageProps & {
   src: StaticImageData;
   alt: string;
 };

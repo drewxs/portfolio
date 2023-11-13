@@ -1,9 +1,6 @@
 import { ProjectCard } from '@/components';
 import { projects } from '@/data';
 
-/**
- * Section for showcasing featured projects.
- */
 export const Projects = () => {
   return (
     <section className='home section projects'>

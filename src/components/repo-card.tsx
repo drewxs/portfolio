@@ -1,8 +1,7 @@
 import { faChevronRight } from '@fortawesome/free-solid-svg-icons';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { Endpoints } from '@octokit/types';
-
-import { Link } from '@/components';
+import Link from 'next/link';
 
 type RepoType = Endpoints['GET /user/repos']['response']['data'][0];
 

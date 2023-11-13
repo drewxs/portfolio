@@ -2,9 +2,6 @@
 
 import { useEffect, useState } from 'react';
 
-/**
- * Hook that keeps track of the window scroll position.
- */
 export const useScrollPosition = (): number => {
   const [scrollPosition, setScrollPosition] = useState(0);
 

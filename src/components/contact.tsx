@@ -2,9 +2,10 @@
 
 import { faEnvelope, faLocationDot, faPhone } from '@fortawesome/free-solid-svg-icons';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
+import Link from 'next/link';
 import { SyntheticEvent, useState } from 'react';
 
-import { Input, Link, Socials } from '@/components';
+import { Input, Socials } from '@/components';
 import { contact } from '@/data';
 
 export const Contact = () => {

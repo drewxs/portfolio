@@ -1,4 +1,6 @@
-import { Img, Link } from '@/components';
+import Link from 'next/link';
+
+import { Img } from '@/components';
 import { Project } from '@/types';
 
 export const ProjectCard = ({ project }: { project: Project }) => {

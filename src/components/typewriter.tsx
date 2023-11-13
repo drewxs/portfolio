@@ -13,16 +13,6 @@ type TypewriterProps = {
   lingerDuration?: number;
 };
 
-/**
- * Animates typewriter effects on given text.
- *
- * @param text - The text to type
- * @param delay - Initial delay before typing
- * @param speed - Typing speed in milliseconds
- * @param delay - Animation start delay in milliseconds
- * @param linger - Whether to keep the caret after the text is finished
- * @param lingerDuration - How long to keep the caret after the text is finished
- */
 export const Typewriter = ({
   text,
   speed = 50,

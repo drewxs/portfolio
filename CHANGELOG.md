@@ -1,3 +1,5 @@
+## [1.10.2](https://github.com/drewxs/portfolio/compare/v1.10.1...v1.10.2) (2023-11-13)
+
 ## [1.10.1](https://github.com/drewxs/portfolio/compare/v1.10.0...v1.10.1) (2023-11-13)
 
 ## [1.10.0](https://github.com/drewxs/portfolio/compare/v1.9.5...v1.10.0) (2023-09-05)

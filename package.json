@@ -32,7 +32,7 @@
     "@fortawesome/free-regular-svg-icons": "^6.4.2",
     "@fortawesome/free-solid-svg-icons": "^6.4.2",
     "@fortawesome/react-fontawesome": "^0.2.0",
-    "@next/bundle-analyzer": "^14.0.2",
+    "@next/bundle-analyzer": "^14.0.3",
     "@octokit/core": "^5.0.1",
     "@sendgrid/mail": "^7.7.0",
     "@vercel/analytics": "^1.1.1",
@@ -44,8 +44,8 @@
     "sharp": "^0.32.6"
   },
   "devDependencies": {
-    "@commitlint/cli": "^18.4.1",
-    "@commitlint/config-conventional": "^18.4.0",
+    "@commitlint/cli": "^18.4.2",
+    "@commitlint/config-conventional": "^18.4.2",
     "@octokit/types": "^12.3.0",
     "@semantic-release/changelog": "^6.0.3",
     "@semantic-release/commit-analyzer": "^11.1.0",
@@ -57,8 +57,8 @@
     "@types/react": "18.2.37",
     "@types/react-dom": "18.2.15",
     "@types/react-fontawesome": "^1.6.8",
-    "@typescript-eslint/eslint-plugin": "^6.10.0",
-    "@typescript-eslint/parser": "^6.10.0",
+    "@typescript-eslint/eslint-plugin": "^6.11.0",
+    "@typescript-eslint/parser": "^6.11.0",
     "conventional-changelog-conventionalcommits": "^7.0.2",
     "eslint": "8.53.0",
     "eslint-config-next": "14.0.2",
@@ -69,7 +69,7 @@
     "prettier": "^3.1.0",
     "rimraf": "^5.0.5",
     "sass": "^1.69.5",
-    "semantic-release": "^22.0.7",
+    "semantic-release": "^22.0.8",
     "typescript": "5.2.2"
   },
   "browserslist": [

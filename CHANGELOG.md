@@ -1,3 +1,10 @@
+## [1.11.1](https://github.com/drewxs/portfolio/compare/v1.11.0...v1.11.1) (2023-12-09)
+
+
+### Bug Fixes
+
+* **api/contact:** rm default export ([33b0867](https://github.com/drewxs/portfolio/commit/33b0867c00987572fdd25e5ffcd315ff9f43020e))
+
 ## [1.11.0](https://github.com/drewxs/portfolio/compare/v1.10.3...v1.11.0) (2023-12-09)
 
 

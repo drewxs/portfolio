@@ -20,13 +20,12 @@ const getRepos = async () => {
     sort: 'created',
     direction: 'desc',
   });
-  const repos = res.data;
-
+  const repos: ReposType = res.data;
   return repos;
 };
 
 const Home = async () => {
-  const repos: ReposType = await getRepos();
+  const repos = await getRepos();
 
   return (
     <>

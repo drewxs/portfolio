@@ -39,7 +39,7 @@ export const Typewriter = ({
       }
     };
 
-    type().catch((err) => console.log(err));
+    type();
   }, [currentText.length, text, speed, delay, isTyping, linger, lingerDuration]);
 
   return (

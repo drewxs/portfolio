@@ -14,9 +14,7 @@ export const Input = (props: InputProps) => {
   const [focused, setFocused] = useState(false);
   const { type, value, name, label, required, fullwidth, multiline, ...rest } = props;
 
-  const handleFocus = () => {
-    setFocused(true);
-  };
+  const handleFocus = () => setFocused(true);
   const handleBlur = () => {
     if (!value) setFocused(false);
   };

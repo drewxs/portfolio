@@ -1,3 +1,10 @@
+## [1.11.0](https://github.com/drewxs/portfolio/compare/v1.10.3...v1.11.0) (2023-12-09)
+
+
+### Features
+
+* migrate pages api to route handlers ([43562cf](https://github.com/drewxs/portfolio/commit/43562cfeeb9de1a35977766be1eeba9d55f15e97))
+
 ## [1.10.3](https://github.com/drewxs/portfolio/compare/v1.10.2...v1.10.3) (2023-11-13)
 
 

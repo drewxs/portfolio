@@ -32,7 +32,8 @@
     "noImplicitOverride": true,
     "noImplicitReturns": true,
     "forceConsistentCasingInFileNames": true,
-    "noUnusedLocals": true
+    "noUnusedLocals": true,
+    "useUnknownInCatchVariables": false
   },
   "include": ["**/*.d.ts", "**/*.ts", "**/*.tsx", ".next/types/**/*.ts"],
   "exclude": ["node_modules"]

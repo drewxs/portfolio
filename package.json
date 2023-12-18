@@ -41,7 +41,7 @@
     "next-themes": "^0.2.1",
     "react": "18.2.0",
     "react-dom": "18.2.0",
-    "sharp": "^0.33.0"
+    "sharp": "^0.33.1"
   },
   "devDependencies": {
     "@commitlint/cli": "^18.4.3",
@@ -57,8 +57,8 @@
     "@types/react": "18.2.42",
     "@types/react-dom": "18.2.17",
     "@types/react-fontawesome": "^1.6.8",
-    "@typescript-eslint/eslint-plugin": "^6.13.2",
-    "@typescript-eslint/parser": "^6.13.2",
+    "@typescript-eslint/eslint-plugin": "^6.14.0",
+    "@typescript-eslint/parser": "^6.14.0",
     "conventional-changelog-conventionalcommits": "^7.0.2",
     "eslint": "8.55.0",
     "eslint-config-next": "14.0.4",
@@ -69,7 +69,7 @@
     "prettier": "^3.1.1",
     "rimraf": "^5.0.5",
     "sass": "^1.69.5",
-    "semantic-release": "^22.0.10",
+    "semantic-release": "^22.0.12",
     "typescript": "5.3.3"
   },
   "browserslist": [

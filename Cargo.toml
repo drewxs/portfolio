@@ -1,0 +1,16 @@
+[package]
+name = "portfolio"
+version = "0.1.0"
+authors = ["Andrew X. Shah <drewshah0@gmail.com>"]
+edition = "2021"
+
+[dependencies]
+serde = { version = "1.0.197", features = ["derive"] }
+dioxus = { version = "0.5", features = ["fullstack", "router"] }
+log = "0.4.21"
+dioxus-logger = "0.4.1"
+
+[features]
+default = []
+server = ["dioxus/axum"]
+web = ["dioxus/web"]

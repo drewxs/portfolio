@@ -1,24 +1,41 @@
-set positional-arguments
 set shell := ["bash", "-uc"]
 
 alias d := dev
 alias b := build
 alias s := start
 
-dev-css:
-  npx tailwindcss -i ./input.css -o ./public/tailwind.css --watch
+program := "portfolio"
+debug := ""
+release := if debug == "" { "--release" } else { "" }
+target := if debug == "" { "release" } else { "debug" }
+extension := if debug == "" { "" } else { "debug" }
 
-dev-app:
-  dx serve --platform fullstack
+all:
+  just build
+  just start
 
 dev:
-  just dev-css && just dev-app
+  just css & just app
+
+css:
+  npx tailwindcss -i ./input.css -o ./public/tailwind.css --watch
+
+app:
+  if [ ! -x "$(command -v "dx")" ]; then \
+    echo "Dioxus CLI not found. Installing..."; \
+    cargo install dioxus-cli; \
+  fi
+  dx serve --platform fullstack
 
 build:
-  cargo build
+  dx build {{release}}
 
-start: build
-  ./target/debug/portfolio
+start:
+  ./target/{{target}}/{{program}}
+
+fmt:
+  cargo fmt
+  dx fmt
 
 clean:
-  rm -rf dist target .diocus
+  rm -rf dist target .dioxus

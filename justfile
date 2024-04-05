@@ -11,31 +11,31 @@ target := if debug == "" { "release" } else { "debug" }
 extension := if debug == "" { "" } else { "debug" }
 
 all:
-  just build
-  just start
+    just build
+    just start
 
 dev:
-  just css & just app
+    just css & just app
 
 css:
-  npx tailwindcss -i ./input.css -o ./public/tailwind.css --watch
+    npx tailwindcss -i ./input.css -o ./public/tailwind.css --watch
 
 app:
-  if [ ! -x "$(command -v "dx")" ]; then \
-    echo "Dioxus CLI not found. Installing..."; \
-    cargo install dioxus-cli; \
-  fi
-  dx serve --platform fullstack
+    @if [ ! -x "$(command -v "dx")" ]; then \
+      echo "Dioxus CLI not found. Installing..."; \
+      cargo install dioxus-cli; \
+    fi
+    dx serve --platform fullstack
 
 build:
-  dx build {{release}}
+    dx build {{ release }}
 
 start:
-  ./target/{{target}}/{{program}}
+    ./target/{{ target }}/{{ program }}
 
 fmt:
-  cargo fmt
-  dx fmt
+    cargo fmt
+    dx fmt
 
 clean:
-  rm -rf dist target .dioxus
+    rm -rf dist target .dioxus

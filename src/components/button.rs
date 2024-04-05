@@ -16,26 +16,15 @@ pub fn Button(
 
     if let Some(href) = href {
         rsx! {
-            a {
-                class: styles,
-                href: href,
-                {children}
-            }
+            a { class: styles, href, {children} }
         }
     } else if let Some(onclick) = onclick {
         rsx! {
-            button {
-                class: styles,
-                onclick: move |evt| onclick.call(evt),
-                {children}
-            }
+            button { class: styles, onclick: move |evt| onclick.call(evt), {children} }
         }
     } else {
         rsx! {
-            div {
-                class: styles,
-                {children}
-            }
+            div { class: styles, {children} }
         }
     }
 }

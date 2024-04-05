@@ -8,16 +8,10 @@ pub fn Home() -> Element {
     let mut text = use_signal(|| String::from("..."));
 
     rsx! {
-        Link {
-            to: Route::Blog {
-                id: count()
-            },
-            "Go to blog"
-        }
+        Link { to: Route::Blog { id: count() }, "Go to blog" }
         div {
             h1 { "High-Five counter: {count}" }
-            div {
-                class: "flex flex-col items-center",
+            div { class: "flex flex-col items-center",
                 button { onclick: move |_| count += 1, "Up high!" }
                 button { onclick: move |_| count -= 1, "Down low!" }
                 button {
@@ -31,7 +25,7 @@ pub fn Home() -> Element {
                     },
                     "Get Server Data"
                 }
-                p { "Server data: {text}"}
+                p { "Server data: {text}" }
             }
         }
     }

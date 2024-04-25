@@ -5,13 +5,13 @@ use tracing::Level;
 
 use portfolio::route::Route;
 
+const _TAILWIND_URL: &str = manganis::mg!(file("public/tailwind.css"));
+
 fn main() {
     dioxus_logger::init(Level::INFO).expect("failed to init logger");
     launch(App);
 }
 
 fn App() -> Element {
-    rsx! {
-        Router::<Route> {}
-    }
+    rsx! { Router::<Route> {} }
 }

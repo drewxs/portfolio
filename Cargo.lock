@@ -1937,6 +1937,7 @@ dependencies = [
  "dioxus-logger",
  "log",
  "serde",
+ "tracing",
 ]
 
 [[package]]

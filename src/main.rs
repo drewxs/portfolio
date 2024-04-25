@@ -1,13 +1,12 @@
 #![allow(non_snake_case)]
 
 use dioxus::prelude::*;
-use log::LevelFilter;
+use log::Level;
 
 use portfolio::route::Route;
 
 fn main() {
-    dioxus_logger::init(LevelFilter::Info).expect("failed to init logger");
-
+    dioxus_logger::init(Level::Info).expect("failed to init logger");
     launch(App);
 }
 

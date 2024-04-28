@@ -1,7 +1,6 @@
 import { Analytics } from '@vercel/analytics/react';
 import { Metadata, Viewport } from 'next';
 import { Source_Code_Pro } from 'next/font/google';
-import Script from 'next/script';
 
 import { Footer } from '@/components/footer';
 import { Navbar } from '@/components/navbar';
@@ -44,7 +43,6 @@ const Layout = ({ children }: Wrapper) => {
   return (
     <html lang='en' className={sourceCodePro.className}>
       <Analytics />
-      <Script src='https://www.google.com/recaptcha/api.js' strategy='afterInteractive' />
       <body>
         <Providers>
           <Navbar />

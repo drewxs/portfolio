@@ -353,18 +353,6 @@
 .youveactivatedmycard {
   display: none;
 }
-.disclaimer {
-  font-size: 0.8em;
-  color: alpha(text, 0.5);
-  margin-top: 2rem;
-
-  &-link {
-    display: inline-block;
-  }
-}
-.grecaptcha-badge {
-  opacity: 0;
-}
 
 $card-background: rgba(
   $color: $secondary,

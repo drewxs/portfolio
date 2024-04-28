@@ -116,35 +116,6 @@ export const Contact = () => {
                   autoComplete='new-card'
                 />
               </div>
-              <button
-                className='button g-recaptcha'
-                disabled={!name || !email || !message}
-                data-sitekey={process.env.NEXT_PUBLIC_RECAPTCHA_SITE_KEY}
-                onClick={handleSubmit}
-              >
-                Send
-              </button>
-              <p className='disclaimer'>
-                This site is protected by reCAPTCHA and the Google{' '}
-                <a
-                  className='disclaimer-link'
-                  href='https://policies.google.com/privacy'
-                  target='_blank'
-                  rel='noreferrer'
-                >
-                  Privacy Policy&nbsp;
-                </a>
-                and&nbsp;
-                <a
-                  className='disclaimer-link'
-                  href='https://policies.google.com/terms'
-                  target='_blank'
-                  rel='noreferrer'
-                >
-                  Terms of Service&nbsp;
-                </a>
-                apply.
-              </p>
             </form>
           )}
           {success && !cardactivated && <div className='contact-col'>{contact.successMessage}</div>}

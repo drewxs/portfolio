@@ -45,13 +45,6 @@ const Layout = ({ children }: Wrapper) => {
     <html lang='en' className={sourceCodePro.className}>
       <Analytics />
       <Script src='https://www.google.com/recaptcha/api.js' strategy='afterInteractive' />
-      <Script src={`https://www.googletagmanager.com/gtag/js?id=${process.env.NEXT_PUBLIC_GTAG}`} />
-      <Script id='google-analytics'>
-        {`window.dataLayer = window.dataLayer || [];
-function gtag(){dataLayer.push(arguments);}
-gtag('js', new Date());
-gtag('config', '${process.env.NEXT_PUBLIC_GTAG}');`}
-      </Script>
       <body>
         <Providers>
           <Navbar />

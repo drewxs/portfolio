@@ -5,12 +5,12 @@ authors = ["Andrew X. Shah <drewshah0@gmail.com>"]
 edition = "2021"
 
 [dependencies]
-serde = { version = "1.0.198", features = ["derive"] }
-log = "0.4.21"
-tracing = "0.1.40"
+serde = { version = "1.0.203", features = ["derive"] }
+log = { version = "0.4.21" }
+tracing = { version = "0.1.40" }
 dioxus = { version = "0.5.1", features = ["fullstack", "router"] }
-dioxus-logger = "0.5.0"
-manganis = "0.2.2"
+dioxus-logger = { version = "0.5.1" }
+manganis = { version = "0.2.2" }
 
 [features]
 default = []

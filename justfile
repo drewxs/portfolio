@@ -14,7 +14,11 @@ all:
     just build
     just start
 
-dev:
+setup:
+    rm -rf ./public/tailwind.css
+    npx tailwindcss -i ./input.css -o ./public/tailwind.css
+
+dev: setup
     just css & just app
 
 css:

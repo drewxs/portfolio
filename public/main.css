@@ -1,0 +1,14 @@
+body {
+  background-color: #fefefe;
+  height: 100vh;
+}
+
+#main {
+  margin: 0;
+  height: 100vh;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  font-family: monospace;
+}

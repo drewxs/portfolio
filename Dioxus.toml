@@ -2,14 +2,14 @@
 name = "portfolio"
 default_platform = "web"
 out_dir = "dist"
-asset_dir = "assets"
+asset_dir = "public"
 
 [web.app]
 title = "Andrew X. Shah"
 
 [web.watcher]
 reload_html = true
-watch_path = ["src", "assets"]
+watch_path = ["src", "public"]
 
 [web.resource]
 style = ["tailwind.css"]

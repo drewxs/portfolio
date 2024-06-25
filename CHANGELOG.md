@@ -1,3 +1,10 @@
+## [1.11.2](https://github.com/drewxs/portfolio/compare/v1.11.1...v1.11.2) (2024-06-25)
+
+
+### Bug Fixes
+
+* rm recaptcha ([bd10e83](https://github.com/drewxs/portfolio/commit/bd10e83b938d7f41cd1bcfc8d31ad984bbacf4fb))
+
 ## [1.11.1](https://github.com/drewxs/portfolio/compare/v1.11.0...v1.11.1) (2023-12-09)
 
 

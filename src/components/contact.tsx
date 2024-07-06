@@ -116,6 +116,9 @@ export const Contact = () => {
                   autoComplete='new-card'
                 />
               </div>
+              <button className='button' disabled={!name || !email || !message} onClick={handleSubmit}>
+                Send
+              </button>
             </form>
           )}
           {success && !cardactivated && <div className='contact-col'>{contact.successMessage}</div>}

@@ -1,15 +1,15 @@
-import { Endpoints } from '@octokit/types';
+import { Endpoints } from "@octokit/types";
 
-import { RepoCard } from './repo-card';
+import { RepoCard } from "./repo-card";
 
-type ReposType = Endpoints['GET /user/repos']['response']['data'];
+type ReposType = Endpoints["GET /user/repos"]["response"]["data"];
 
 export const Code = ({ repos }: { repos: ReposType }) => {
   return (
-    <section className='home section code'>
-      <div className='container'>
+    <section className="home section code">
+      <div className="container">
         <h1>Code</h1>
-        <div className='repo-list'>{repos?.map((repo) => <RepoCard repo={repo} key={repo.id} />)}</div>
+        <div className="repo-list">{repos?.map((repo) => <RepoCard repo={repo} key={repo.id} />)}</div>
       </div>
     </section>
   );

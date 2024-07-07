@@ -3,11 +3,6 @@
   "importOrder": ["<THIRD_PARTY_MODULES>", "^(@/(.*))$", "^[./]"],
   "importOrderSeparation": true,
   "importOrderSortSpecifiers": true,
-  "arrowParens": "always",
   "printWidth": 120,
-  "semi": true,
-  "bracketSpacing": true,
-  "singleQuote": true,
-  "jsxSingleQuote": true,
   "trailingComma": "all"
 }

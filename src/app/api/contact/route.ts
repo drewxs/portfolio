@@ -1,4 +1,4 @@
-import sendgrid from '@sendgrid/mail';
+import sendgrid from "@sendgrid/mail";
 
 type Body = { name: string; email: string; message: string };
 
@@ -6,10 +6,10 @@ sendgrid.setApiKey(process.env.SENDGRID_API_KEY);
 
 export const POST = async (req: Request) => {
   if (!process.env.SENDGRID_FROM) {
-    throw new Error('SENDGRID_FROM not set');
+    throw new Error("SENDGRID_FROM not set");
   }
   if (!process.env.SENDGRID_TO) {
-    throw new Error('SENDGRID_TO not set');
+    throw new Error("SENDGRID_TO not set");
   }
 
   try {
@@ -25,7 +25,7 @@ export const POST = async (req: Request) => {
         `,
     });
 
-    return Response.json({ message: 'success' });
+    return Response.json({ message: "success" });
   } catch (error) {
     return Response.json({ error: error.message });
   }

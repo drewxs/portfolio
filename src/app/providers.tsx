@@ -1,9 +1,9 @@
-'use client';
+"use client";
 
-import { ThemeProvider } from 'next-themes';
+import { ThemeProvider } from "next-themes";
 
-import { Wrapper } from '@/types';
+import { Wrapper } from "@/types";
 
 export const Providers = ({ children }: Wrapper) => {
-  return <ThemeProvider defaultTheme='dark'>{children}</ThemeProvider>;
+  return <ThemeProvider defaultTheme="dark">{children}</ThemeProvider>;
 };

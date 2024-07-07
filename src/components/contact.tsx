@@ -1,21 +1,21 @@
-'use client';
+"use client";
 
-import { faEnvelope, faLocationDot, faPhone } from '@fortawesome/free-solid-svg-icons';
-import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
-import Link from 'next/link';
-import { SyntheticEvent, useState } from 'react';
+import { faEnvelope, faLocationDot, faPhone } from "@fortawesome/free-solid-svg-icons";
+import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
+import Link from "next/link";
+import { SyntheticEvent, useState } from "react";
 
-import { contact } from '@/data';
+import { contact } from "@/data";
 
-import { Input } from './input';
-import { Socials } from './socials';
+import { Input } from "./input";
+import { Socials } from "./socials";
 
 export const Contact = () => {
-  const [name, setName] = useState('');
-  const [email, setEmail] = useState('');
-  const [message, setMessage] = useState('');
-  const [monster, setMonster] = useState('');
-  const [spell, setSpell] = useState('');
+  const [name, setName] = useState("");
+  const [email, setEmail] = useState("");
+  const [message, setMessage] = useState("");
+  const [monster, setMonster] = useState("");
+  const [spell, setSpell] = useState("");
   const [success, setSuccess] = useState(false);
   const [cardactivated, setCardactivated] = useState(false);
 
@@ -25,10 +25,10 @@ export const Contact = () => {
     if (!name || !email || !message) return;
     if (monster || spell) return setCardactivated(true);
 
-    const res = await fetch('/api/contact', {
+    const res = await fetch("/api/contact", {
       body: JSON.stringify({ name, email, message }),
-      headers: { 'Content-Type': 'application/json' },
-      method: 'POST',
+      headers: { "Content-Type": "application/json" },
+      method: "POST",
     });
 
     const { error } = await res.json();
@@ -37,92 +37,92 @@ export const Contact = () => {
   };
 
   return (
-    <section className='home section contact'>
-      <div className='container'>
-        <h1 className='contact-title'>Contact</h1>
-        <div className='contact-row'>
-          <div className='contact-col content'>
-            <div className='contact-col__row'>
-              <h2 className='contact-heading h4'>{contact.heading}</h2>
-              <p className='contact-message'>{contact.message}</p>
+    <section className="home section contact">
+      <div className="container">
+        <h1 className="contact-title">Contact</h1>
+        <div className="contact-row">
+          <div className="contact-col content">
+            <div className="contact-col__row">
+              <h2 className="contact-heading h4">{contact.heading}</h2>
+              <p className="contact-message">{contact.message}</p>
             </div>
-            <div className='contact-col__row'>
-              <div className='contact-block'>
-                <Link href={`tel:${contact.phone.replace(/\s/g, '')}`}>
-                  <FontAwesomeIcon className='contact-block__icon' icon={faPhone} />
+            <div className="contact-col__row">
+              <div className="contact-block">
+                <Link href={`tel:${contact.phone.replace(/\s/g, "")}`}>
+                  <FontAwesomeIcon className="contact-block__icon" icon={faPhone} />
                 </Link>
-                <p className='contact-block__text'>{contact.phone}</p>
+                <p className="contact-block__text">{contact.phone}</p>
               </div>
-              <div className='contact-block'>
+              <div className="contact-block">
                 <Link href={`mailto:${contact.email}`}>
-                  <FontAwesomeIcon className='contact-block__icon' icon={faEnvelope} />
+                  <FontAwesomeIcon className="contact-block__icon" icon={faEnvelope} />
                 </Link>
-                <p className='contact-block__text'>{contact.email}</p>
+                <p className="contact-block__text">{contact.email}</p>
               </div>
-              <div className='contact-block'>
-                <FontAwesomeIcon className='contact-block__icon' icon={faLocationDot} />
-                <p className='contact-block__text'>{contact.location}</p>
+              <div className="contact-block">
+                <FontAwesomeIcon className="contact-block__icon" icon={faLocationDot} />
+                <p className="contact-block__text">{contact.location}</p>
               </div>
             </div>
-            <div className='contact-col__row'>
+            <div className="contact-col__row">
               <Socials />
             </div>
           </div>
           {!success && !cardactivated && (
-            <form id='contact-form' className='contact-col contact-form' onSubmit={handleSubmit}>
+            <form id="contact-form" className="contact-col contact-form" onSubmit={handleSubmit}>
               <Input
-                type='text'
-                name='name'
-                label='Name'
+                type="text"
+                name="name"
+                label="Name"
                 value={name}
                 onInput={(e) => setName(e.currentTarget.value)}
                 required
                 fullwidth
               />
               <Input
-                type='email'
-                name='email'
-                label='Email'
+                type="email"
+                name="email"
+                label="Email"
                 value={email}
                 onInput={(e) => setEmail(e.currentTarget.value)}
                 required
                 fullwidth
               />
               <Input
-                type='text'
-                name='message'
-                label='Message'
+                type="text"
+                name="message"
+                label="Message"
                 value={message}
                 onInput={(e) => setMessage(e.currentTarget.value)}
                 required
                 fullwidth
                 multiline
               />
-              <div className='youveactivatedmycard'>
+              <div className="youveactivatedmycard">
                 <Input
-                  type='text'
-                  name='phone'
-                  label='Phone'
+                  type="text"
+                  name="phone"
+                  label="Phone"
                   value={monster}
                   onChange={(e) => setMonster(e.currentTarget.value)}
-                  autoComplete='new-card'
+                  autoComplete="new-card"
                 />
                 <Input
-                  type='text'
-                  name='address'
-                  label='Address'
+                  type="text"
+                  name="address"
+                  label="Address"
                   value={spell}
                   onChange={(e) => setSpell(e.currentTarget.value)}
-                  autoComplete='new-card'
+                  autoComplete="new-card"
                 />
               </div>
-              <button className='button' disabled={!name || !email || !message} onClick={handleSubmit}>
+              <button className="button" disabled={!name || !email || !message} onClick={handleSubmit}>
                 Send
               </button>
             </form>
           )}
-          {success && !cardactivated && <div className='contact-col'>{contact.successMessage}</div>}
-          {cardactivated && <div className='contact-col'>{contact.errorMessage}</div>}
+          {success && !cardactivated && <div className="contact-col">{contact.successMessage}</div>}
+          {cardactivated && <div className="contact-col">{contact.errorMessage}</div>}
         </div>
       </div>
     </section>

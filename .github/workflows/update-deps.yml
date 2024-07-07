@@ -3,7 +3,7 @@ name: Update dependencies
 on:
   workflow_dispatch:
   schedule:
-    - cron: '0 0 1 * *'
+    - cron: "0 0 1 * *"
 
 jobs:
   update-dependencies:
@@ -21,6 +21,6 @@ jobs:
       - name: Commit and create PR
         uses: peter-evans/create-pull-request@v4
         with:
-          title: 'build(deps): update dependencies (automated)'
-          branch: 'build-deps-update-automated'
-          commit-message: 'build(deps): update dependencies (automated)'
+          title: "build(deps): update dependencies (automated)"
+          branch: "build-deps-update-automated"
+          commit-message: "build(deps): update dependencies (automated)"

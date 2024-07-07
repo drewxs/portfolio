@@ -1,6 +1,6 @@
-import { hero } from '@/data';
+import { hero } from "@/data";
 
-import { Typewriter } from './typewriter';
+import { Typewriter } from "./typewriter";
 
 export const Hero = () => {
   const speed = 30;
@@ -10,12 +10,12 @@ export const Hero = () => {
   const line2Delay = delay + hero.line2.length * speed + line1Delay;
 
   return (
-    <section className='home hero'>
-      <div className='container'>
+    <section className="home hero">
+      <div className="container">
         <h1>
           <Typewriter text={hero.line1} speed={speed} delay={delay} />
           <Typewriter text={hero.line2} speed={speed} delay={line1Delay} lingerDuration={0} />
-          <Typewriter text=' ' speed={speed} delay={line2Delay} linger />
+          <Typewriter text=" " speed={speed} delay={line2Delay} linger />
         </h1>
       </div>
     </section>

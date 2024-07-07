@@ -1,4 +1,4 @@
-@use '@/styles/abstract' as *;
+@use "@/styles/abstract" as *;
 
 .input {
   position: relative;
@@ -48,7 +48,7 @@
 
     &::before,
     &::after {
-      content: '';
+      content: "";
       position: absolute;
       @include inset(auto, 0, 0, 0);
     }

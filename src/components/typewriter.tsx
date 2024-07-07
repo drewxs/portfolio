@@ -1,9 +1,9 @@
-'use client';
+"use client";
 
-import clsx from 'clsx';
-import { useEffect, useState } from 'react';
+import clsx from "clsx";
+import { useEffect, useState } from "react";
 
-import { sleep } from '@/utils';
+import { sleep } from "@/utils";
 
 type TypewriterProps = {
   text: string;
@@ -20,7 +20,7 @@ export const Typewriter = ({
   linger = false,
   lingerDuration = 1000,
 }: TypewriterProps) => {
-  const [currentText, setCurrentText] = useState('');
+  const [currentText, setCurrentText] = useState("");
   const [isTyping, setIsTyping] = useState(false);
 
   useEffect(() => {
@@ -44,7 +44,7 @@ export const Typewriter = ({
 
   return (
     <>
-      <span className={clsx('typewriter', { typing: isTyping })}>{currentText}</span>
+      <span className={clsx("typewriter", { typing: isTyping })}>{currentText}</span>
       <br />
     </>
   );

@@ -1,7 +1,7 @@
-'use client';
+"use client";
 
-import clsx from 'clsx';
-import { HTMLProps, useState } from 'react';
+import clsx from "clsx";
+import { HTMLProps, useState } from "react";
 
 type InputProps = HTMLProps<HTMLInputElement> &
   HTMLProps<HTMLTextAreaElement> & {
@@ -20,15 +20,15 @@ export const Input = (props: InputProps) => {
   };
 
   return (
-    <div className={clsx('input', props.className, { focused, fullwidth }, { focused: value })}>
-      <label className='input-label' htmlFor={name}>
+    <div className={clsx("input", props.className, { focused, fullwidth }, { focused: value })}>
+      <label className="input-label" htmlFor={name}>
         {label}
-        <span className='input-label__required'>{required && ' *'}</span>
+        <span className="input-label__required">{required && " *"}</span>
       </label>
-      <div className='input-base'>
+      <div className="input-base">
         {!multiline ? (
           <input
-            className='input-field'
+            className="input-field"
             type={type}
             value={value}
             onFocus={handleFocus}
@@ -36,7 +36,7 @@ export const Input = (props: InputProps) => {
             {...rest}
           />
         ) : (
-          <textarea className='input-field' value={value} {...rest} onFocus={handleFocus} onBlur={handleBlur} />
+          <textarea className="input-field" value={value} {...rest} onFocus={handleFocus} onBlur={handleBlur} />
         )}
       </div>
     </div>

@@ -1,4 +1,4 @@
-@use '@/styles/abstract' as *;
+@use "@/styles/abstract" as *;
 
 .typewriter {
   &:after {
@@ -6,7 +6,7 @@
   }
   &.typing {
     &:after {
-      content: '|';
+      content: "|";
       animation: blink $animation-duration-slow $animation-timing-function infinite;
       margin-left: -0.25em;
     }

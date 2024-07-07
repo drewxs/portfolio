@@ -1,5 +1,5 @@
-@use 'variables' as *;
-@use 'functions' as *;
+@use "variables" as *;
+@use "functions" as *;
 
 // Scales font-size based on viewport width.
 @mixin fluid-type($min-vw, $max-vw, $min-font-size, $max-font-size) {
@@ -30,7 +30,7 @@
 @mixin breakpoint($key, $direction: down) {
   $size: map-get($breakpoints, $key);
 
-  @if $direction == 'down' {
+  @if $direction == "down" {
     @media only screen and (max-width: $size) {
       @content;
     }
@@ -61,7 +61,7 @@
 
 // Applies styles for the given theme.
 @mixin theme($theme) {
-  [data-theme='#{$theme}'] {
+  [data-theme="#{$theme}"] {
     @content;
   }
 }
@@ -90,7 +90,7 @@
     $value: ();
     @each $property in $properties {
       @if length($value) > 0 {
-        $value: append($value, unquote(',') #{$property} $duration $method $delay);
+        $value: append($value, unquote(",") #{$property} $duration $method $delay);
       } @else {
         $value: append($value, #{$property} $duration $method $delay);
       }

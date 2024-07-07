@@ -8,19 +8,19 @@ $dark-grey: #0e0e0e;
 $error: #e57373;
 
 $themes: (
-  'light': (
-    'primary': $primary,
-    'secondary': $secondary,
-    'text': $black,
-    'bg': $grey,
-    'error': $error,
+  "light": (
+    "primary": $primary,
+    "secondary": $secondary,
+    "text": $black,
+    "bg": $grey,
+    "error": $error,
   ),
-  'dark': (
-    'primary': $secondary,
-    'secondary': $primary,
-    'text': $white,
-    'bg': $black,
-    'error': $error,
+  "dark": (
+    "primary": $secondary,
+    "secondary": $primary,
+    "text": $white,
+    "bg": $black,
+    "error": $error,
   ),
 );
 
@@ -34,8 +34,8 @@ $breakpoints: (
 );
 
 // Fonts
-$font-face-url: '../fonts/Montserrat-Thin.ttf';
-$font-face-format: 'ttf';
+$font-face-url: "../fonts/Montserrat-Thin.ttf";
+$font-face-format: "ttf";
 
 // Fluid typography
 $font-size: 16px;

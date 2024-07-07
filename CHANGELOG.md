@@ -1,3 +1,9 @@
+## [1.11.3](https://github.com/drewxs/portfolio/compare/v1.11.2...v1.11.3) (2024-07-07)
+
+### Bug Fixes
+
+* **contact:** missing btn ([ef24526](https://github.com/drewxs/portfolio/commit/ef24526d6478f65daf7848e318c1e5b8066c3353))
+
 ## [1.11.2](https://github.com/drewxs/portfolio/compare/v1.11.1...v1.11.2) (2024-06-25)
 
 

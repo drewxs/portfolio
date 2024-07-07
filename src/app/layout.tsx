@@ -23,6 +23,7 @@ export const viewport: Viewport = {
 };
 
 export const metadata: Metadata = {
+  metadataBase: new URL(meta.domain),
   title: meta.title,
   description: meta.description,
   openGraph: {

@@ -17,7 +17,7 @@ export const ThemeChanger = () => {
 
   if (!mounted) return null;
   return (
-    <div className="theme-changer" onClick={handleThemeToggle}>
+    <button className="theme-changer" onClick={handleThemeToggle}>
       <div className="gear"></div>
       <div className="gear tooth"></div>
       <div className="gear tooth"></div>
@@ -25,6 +25,6 @@ export const ThemeChanger = () => {
       <div className="gear tooth"></div>
       <div className="circle"></div>
       <div className="circle inner"></div>
-    </div>
+    </button>
   );
 };

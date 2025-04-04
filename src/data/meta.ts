@@ -1,6 +1,6 @@
 export const meta = {
   siteName: "Andrew X. Shah",
   domain: `https://${process.env.NEXT_PUBLIC_SITE_URL}`,
-  title: `Andrew X. Shah | Software Engineer`,
+  title: `Andrew X. Shah | Software Developer`,
   description: `An eternal work in progress.`,
 };

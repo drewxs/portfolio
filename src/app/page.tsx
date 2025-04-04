@@ -5,7 +5,6 @@ import { Code } from "@/components/code";
 import { Contact } from "@/components/contact";
 import { Experience } from "@/components/experience";
 import { Hero } from "@/components/hero";
-import { Projects } from "@/components/projects";
 
 type ReposType = Endpoints["GET /user/repos"]["response"]["data"];
 
@@ -31,7 +30,6 @@ const Home = async () => {
     <>
       <Hero />
       <Code repos={repos} />
-      <Projects />
       <Experience />
       <Contact />
     </>

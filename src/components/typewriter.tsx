@@ -5,7 +5,7 @@ import { useEffect, useState } from "react";
 
 import { sleep } from "@/utils";
 
-type TypewriterProps = {
+type Props = {
   text: string;
   speed?: number;
   delay?: number;
@@ -13,13 +13,7 @@ type TypewriterProps = {
   lingerDuration?: number;
 };
 
-export const Typewriter = ({
-  text,
-  speed = 50,
-  delay = 200,
-  linger = false,
-  lingerDuration = 1000,
-}: TypewriterProps) => {
+export const Typewriter = ({ text, speed = 50, delay = 200, linger = false, lingerDuration = 1000 }: Props) => {
   const [currentText, setCurrentText] = useState("");
   const [isTyping, setIsTyping] = useState(false);
 

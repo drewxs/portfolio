@@ -1,5 +1,4 @@
-import engram from "public/projects/engram.png";
-
+import engram from "@/../public/projects/engram.png";
 import { Project } from "@/types";
 
 export const projects: Project[] = [

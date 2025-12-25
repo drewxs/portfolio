@@ -8,7 +8,9 @@ export const Projects = () => {
       <div className="container">
         <h1 className="projects-title">Projects</h1>
         <div className="project-list">
-          {projects?.map((project) => <ProjectCard project={project} key={project._id} />)}
+          {projects?.map((project) => (
+            <ProjectCard project={project} key={project._id} />
+          ))}
         </div>
       </div>
     </section>

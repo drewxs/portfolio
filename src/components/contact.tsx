@@ -1,40 +1,43 @@
 "use client";
 
-import { faEnvelope, faLocationDot, faPhone } from "@fortawesome/free-solid-svg-icons";
+import { faEnvelope, faLocationDot } from "@fortawesome/free-solid-svg-icons";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
+import useWeb3Forms from "@web3forms/react";
 import Link from "next/link";
-import { SyntheticEvent, useState } from "react";
-
-import { contact } from "@/data";
+import { useForm } from "react-hook-form";
 
 import { Input } from "./input";
 import { Socials } from "./socials";
 
+const data = {
+  heading: `Let's talk`,
+  message: `Fill in the form to send me a message. Alternatively, reach out to me at my email address.`,
+  email: `drew@drewxs.dev`,
+  location: `Calgary, AB, Canada`,
+  success: `Thanks for reaching out!\nI will respond as soon as I get a chance!`,
+};
+
+type Form = {
+  name: string;
+  email: string;
+  message: string;
+};
+
 export const Contact = () => {
-  const [name, setName] = useState("");
-  const [email, setEmail] = useState("");
-  const [message, setMessage] = useState("");
-  const [monster, setMonster] = useState("");
-  const [spell, setSpell] = useState("");
-  const [success, setSuccess] = useState(false);
-  const [cardactivated, setCardactivated] = useState(false);
+  const {
+    register,
+    watch,
+    handleSubmit,
+    reset,
+    formState: { isSubmitting, isSubmitSuccessful },
+  } = useForm<Form>();
 
-  const handleSubmit = async (e: SyntheticEvent) => {
-    e.preventDefault();
-
-    if (!name || !email || !message) return;
-    if (monster || spell) return setCardactivated(true);
-
-    const res = await fetch("/api/contact", {
-      body: JSON.stringify({ name, email, message }),
-      headers: { "Content-Type": "application/json" },
-      method: "POST",
-    });
-
-    const { error } = await res.json();
-    if (error) return setSuccess(false);
-    setSuccess(true);
-  };
+  const { submit } = useWeb3Forms({
+    access_key: "3ad8712e-b5d5-4e68-a4d4-a99b1b429c98",
+    settings: { from_name: "drewxs.dev" },
+    onSuccess: () => reset(),
+    onError: console.error,
+  });
 
   return (
     <section className="home section contact">
@@ -43,86 +46,58 @@ export const Contact = () => {
         <div className="contact-row">
           <div className="contact-col content">
             <div className="contact-col__row">
-              <h2 className="contact-heading h4">{contact.heading}</h2>
-              <p className="contact-message">{contact.message}</p>
+              <h2 className="contact-heading h4">{data.heading}</h2>
+              <p className="contact-message">{data.message}</p>
             </div>
             <div className="contact-col__row">
               <div className="contact-block">
-                <Link href={`tel:${contact.phone.replace(/\s/g, "")}`}>
-                  <FontAwesomeIcon className="contact-block__icon" icon={faPhone} />
-                </Link>
-                <p className="contact-block__text">{contact.phone}</p>
-              </div>
-              <div className="contact-block">
-                <Link href={`mailto:${contact.email}`}>
+                <Link href={`mailto:${data.email}`}>
                   <FontAwesomeIcon className="contact-block__icon" icon={faEnvelope} />
                 </Link>
-                <p className="contact-block__text">{contact.email}</p>
+                <p className="contact-block__text">{data.email}</p>
               </div>
               <div className="contact-block">
                 <FontAwesomeIcon className="contact-block__icon" icon={faLocationDot} />
-                <p className="contact-block__text">{contact.location}</p>
+                <p className="contact-block__text">{data.location}</p>
               </div>
             </div>
             <div className="contact-col__row">
               <Socials />
             </div>
           </div>
-          {!success && !cardactivated && (
-            <form id="contact-form" className="contact-col contact-form" onSubmit={handleSubmit}>
+          {!isSubmitSuccessful && (
+            <form id="contact-form" className="contact-col contact-form" onSubmit={handleSubmit(submit)}>
               <Input
                 type="text"
-                name="name"
                 label="Name"
-                value={name}
-                onInput={(e) => setName(e.currentTarget.value)}
+                value={watch("name")}
+                {...register("name", { required: true })}
                 required
                 fullwidth
               />
               <Input
                 type="email"
-                name="email"
                 label="Email"
-                value={email}
-                onInput={(e) => setEmail(e.currentTarget.value)}
+                value={watch("email")}
+                {...register("email", { required: true })}
                 required
                 fullwidth
               />
               <Input
                 type="text"
-                name="message"
                 label="Message"
-                value={message}
-                onInput={(e) => setMessage(e.currentTarget.value)}
+                value={watch("message")}
+                {...register("message", { required: true })}
                 required
                 fullwidth
                 multiline
               />
-              <div className="youveactivatedmycard">
-                <Input
-                  type="text"
-                  name="phone"
-                  label="Phone"
-                  value={monster}
-                  onChange={(e) => setMonster(e.currentTarget.value)}
-                  autoComplete="new-card"
-                />
-                <Input
-                  type="text"
-                  name="address"
-                  label="Address"
-                  value={spell}
-                  onChange={(e) => setSpell(e.currentTarget.value)}
-                  autoComplete="new-card"
-                />
-              </div>
-              <button className="button" disabled={!name || !email || !message} onClick={handleSubmit}>
+              <button type="submit" className="button" disabled={isSubmitting}>
                 Send
               </button>
             </form>
           )}
-          {success && !cardactivated && <div className="contact-col">{contact.successMessage}</div>}
-          {cardactivated && <div className="contact-col">{contact.errorMessage}</div>}
+          {isSubmitSuccessful && <div className="contact-col">{data.success}</div>}
         </div>
       </div>
     </section>

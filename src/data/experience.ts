@@ -4,10 +4,10 @@ export const experience: Experience[] = [
   {
     _id: "04",
     year: "2022-Present",
-    title: `Full Stack Developer`,
-    description: `Designed, developed, and maintained numerous systems and applications, leveraging a range of cloud infrastructures.
-\nCollaborated with cross-functional teams, including designers, project managers, stakeholders, and other developers, to deliver high-quality solutions.
-\nFacilitated deployments and environments through well-defined CI/CD pipelines.`,
+    title: `Software Developer`,
+    description: `Languages: Rust, Go, Python, Ruby, TypeScript, Java
+Frameworks: Axum, FastAPI, Flask, Rails, React[Native]/Next, Express, Spring
+Platforms/Tools: Docker, GitHub, AWS, GCP, DigitalOcean, Cloudflare, Vercel`,
     company: `Paper Crane`,
     url: `https://www.papercrane.ca`,
   },
@@ -15,9 +15,7 @@ export const experience: Experience[] = [
     _id: "03",
     year: "2021-2022",
     title: `Jr. Developer`,
-    description: `Developed and migrated applications utilizing a wide variety of technologies.
-\nTranslated business and design requirements into technical solutions by collaborating with designers and leads.
-\nOptimized performance bottlenecks in systems to deliver high-performance software.`,
+    description: `Same as above (minus a few things).`,
     company: `Paper Crane`,
     url: `https://www.papercrane.ca`,
   },

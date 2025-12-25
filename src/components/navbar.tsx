@@ -1,8 +1,8 @@
 "use client";
 
 import clsx from "clsx";
-import logo from "public/logo.png";
 
+import logo from "@/../public/logo.png";
 import { useScrollPosition } from "@/hooks";
 
 import { Img } from "./image";

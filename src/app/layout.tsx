@@ -42,7 +42,7 @@ export const metadata: Metadata = {
 
 const Layout = ({ children }: Wrapper) => {
   return (
-    <html lang="en" className={sourceCodePro.className}>
+    <html className={sourceCodePro.className} lang="en">
       <Analytics />
       <body>
         <Providers>
